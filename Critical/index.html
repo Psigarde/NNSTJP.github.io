@@ -122,6 +122,16 @@
 							<div class="DivTableCellCrit"><span id="TabCritClassPhCriticalStreamValueUDMG">100%</span></div>
 							<div class="DivTableCellCrit"><span id="TabCritClassPhCriticalStreamValueEDMG"></span></div>
 						</div>
+						<div class="DivTableRow TabCritClassEt">
+							<div class="DivTableCell DivTableCellTop"><select class="TabCritSelectLv" id="TabCritClassEtJustAttackCritical" onchange="UpdateSkill(this.id)">
+								<option value="0">Lv 0</option><option value="1">Lv 1</option><option value="2">Lv 2</option><option value="3">Lv 3</option><option value="4">Lv 4</option><option value="5">Lv 5</option>
+								<option value="6">Lv 6</option><option value="7">Lv 7</option><option value="8">Lv 8</option><option value="9">Lv 9</option><option value="10">Lv 10</option></select></div>
+							<div class="DivTableCellName"><img src="PNG/Skill/UISkillEtJustAttackCritical.png" class="TabCritImage">JUST ATTACK CRITICAL</div>
+							<div class="DivTableCellCrit"><span id="TabCritClassEtJustAttackCriticalValueRate">0%</span></div>
+							<div class="DivTableCellCrit"><span id="TabCritClassEtJustAttackCriticalValueCDMG">100%</span></div>
+							<div class="DivTableCellCrit"><span id="TabCritClassEtJustAttackCriticalValueUDMG">100%</span></div>
+							<div class="DivTableCellCrit"><span id="TabCritClassEtJustAttackCriticalValueEDMG"></span></div>
+						</div>
 						<div class="DivTableRow">
 							<div class="DivTableCell DivTableCellTop"><select class="TabCritSelectLv" id="TabCritRingRLv" style="display:none" onchange="UpdateRing()">
 								<option value="1">+ 1</option><option value="2">+ 2</option><option value="3">+ 3</option><option value="4">+ 4</option><option value="5">+ 5</option>
@@ -192,6 +202,17 @@
 							<div class="DivTableCellCrit"><span id="TabCritSKyuu4ValueCDMG">100%</span><span class="TabCritSKyuu4ETC"><input class="TabCritNumber" id="TabCritSKyuu4ETCValueCDMG" type="number" min="100" max="200" value="100" maxLength="6" onchange="UpdateSKyuuETC(this.id)"></input>%</span></div>
 							<div class="DivTableCellCrit"><span id="TabCritSKyuu4ValueUDMG">100%</span><span class="TabCritSKyuu4ETC"><input class="TabCritNumber" id="TabCritSKyuu4ETCValueUDMG" type="number" min="100" max="200" value="100" maxLength="6" onchange="UpdateSKyuuETC(this.id)"></input>%</span></div>
 							<div class="DivTableCellCrit"><span id="TabCritSKyuu4ValueEDMG"></span></div>
+						</div>
+						<div class="DivTableRow">
+							<div class="DivTableCell DivTableCellTop"></div>
+							<div class="DivTableCellName"><img src="PNG/ETC/UISKyuu5.png" class="TabCritImage"><select class="TabCritSelect" id="TabCritSKyuu5" onchange="UpdateSKyuu(this.id)">
+								<option value="NA">N/A</option>
+								<option value="Both1">S5: MYSTERIOUS INTENT</option>
+								<option value="ETC">S5: ETC</option></select></div>
+							<div class="DivTableCellCrit"><span id="TabCritSKyuu5ValueRate">0%</span><span class="TabCritSKyuu5ETC"><input class="TabCritNumber" id="TabCritSKyuu5ETCValueRate" type="number" min="-100" max="100" value="0" maxLength="5" onchange="UpdateSKyuuETC(this.id)"></input>%</span></div>
+							<div class="DivTableCellCrit"><span id="TabCritSKyuu5ValueCDMG">100%</span><span class="TabCritSKyuu5ETC"><input class="TabCritNumber" id="TabCritSKyuu5ETCValueCDMG" type="number" min="100" max="200" value="100" maxLength="6" onchange="UpdateSKyuuETC(this.id)"></input>%</span></div>
+							<div class="DivTableCellCrit"><span id="TabCritSKyuu5ValueUDMG">100%</span><span class="TabCritSKyuu5ETC"><input class="TabCritNumber" id="TabCritSKyuu5ETCValueUDMG" type="number" min="100" max="200" value="100" maxLength="6" onchange="UpdateSKyuuETC(this.id)"></input>%</span></div>
+							<div class="DivTableCellCrit"><span id="TabCritSKyuu5ValueEDMG"></span></div>
 						</div>
 						<div class="DivTableRow">
 							<div class="DivTableCell DivTableCellTop"></div>
@@ -312,6 +333,11 @@
 						<div class="DivTableCellClass"><img src="PNG/Class/UIClassPh.png" class="TabClassImage"><span class="TabClassFont">PHANTOM</span></div>
 						<div class="DivTableCellClass"><input class="TabClassCheckbox" id="CMPh" type="checkbox" value="Ph" onclick="SetClassM(this.value)"></div>
 						<div class="DivTableCellClass"><input class="TabClassCheckbox" id="CSPh" type="checkbox" value="Ph" disabled onclick="SetClassS(this.value)"></div>
+					</div>
+					<div class="DivTableRow">
+						<div class="DivTableCellClass"><img src="PNG/Class/UIClassEt.png" class="TabClassImage"><span class="TabClassFont">ETOILE</span></div>
+						<div class="DivTableCellClass"><input class="TabClassCheckbox" id="CMEt" type="checkbox" value="Et" onclick="SetClassM(this.value)"></div>
+						<div class="DivTableCellClass"><input class="TabClassCheckbox" id="CSEt" type="checkbox" value="Et" disabled onclick="SetClassS(this.value)"></div>
 					</div>
 				</div>
 			</div>
