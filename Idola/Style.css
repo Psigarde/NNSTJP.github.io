@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body
+	{
+		font-family:"Ubuntu";
+		white-space:nowrap;
+		background-color:#000000;
+		overflow:hidden;
+	}
+.Main
+	{
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+		max-height:auto;
+		background-image:url("PNG/Background.png");
+		background-size:100%;
+		background-repeat:no-repeat;
+		display:table;
+	}
+.Frame
+	{
+		position:absolute;
+	}
+.FrameT
+	{
+		position:absolute;
+		width:616px;
+		height:54px;
+		pointer-events:none;
+	}
+.FrameM
+	{
+		position:relative;
+		top:54px;
+		width:616px;
+		height:550px;
+		background-size:100%;
+	}
+.FrameB
+	{
+		position:relative;
+		top:54px;
+		width:616px;
+		height:15px;
+		pointer-events:none;
+	}
+.FrameCharacter
+	{
+		width:128px;
+		height:128px;
+		cursor:pointer;
+	}
+.FrameUIDestiny
+	{
+		position:absolute;
+		z-index:2;
+		left:0px;
+		top:0px;
+		width:128px;
+		height:128px;
+		pointer-events:none;
+	}
+.SelectCharacterList
+	{
+		position:absolute;
+		z-index:3;
+		top:50%;
+		width:408px;
+		height:95%;
+		transform:translate(0%, -50%);
+		padding:4px;
+		overflow-x:hidden;
+		overflow-y:scroll;
+		transition:0.5s;
+	}
+.SelectCharacterIMG
+	{
+		width:128px;
+		height:128px;
+		margin:4px;
+		cursor:pointer;
+	}
+
+#Frame01
+	{
+		z-index:1;
+		left:50%;
+		top:50%;
+		transform:translate(calc(-100% - 4px), -50%);
+		color:#000000;
+		transition:0.5s;
+	}
+#Frame02
+	{
+		z-index:1;
+		left:50%;
+		top:50%;
+		transform:translate(4px, -50%);
+		color:#FFFFFF;
+		transition:0.5s;
+	}
+#Frame01T
+	{
+		background-image:url("PNG/Frame/0101.png");
+	}
+#Frame01M
+	{
+		background-image:url("PNG/Frame/0102.png");
+	}
+#Frame01B
+	{
+		background-image:url("PNG/Frame/0103.png");
+	}
+#Frame02T
+	{
+		background-image:url("PNG/Frame/0201.png");
+	}
+#Frame02M
+	{
+		background-image:url("PNG/Frame/0202.png");
+	}
+#Frame02B
+	{
+		background-image:url("PNG/Frame/0203.png");
+	}
+#Character0101Destiny
+	{
+		display:none;
+	}
+#Character0102Destiny
+	{
+		display:none;
+	}
+#Character0103Destiny
+	{
+		display:none;
+	}
+#Character0104Destiny
+	{
+		display:none;
+	}
+#Character0201Destiny
+	{
+		display:none;
+	}
+#Character0202Destiny
+	{
+		display:none;
+	}
+#Character0203Destiny
+	{
+		display:none;
+	}
+#Character0204Destiny
+	{
+		display:none;
+	}
+#SelectCharacterList01
+	{
+		margin-left:-416px;
+		background-color:#808080;
+	}
+#SelectCharacterList02
+	{
+		margin-left:100%;
+		background-color:#808080;
+	}
+
+::-webkit-scrollbar
+	{
+		display:none;
+	}
