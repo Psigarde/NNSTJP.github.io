@@ -18,6 +18,7 @@ body
 		background-size:100%;
 		background-repeat:no-repeat;
 		display:table;
+		font-size:0
 	}
 .Frame
 	{
@@ -26,7 +27,7 @@ body
 .FrameT
 	{
 		position:absolute;
-		width:616px;
+		width:400px;
 		height:54px;
 		pointer-events:none;
 	}
@@ -34,7 +35,7 @@ body
 	{
 		position:relative;
 		top:54px;
-		width:616px;
+		width:400px;
 		height:550px;
 		background-size:100%;
 	}
@@ -42,7 +43,7 @@ body
 	{
 		position:relative;
 		top:54px;
-		width:616px;
+		width:400px;
 		height:15px;
 		pointer-events:none;
 	}
@@ -62,6 +63,22 @@ body
 		height:128px;
 		pointer-events:none;
 	}
+.FrameWeapon
+	{
+		position:relative;
+		left:4px;
+		width:64px;
+		height:64px;
+		cursor:pointer;
+	}
+.FrameSoul
+	{
+		position:relative;
+		left:8px;
+		width:64px;
+		height:64px;
+		cursor:pointer;
+	}
 .SelectCharacterList
 	{
 		position:absolute;
@@ -73,9 +90,27 @@ body
 		transform:translate(0%, -50%);
 		overflow-y:scroll;
 		transition:0.5s;
-		font-size:0;
 	}
 .SelectCharacterIMG
+	{
+		width:64px;
+		height:64px;
+		margin:2px;
+		cursor:pointer;
+	}
+.SelectSymbolList
+	{
+		position:absolute;
+		z-index:4;
+		top:50%;
+		width:408px;
+		height:95%;
+		padding:4px;
+		transform:translate(0%, -50%);
+		overflow-y:scroll;
+		transition:0.5s;
+	}
+.SelectSymbolIMG
 	{
 		width:64px;
 		height:64px;
@@ -103,27 +138,27 @@ body
 	}
 #Frame01T
 	{
-		background-image:url("PNG/Frame/0101.png");
+		background-image:url("PNG/Frame/N0101.png");
 	}
 #Frame01M
 	{
-		background-image:url("PNG/Frame/0102.png");
+		background-image:url("PNG/Frame/N0102.png");
 	}
 #Frame01B
 	{
-		background-image:url("PNG/Frame/0103.png");
+		background-image:url("PNG/Frame/N0103.png");
 	}
 #Frame02T
 	{
-		background-image:url("PNG/Frame/0201.png");
+		background-image:url("PNG/Frame/N0201.png");
 	}
 #Frame02M
 	{
-		background-image:url("PNG/Frame/0202.png");
+		background-image:url("PNG/Frame/N0202.png");
 	}
 #Frame02B
 	{
-		background-image:url("PNG/Frame/0203.png");
+		background-image:url("PNG/Frame/N0203.png");
 	}
 #Character0101Destiny
 	{
@@ -163,6 +198,16 @@ body
 		background-color:#808080;
 	}
 #SelectCharacterList02
+	{
+		margin-left:100%;
+		background-color:#808080;
+	}
+#SelectWeaponList
+	{
+		margin-left:-416px;
+		background-color:#808080;
+	}
+#SelectSoulList
 	{
 		margin-left:100%;
 		background-color:#808080;
