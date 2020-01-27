@@ -69,17 +69,17 @@ body
 		top:50%;
 		width:408px;
 		height:95%;
-		transform:translate(0%, -50%);
 		padding:4px;
-		overflow-x:hidden;
+		transform:translate(0%, -50%);
 		overflow-y:scroll;
 		transition:0.5s;
+		font-size:0;
 	}
 .SelectCharacterIMG
 	{
-		width:128px;
-		height:128px;
-		margin:4px;
+		width:64px;
+		height:64px;
+		margin:2px;
 		cursor:pointer;
 	}
 

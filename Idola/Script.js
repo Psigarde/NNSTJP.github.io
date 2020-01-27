@@ -47,6 +47,14 @@ function SelectCharacterList(Slot)
 function SelectCharacter(ID)
 	{
 		document.getElementById(CharacterSlotCurr).src = "PNG/Character Icon/" + ID + ".png";
+		if(ID.charAt(7) == "0")
+			{
+				document.getElementById(CharacterSlotCurr + "Destiny").style.display = "none";
+			}
+		else
+			{
+				document.getElementById(CharacterSlotCurr + "Destiny").style.display = "inline";
+			}
 		SelectCharacterDone();
 	}
 function SelectCharacterDone()
