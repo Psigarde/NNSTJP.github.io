@@ -83,6 +83,7 @@ function Resize()
 function SelectCharacterList(Slot)
 	{
 		SelectSymbolDone();
+		SelectBorder();
 		CharacterSlotCurr = Slot;
 		if(CharacterSlotCurr != CharacterSlotPrev)
 			{
@@ -103,6 +104,7 @@ function SelectCharacterList(Slot)
 						document.getElementById("SelectCharacterList02").style.marginLeft = RightMargin;
 					}
 				CharacterSlotPrev = Slot;
+				document.getElementById(Slot).style.border = "2px solid rgba(255, 64, 64, 1)";
 			}
 		else
 			{
@@ -133,6 +135,7 @@ function SelectCharacterDone()
 function SelectSymbolList(Slot)
 	{
 		SelectCharacterDone();
+		SelectBorder();
 		SymbolSlotCurr = Slot.replace("Weapon", "").replace("Soul", "");
 		if(SymbolSlotCurr != SymbolSlotPrev)
 			{
@@ -142,6 +145,8 @@ function SelectSymbolList(Slot)
 				RightMargin = window.innerWidth - parseInt(window.getComputedStyle(document.getElementById("SelectSoulList")).getPropertyValue("width")) - 8;
 				document.getElementById("SelectSoulList").style.marginLeft = RightMargin;
 				SymbolSlotPrev = Slot.replace("Weapon", "").replace("Soul", "");
+				document.getElementById("Weapon" + SymbolSlotCurr).style.border = "2px solid rgba(255, 64, 64, 1)";
+				document.getElementById("Soul" + SymbolSlotCurr).style.border = "2px solid rgba(255, 64, 64, 1)";
 			}
 		else
 			{
@@ -164,4 +169,31 @@ function SelectSymbolDone()
 		document.getElementById("SelectSoulList").style.transition = "0.5s";
 		document.getElementById("SelectSoulList").style.marginLeft = "100%";
 		SymbolSlotPrev = "";
+	}
+function SelectBorder()
+	{
+		document.getElementById("Character0101").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Character0102").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Character0103").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Character0104").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Character0201").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Character0202").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Character0203").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Character0204").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Weapon0101").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Weapon0102").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Weapon0103").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Weapon0104").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Weapon0201").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Weapon0202").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Weapon0203").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Weapon0204").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Soul0101").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Soul0102").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Soul0103").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Soul0104").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Soul0201").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Soul0202").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Soul0203").style.border = "2px solid rgba(255, 64, 64, 0)";
+		document.getElementById("Soul0204").style.border = "2px solid rgba(255, 64, 64, 0)";
 	}

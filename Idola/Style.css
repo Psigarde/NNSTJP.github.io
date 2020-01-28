@@ -36,7 +36,7 @@ body
 		position:relative;
 		top:54px;
 		width:400px;
-		height:550px;
+		height:564px;
 		background-size:100%;
 	}
 .FrameB
@@ -52,6 +52,7 @@ body
 		width:128px;
 		height:128px;
 		cursor:pointer;
+		border:2px solid rgba(0, 0, 0, 0);
 	}
 .FrameUIDestiny
 	{
@@ -70,6 +71,7 @@ body
 		width:64px;
 		height:64px;
 		cursor:pointer;
+		border:2px solid rgba(0, 0, 0, 0);
 	}
 .FrameSoul
 	{
@@ -78,6 +80,7 @@ body
 		width:64px;
 		height:64px;
 		cursor:pointer;
+		border:2px solid rgba(0, 0, 0, 0);
 	}
 .SelectCharacterList
 	{
