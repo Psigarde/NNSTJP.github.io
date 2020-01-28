@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
 body
 	{
 		font-family:"Ubuntu";
@@ -6,6 +7,31 @@ body
 		background-color:#000000;
 		overflow:hidden;
 	}
+.DivTable
+	{
+		display:table;
+	}
+.DivRow
+	{
+		display:table-row;
+	}
+.DivCell
+	{
+		position:relative;
+		display:table-cell;
+		vertical-align:middle;
+	}
+.DivCellSPD
+	{
+		height:32px;
+		display:table-cell;
+		vertical-align:top;
+		font-family:"Ubuntu Mono";
+		font-size:12;
+		text-align:center;
+	}
+
+
 .Main
 	{
 		position:absolute;
@@ -18,109 +44,12 @@ body
 		background-size:100%;
 		background-repeat:no-repeat;
 		display:table;
-		font-size:0
+		font-size:0;
 	}
 .Frame
 	{
 		position:absolute;
 	}
-.FrameT
-	{
-		position:absolute;
-		width:400px;
-		height:54px;
-		pointer-events:none;
-	}
-.FrameM
-	{
-		position:relative;
-		top:54px;
-		width:400px;
-		height:564px;
-		background-size:100%;
-	}
-.FrameB
-	{
-		position:relative;
-		top:54px;
-		width:400px;
-		height:15px;
-		pointer-events:none;
-	}
-.FrameCharacter
-	{
-		width:128px;
-		height:128px;
-		cursor:pointer;
-		border:2px solid rgba(0, 0, 0, 0);
-	}
-.FrameUIDestiny
-	{
-		position:absolute;
-		z-index:2;
-		left:2px;
-		top:2px;
-		width:128px;
-		height:128px;
-		pointer-events:none;
-	}
-.FrameWeapon
-	{
-		position:relative;
-		left:2px;
-		width:64px;
-		height:64px;
-		cursor:pointer;
-		border:2px solid rgba(0, 0, 0, 0);
-	}
-.FrameSoul
-	{
-		position:relative;
-		left:6px;
-		width:64px;
-		height:64px;
-		cursor:pointer;
-		border:2px solid rgba(0, 0, 0, 0);
-	}
-.SelectCharacterList
-	{
-		position:absolute;
-		z-index:3;
-		top:50%;
-		width:408px;
-		height:95%;
-		padding:4px;
-		transform:translate(0%, -50%);
-		overflow-y:scroll;
-		transition:0.5s;
-	}
-.SelectCharacterIMG
-	{
-		width:64px;
-		height:64px;
-		margin:2px;
-		cursor:pointer;
-	}
-.SelectSymbolList
-	{
-		position:absolute;
-		z-index:4;
-		top:50%;
-		width:408px;
-		height:95%;
-		padding:4px;
-		transform:translate(0%, -50%);
-		overflow-y:scroll;
-		transition:0.5s;
-	}
-.SelectSymbolIMG
-	{
-		width:64px;
-		height:64px;
-		margin:2px;
-		cursor:pointer;
-	}
-
 #Frame01
 	{
 		z-index:1;
@@ -139,61 +68,104 @@ body
 		color:#FFFFFF;
 		transition:0.5s;
 	}
+
+.FrameT
+	{
+		position:absolute;
+		width:424px;
+		height:54px;
+		pointer-events:none;
+	}
 #Frame01T
 	{
 		background-image:url("PNG/Frame/N0101.png");
-	}
-#Frame01M
-	{
-		background-image:url("PNG/Frame/N0102.png");
-	}
-#Frame01B
-	{
-		background-image:url("PNG/Frame/N0103.png");
 	}
 #Frame02T
 	{
 		background-image:url("PNG/Frame/N0201.png");
 	}
+.FrameM
+	{
+		position:relative;
+		top:54px;
+		width:424px;
+		height:545px;
+		background-size:100%;
+	}
+#Frame01M
+	{
+		background-image:url("PNG/Frame/N0102.png");
+	}
 #Frame02M
 	{
 		background-image:url("PNG/Frame/N0202.png");
+	}
+.FrameB
+	{
+		position:relative;
+		top:54px;
+		width:424px;
+		height:15px;
+		pointer-events:none;
+	}
+#Frame01B
+	{
+		background-image:url("PNG/Frame/N0103.png");
 	}
 #Frame02B
 	{
 		background-image:url("PNG/Frame/N0203.png");
 	}
-#Character0101Destiny
+
+.FrameCharacter
 	{
-		display:none;
+		width:128px;
+		height:128px;
+		cursor:pointer;
+		border:2px solid rgba(0, 0, 0, 0);
 	}
-#Character0102Destiny
+.FrameDestiny
 	{
-		display:none;
+		position:absolute;
+		z-index:2;
+		left:2px;
+		top:2px;
+		width:128px;
+		height:128px;
+		pointer-events:none;
 	}
-#Character0103Destiny
+.FrameSymbol
 	{
-		display:none;
+		position:relative;
+		width:64px;
+		height:64px;
+		cursor:pointer;
+		border:2px solid rgba(0, 0, 0, 0);
 	}
-#Character0104Destiny
+.FrameSPD
 	{
-		display:none;
+		position:relative;
+		width:32px;
+		height:32px;
 	}
-#Character0201Destiny
+.FrameSPDNumber
 	{
-		display:none;
+		height:24px;
+		width:32px;
+		text-align:center;
 	}
-#Character0202Destiny
+
+.SelectCharacterList
 	{
-		display:none;
-	}
-#Character0203Destiny
-	{
-		display:none;
-	}
-#Character0204Destiny
-	{
-		display:none;
+		position:absolute;
+		z-index:3;
+		top:50%;
+		width:408px;
+		height:95%;
+		padding:4px;
+		transform:translate(0%, -50%);
+		overflow-y:scroll;
+		transition:0.5s;
 	}
 #SelectCharacterList01
 	{
@@ -205,6 +177,26 @@ body
 		margin-left:100%;
 		background-color:#808080;
 	}
+.SelectCharacterIMG
+	{
+		width:64px;
+		height:64px;
+		margin:2px;
+		cursor:pointer;
+	}
+
+.SelectSymbolList
+	{
+		position:absolute;
+		z-index:4;
+		top:50%;
+		width:408px;
+		height:95%;
+		padding:4px;
+		transform:translate(0%, -50%);
+		overflow-y:scroll;
+		transition:0.5s;
+	}
 #SelectWeaponList
 	{
 		margin-left:-416px;
@@ -215,8 +207,57 @@ body
 		margin-left:100%;
 		background-color:#808080;
 	}
+.SelectSymbolIMG
+	{
+		width:64px;
+		height:64px;
+		margin:2px;
+		cursor:pointer;
+	}
+
+#UI0101Destiny
+	{
+		display:none;
+	}
+#UI0102Destiny
+	{
+		display:none;
+	}
+#UI0103Destiny
+	{
+		display:none;
+	}
+#UI0104Destiny
+	{
+		display:none;
+	}
+#UI0201Destiny
+	{
+		display:none;
+	}
+#UI0202Destiny
+	{
+		display:none;
+	}
+#UI0203Destiny
+	{
+		display:none;
+	}
+#UI0204Destiny
+	{
+		display:none;
+	}
 
 ::-webkit-scrollbar
 	{
 		display:none;
+	}
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button
+	{
+		-webkit-appearance: none;
+		margin: 0;
+	}
+input[type="number"]
+	{
+		-moz-appearance:textfield;
 	}
