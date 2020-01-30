@@ -2,11 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
 body
 	{
-		font-family:"Ubuntu";
+		background-color:rgba(0, 0, 0, 0);
 		white-space:nowrap;
-		background-color:#000000;
+		font-family:"Ubuntu";
+		user-select:none;
 		overflow:hidden;
 	}
+
 .DivTable
 	{
 		display:table;
@@ -18,19 +20,43 @@ body
 .DivCell
 	{
 		position:relative;
-		display:table-cell;
 		vertical-align:middle;
+		display:table-cell;
 	}
 .DivCellSPD
 	{
 		height:32px;
 		display:table-cell;
 		vertical-align:top;
-		font-family:"Ubuntu Mono";
 		font-size:12;
 		text-align:center;
+		font-family:"Ubuntu Mono";
 	}
-
+.DivButton
+	{
+		width:64px;
+		height:16px;
+		margin:2px;
+		border:2px solid rgba(0, 0, 0, 1);
+		padding:2px;
+		background-color:rgba(255, 255, 255, 1);
+		font-size:16px;
+		line-height:16px;
+		text-align:center;
+		vertical-align:middle;
+		color:rgba(0, 0, 0, 1);
+		cursor:pointer;
+	}
+.DivInput
+	{
+		width:224px;
+		height:24px;
+		margin:2px;
+		border:2px solid rgba(0, 0, 0, 1);
+		padding:2px;
+		font-size:16px;
+		font-family:"Ubuntu Mono";
+	}
 
 .Main
 	{
@@ -43,30 +69,27 @@ body
 		background-image:url("PNG/Background.png");
 		background-size:100%;
 		background-repeat:no-repeat;
-		display:table;
 		font-size:0;
+		display:table;
 	}
+
 .Frame
 	{
 		position:absolute;
+		z-index:1;
+		left:50%;
+		top:50%;
+		transition:0.5s;
 	}
 #Frame01
 	{
-		z-index:1;
-		left:50%;
-		top:50%;
 		transform:translate(calc(-100% - 4px), -50%);
-		color:#000000;
-		transition:0.5s;
+		color:rgba(0, 0, 0, 1);
 	}
 #Frame02
 	{
-		z-index:1;
-		left:50%;
-		top:50%;
 		transform:translate(4px, -50%);
-		color:#FFFFFF;
-		transition:0.5s;
+		color:rgba(255, 255, 255, 1);
 	}
 
 .FrameT
@@ -74,11 +97,12 @@ body
 		position:absolute;
 		width:424px;
 		height:54px;
-		pointer-events:none;
+		cursor:pointer;
 	}
 #Frame01T
 	{
 		background-image:url("PNG/Frame/N0101.png");
+		
 	}
 #Frame02T
 	{
@@ -89,7 +113,7 @@ body
 		position:relative;
 		top:54px;
 		width:424px;
-		height:609px;
+		height:618px;
 		background-size:100%;
 	}
 #Frame01M
@@ -106,7 +130,6 @@ body
 		top:54px;
 		width:424px;
 		height:15px;
-		pointer-events:none;
 	}
 #Frame01B
 	{
@@ -121,8 +144,8 @@ body
 	{
 		width:128px;
 		height:128px;
-		cursor:pointer;
 		border:2px solid rgba(0, 0, 0, 0);
+		cursor:pointer;
 	}
 .FrameDestiny
 	{
@@ -139,8 +162,8 @@ body
 		position:relative;
 		width:64px;
 		height:64px;
-		cursor:pointer;
 		border:2px solid rgba(0, 0, 0, 0);
+		cursor:pointer;
 	}
 .FrameSPD
 	{
@@ -152,7 +175,40 @@ body
 	{
 		height:24px;
 		width:32px;
+		border:none;
+		color:inherit;
+		background-color:rgba(0, 0, 0, 0);
 		text-align:center;
+	}
+
+.SelectParty
+	{
+		position:absolute;
+		z-index:0;
+		top:calc(50% - 312px);
+		width:100px;
+		height:33px;
+		transform:skew(35deg);
+		background-color:rgba(128, 32, 32, 1);
+	}
+#SelectParty01
+	{
+		left:calc(50% - 135px);
+	}
+#SelectParty02
+	{
+		left:calc(50% + 296px);
+		display:none;
+	}
+.SelectPartyText
+	{
+		height:33px;
+		transform:skew(-35deg);
+		font-size:24px;
+		line-height:33px;
+		text-align:center;
+		vertical-align:middle;
+		color:rgba(255, 255, 255, 1);
 	}
 
 .SelectCharacterList
@@ -170,12 +226,12 @@ body
 #SelectCharacterList01
 	{
 		margin-left:-416px;
-		background-color:#808080;
+		background-color:rgba(128, 128, 128, 1);
 	}
 #SelectCharacterList02
 	{
 		margin-left:100%;
-		background-color:#808080;
+		background-color:rgba(128, 128, 128, 1);
 	}
 
 .SelectSymbolList
@@ -193,12 +249,12 @@ body
 #SelectWeaponList
 	{
 		margin-left:-416px;
-		background-color:#808080;
+		background-color:rgba(128, 128, 128, 1);
 	}
 #SelectSoulList
 	{
 		margin-left:100%;
-		background-color:#808080;
+		background-color:rgba(128, 128, 128, 1);
 	}
 
 .SelectIdoMagList
@@ -216,12 +272,12 @@ body
 #SelectIdoMagList01
 	{
 		margin-left:-416px;
-		background-color:#808080;
+		background-color:rgba(128, 128, 128, 1);
 	}
 #SelectIdoMagList02
 	{
 		margin-left:100%;
-		background-color:#808080;
+		background-color:rgba(128, 128, 128, 1);
 	}
 
 .SelectIMG
@@ -263,6 +319,39 @@ body
 #UI0204Destiny
 	{
 		display:none;
+	}
+
+#Loading
+	{
+		position:absolute;
+		z-index:9;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+		background-color:rgba(0, 0, 0, 1);
+		transition:1.5s;
+	}
+#LoadingText
+	{
+		position:relative;
+		top:50%;
+		transform:translate(0, -50%);
+		font-size:64px;
+		text-align:center;
+		color:rgba(255, 255, 255, 1);
+		transition:1.5s;
+	}
+
+.Data
+	{
+		position:absolute;
+		z-index:8;
+		left:50%;
+		top:32px;
+		border:4px solid black;
+		transform:translate(-50%, 0);
+		background-color:rgba(255, 255, 255, 0.5);
 	}
 
 ::-webkit-scrollbar

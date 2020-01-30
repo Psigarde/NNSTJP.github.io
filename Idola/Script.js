@@ -11,6 +11,7 @@ var IdoMagIDPrev;
 var LeftMargin;
 var RightMargin;
 var RightBool = false;
+var Data;
 function Start()
 	{
 		var CountL = 0;
@@ -83,7 +84,29 @@ function Start()
 						document.getElementById("SelectIdoMagList02").innerHTML += "<BR>";
 					}
 			}
+		Data =
+			{
+				Party: "01",
+				CharacterID: ["100000 01", "100000 01", "100000 01", "100000 01", "100000 02", "100000 02", "100000 02", "100000 02"],
+				CharacterSPD: ["0", "0", "0", "0", "0", "0", "0", "0"],
+				WeaponID: ["200000000", "200000000", "200000000", "200000000", "200000000", "200000000", "200000000", "200000000"],
+				WeaponSPD: ["0", "0", "0", "0", "0", "0", "0", "0"],
+				SoulID: ["300000000", "300000000", "300000000", "300000000", "300000000", "300000000", "300000000", "300000000"],
+				SoulSPD: ["0", "0", "0", "0", "0", "0", "0", "0"],
+				SupportSPD: ["0", "0", "0", "0", "0", "0", "0", "0"],
+				IdoMagID: ["12700000 00", "12700000 00"],
+				IdoMagSPD: ["0", "0"]
+			};
 		Speed("0101CharacterSPD");
+		for(var Count = 0; Count < localStorage.length; Count ++)
+			{
+				var DataList = document.createElement("option");
+				DataList.text = localStorage.key(Count);
+				document.getElementById("DataList").options.add(DataList);
+			}
+		document.getElementById("Loading").style.backgroundColor = "rgba(0, 0, 0, 0)";
+		document.getElementById("LoadingText").style.color = "rgba(0, 0, 0, 0)";
+		setTimeout(function() { document.getElementById("Loading").style.display = "none"; }, 1500);
 	}
 function Resize()
 	{
@@ -97,6 +120,20 @@ function Resize()
 				document.getElementById("SelectSoulList").style.marginLeft = RightMargin;
 				document.getElementById("SelectIdoMagList02").style.marginLeft = RightMargin;
 			}
+	}
+function SelectParty(ID)
+	{
+		if(ID == "01")
+			{
+				document.getElementById("SelectParty01").style.display = "inline";
+				document.getElementById("SelectParty02").style.display = "none";
+			}
+		else
+			{
+				document.getElementById("SelectParty01").style.display = "none";
+				document.getElementById("SelectParty02").style.display = "inline";
+			}
+		Data.Party = (ID == "01") ? "01" : "02";
 	}
 function SelectCharacterList(ID)
 	{
@@ -133,6 +170,14 @@ function SelectCharacterList(ID)
 function SelectCharacter(ID)
 	{
 		document.getElementById(CharacterIDCurr + "Character").src = "PNG/Character Icon/" + ID + ".png";
+		if(CharacterIDCurr.charAt(1) == "1")
+			{
+				Data.CharacterID[parseInt(CharacterIDCurr.charAt(3)) - 1] = ID;
+			}
+		else
+			{
+				Data.CharacterID[parseInt(CharacterIDCurr.charAt(3)) + 3] = ID;
+			}
 		if(ID.charAt(7) == "0")
 			{
 				document.getElementById("UI" + CharacterIDCurr + "Destiny").style.display = "none";
@@ -176,10 +221,26 @@ function SelectSymbolList(ID)
 function SelectWeapon(ID)
 	{
 		document.getElementById(SymbolIDCurr + "Weapon").src = "PNG/Weapon Icon/" + ID + ".png";
+		if(SymbolIDCurr.charAt(1) == "1")
+			{
+				Data.WeaponID[parseInt(SymbolIDCurr.charAt(3)) - 1] = ID;
+			}
+		else
+			{
+				Data.WeaponID[parseInt(SymbolIDCurr.charAt(3)) + 3] = ID;
+			}
 	}
 function SelectSoul(ID)
 	{
 		document.getElementById(SymbolIDCurr + "Soul").src = "PNG/Soul Icon/" + ID + ".png";
+		if(SymbolIDCurr.charAt(1) == "1")
+			{
+				Data.SoulID[parseInt(SymbolIDCurr.charAt(3)) - 1] = ID;
+			}
+		else
+			{
+				Data.SoulID[parseInt(SymbolIDCurr.charAt(3)) + 3] = ID;
+			}
 	}
 function SelectSymbolDone()
 	{
@@ -225,6 +286,7 @@ function SelectIdoMagList(ID)
 function SelectIdoMag(ID)
 	{
 		document.getElementById(IdoMagIDCurr + "IdoMag").src = "PNG/IdoMag Icon/" + ID + ".png";
+		(IdoMagIDCurr == "01") ? Data.IdoMagID[0] = ID : Data.IdoMagID[1] = ID;
 	}
 function SelectIdoMagDone()
 	{
@@ -237,32 +299,16 @@ function SelectIdoMagDone()
 	}
 function SelectBorder()
 	{
-		document.getElementById("0101Character").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0102Character").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0103Character").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0104Character").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0201Character").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0202Character").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0203Character").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0204Character").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0101Weapon").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0102Weapon").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0103Weapon").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0104Weapon").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0201Weapon").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0202Weapon").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0203Weapon").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0204Weapon").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0101Soul").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0102Soul").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0103Soul").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0104Soul").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0201Soul").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0202Soul").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0203Soul").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("0204Soul").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("01IdoMag").style.border = "2px solid rgba(255, 64, 64, 0)";
-		document.getElementById("02IdoMag").style.border = "2px solid rgba(255, 64, 64, 0)";
+		for(var Count01 = 1; Count01 < 3; Count01 ++)
+			{
+				for(var Count02 = 1; Count02 < 5; Count02 ++)
+					{
+						document.getElementById("0" + Count01 + "0" + Count02 + "Character").style.border = "2px solid rgba(255, 64, 64, 0)";
+						document.getElementById("0" + Count01 + "0" + Count02 + "Weapon").style.border = "2px solid rgba(255, 64, 64, 0)";
+						document.getElementById("0" + Count01 + "0" + Count02 + "Soul").style.border = "2px solid rgba(255, 64, 64, 0)";
+					}
+				document.getElementById("0" + Count01 + "IdoMag").style.border = "2px solid rgba(255, 64, 64, 0)";
+			}
 	}
 function Speed(ID)
 	{
@@ -286,11 +332,72 @@ function Speed(ID)
 								SPDTXT = SPD.toFixed(0);
 							}
 						document.getElementById("0" + Count01 + "0" + Count02 + "SPD").innerHTML = SPDTXT;
+						Data.CharacterSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("0" + Count01 + "0" + Count02 + "CharacterSPD").value;
+						Data.WeaponSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("0" + Count01 + "0" + Count02 + "WeaponSPD").value;
+						Data.SoulSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("0" + Count01 + "0" + Count02 + "SoulSPD").value;
+						Data.SupportSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("0" + Count01 + "0" + Count02 + "SupportSPD").value;
+						Data.IdoMagSPD[Count01 - 1] = document.getElementById("0" + Count01 + "IdoMagSPD").value;
 					}
 				SPDOrder.sort(function(a, b) { return b[1] - a[1]; } );
 				document.getElementById("0" + Count01 + SPDOrder[0][0] + "SPDOrder").innerHTML = "1ST";
 				document.getElementById("0" + Count01 + SPDOrder[1][0] + "SPDOrder").innerHTML = "2ND";
 				document.getElementById("0" + Count01 + SPDOrder[2][0] + "SPDOrder").innerHTML = "3RD";
 				document.getElementById("0" + Count01 + SPDOrder[3][0] + "SPDOrder").innerHTML = "4TH";
+			}
+	}
+function DataSave()
+	{
+		if(document.getElementById("DataName").value == "")
+			{
+				document.getElementById("DataName").value = "SAVE " + (parseInt(localStorage.length) + 1);
+			}
+		localStorage.setItem(document.getElementById("DataName").value, JSON.stringify(Data));
+		var CountBool = false;
+		for(var Count = 0; Count < document.getElementById("DataList").options.length; Count ++)
+			{
+				if(document.getElementById("DataList").options[Count].text == document.getElementById("DataName").value)
+					{
+						CountBool = true;
+					}
+			}
+		if(!CountBool)
+			{
+				var DataList = document.createElement("option");
+				DataList.text = localStorage.key(document.getElementById("DataName").value);
+				document.getElementById("DataList").options.add(DataList);
+			}
+	}
+function DataLoad()
+	{
+		if(localStorage.length > 0)
+			{
+				var DataLoad = JSON.parse(localStorage.getItem(document.getElementById("DataList").value));
+				SelectParty(DataLoad.Party);
+				for(var Count01 = 1; Count01 < 3; Count01 ++)
+					{
+						for(var Count02 = 1; Count02 < 5; Count02 ++)
+							{
+								CharacterIDCurr = "0" + Count01 + "0" + Count02;
+								SelectCharacter(DataLoad.CharacterID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
+								document.getElementById("0" + Count01 + "0" + Count02 + "CharacterSPD").value = DataLoad.CharacterSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								SymbolIDCurr = "0" + Count01 + "0" + Count02;
+								SelectWeapon(DataLoad.WeaponID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
+								document.getElementById("0" + Count01 + "0" + Count02 + "WeaponSPD").value = DataLoad.WeaponSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								SelectSoul(DataLoad.SoulID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
+								document.getElementById("0" + Count01 + "0" + Count02 + "SoulSPD").value = DataLoad.SoulSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								document.getElementById("0" + Count01 + "0" + Count02 + "SupportSPD").value = DataLoad.SupportSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+							}
+						IdoMagIDCurr = "0" + Count01;
+						SelectIdoMag(DataLoad.IdoMagID[Count01 - 1]);
+					}
+				Speed("0101CharacterSPD");
+			}
+	}
+function DataDelete()
+	{
+		if(localStorage.length > 0)
+			{
+				localStorage.removeItem(document.getElementById("DataList").value);
+				document.getElementById("DataList").remove(document.getElementById("DataList").selectedIndex);
 			}
 	}
