@@ -389,6 +389,7 @@ function DataLoad()
 							}
 						IdoMagIDCurr = "0" + Count01;
 						SelectIdoMag(DataLoad.IdoMagID[Count01 - 1]);
+						document.getElementById("0" + Count01 + "IdoMagSPD").value = DataLoad.IdoMagSPD[Count01 - 1];
 					}
 				Speed("0101CharacterSPD");
 				document.getElementById("DataName").value = document.getElementById("DataList").value;
