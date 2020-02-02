@@ -167,6 +167,16 @@ body
 		height:128px;
 		pointer-events:none;
 	}
+.FrameElement
+	{
+		position:absolute;
+		z-index:2;
+		left:5px;
+		top:6px;
+		width:28px;
+		height:28px;
+		cursor:default;
+	}
 .FrameSymbol
 	{
 		position:relative;
@@ -329,6 +339,39 @@ body
 		display:none;
 	}
 #ID0204Destiny
+	{
+		display:none;
+	}
+
+#ID0101Element
+	{
+		display:none;
+	}
+#ID0102Element
+	{
+		display:none;
+	}
+#ID0103Element
+	{
+		display:none;
+	}
+#ID0104Element
+	{
+		display:none;
+	}
+#ID0201Element
+	{
+		display:none;
+	}
+#ID0202Element
+	{
+		display:none;
+	}
+#ID0203Element
+	{
+		display:none;
+	}
+#ID0204Element
 	{
 		display:none;
 	}
