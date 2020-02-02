@@ -18,7 +18,7 @@ function Start()
 		var CountC = 0;
 		for(var Count = 0; Count < Characters.length; Count ++)
 			{
-				if(Characters[Count].charAt(8) == "0" || Characters[Count] == "100001 00" || Characters[Count] == "100001 11" || Characters[Count] == "100001 12")
+				if(Characters[Count].charAt(8) == "0" || ["100001 00", "100001 11", "100001 12"].indexOf(Characters[Count]) > -1)
 					{
 						document.getElementById("SelectCharacterList01").innerHTML += "<img class='SelectIMG' src='PNG/Character Icon/" + Characters[Count] + ".png' id='" + Characters[Count] + "' onClick='SelectCharacter(this.id)'>";
 						CountL ++;
@@ -173,7 +173,7 @@ function SelectCharacterList(ID)
 		CharacterIDCurr = ID.replace("Character", "");
 		if(CharacterIDCurr != CharacterIDPrev)
 			{
-				if(CharacterIDCurr == "0101" || CharacterIDCurr == "0102" || CharacterIDCurr == "0103" || CharacterIDCurr == "0104")
+				if(["0101", "0102", "0103", "0104"].indexOf(CharacterIDCurr) > -1)
 					{
 						document.getElementById("SelectCharacterList01").style.marginLeft = "0px";
 						RightBool = false;
@@ -209,6 +209,7 @@ function SelectCharacter(ID)
 				Data.CharacterID[parseInt(CharacterIDCurr.charAt(3)) + 3] = ID;
 			}
 		document.getElementById("ID" + CharacterIDCurr + "Destiny").style.display = (ID.charAt(7) == "0") ? "none" : "inline";
+		DB("0101CharacterDB");
 	}
 function SelectCharacterDone()
 	{
@@ -424,6 +425,11 @@ function DB(ID)
 			{
 				for(var Count02 = 1; Count02 < 5; Count02 ++)
 					{
+						if(["100001 00", "100001 11", "100001 12", "100069 00", "100069 10", "100069 12", "100070 00", "100070 10", "100070 12", "100071 00", "100071 10", "100071 12", "100079 00"].indexOf(Data.CharacterID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]) > -1)
+							{
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterD").style.opacity = 0.5;
+								document.getElementById("0" + Count01 + "0" + Count02 + "CharacterDB").style.display = "none";
+							}
 						document.getElementById("0" + Count01 + "0" + Count02 + "CharacterDB").style.display = (document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterD").style.opacity == "1") ? "inline" : "none";
 						Data.CharacterD[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterD").style.opacity;
 						Data.CharacterDB[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("0" + Count01 + "0" + Count02 + "CharacterDB").value;
