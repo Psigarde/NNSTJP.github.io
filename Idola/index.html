@@ -15,7 +15,7 @@
 							<div class="DivRow">
 								<div class="DivCell">
 									<img class="FrameCharacter" id="0101Character" src="PNG/Character Icon/100000 01.png" onClick="SelectCharacterList(this.id)">
-									<img class="FrameDestiny" id="UI0101Destiny" src="PNG/UI/Destiny.png">
+									<img class="FrameDestiny" id="ID0101Destiny" src="PNG/UI/Destiny.png">
 								</div>
 								<div class="DivCell">
 									<div class="DivTable">
@@ -23,33 +23,53 @@
 											<div class="DivCell" style="padding-left:2px; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCell">
+														<div class="DivCell" style="width:32px">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameCharacterSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0101CharacterSPD" type="number" min="0" max="999" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0101CharacterSPD" type="number" min="0" max="999" value="0" onchange="Speed(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:68px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" id="FrameSupportSPD" src="PNG/UI/SPD Up.png"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0101SupportSPD" type="number" min="0" max="99" value="0" onchange="Speed(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:32px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/LB.png"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0101CharacterLB" type="number" min="0" max="4" value="0" onchange="LB(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:34px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" id="ID0101CharacterD" style="cursor:pointer" src="PNG/UI/DB.png" onClick="D(this.id)"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0101CharacterDB" type="number" min="0" max="8" value="0" onchange="DB(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameSupportSPD" src="PNG/UI/SPD Up.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0101SupportSPD" type="number" min="0" max="99" value="0" onchange="Speed(this.id)"></input></div>
-																</div>
-															</div>
-														</div>
-														<div class="DivCell" style="padding-left:2px">
-															<div class="DivTable">
-																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameCharacterSPD" src="PNG/UI/SPD.png"></div>
-																</div>
-																<div class="DivRow">
-																	<div class="DivCellSPD"><div id="0101SPDOrder"></div><div id="0101SPD"></div></div>
+																	<div class="DivCellStat"><div id="0101SPDOrder"></div><div id="0101SPD"></div></div>
 																</div>
 															</div>
 														</div>
@@ -65,10 +85,10 @@
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0101WeaponSPD" type="number" min="0" max="200" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0101WeaponSPD" type="number" min="0" max="200" value="0" onchange="Speed(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
@@ -76,10 +96,10 @@
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0101SoulSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0101SoulSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
@@ -95,7 +115,7 @@
 							<div class="DivRow">
 								<div class="DivCell">
 									<img class="FrameCharacter" id="0102Character" src="PNG/Character Icon/100000 01.png" onClick="SelectCharacterList(this.id)">
-									<img class="FrameDestiny" id="UI0102Destiny" src="PNG/UI/Destiny.png">
+									<img class="FrameDestiny" id="ID0102Destiny" src="PNG/UI/Destiny.png">
 								</div>
 								<div class="DivCell">
 									<div class="DivTable">
@@ -103,33 +123,53 @@
 											<div class="DivCell" style="padding-left:2px; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCell">
+														<div class="DivCell" style="width:32px">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameCharacterSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0102CharacterSPD" type="number" min="0" max="999" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0102CharacterSPD" type="number" min="0" max="999" value="0" onchange="Speed(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:68px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" id="FrameSupportSPD" src="PNG/UI/SPD Up.png"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0102SupportSPD" type="number" min="0" max="99" value="0" onchange="Speed(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:32px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/LB.png"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0102CharacterLB" type="number" min="0" max="4" value="0" onchange="LB(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:34px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" id="ID0102CharacterD" style="cursor:pointer" src="PNG/UI/DB.png" onClick="D(this.id)"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0102CharacterDB" type="number" min="0" max="8" value="0" onchange="DB(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameSupportSPD" src="PNG/UI/SPD Up.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0102SupportSPD" type="number" min="0" max="99" value="0" onchange="Speed(this.id)"></input></div>
-																</div>
-															</div>
-														</div>
-														<div class="DivCell" style="padding-left:2px">
-															<div class="DivTable">
-																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameCharacterSPD" src="PNG/UI/SPD.png"></div>
-																</div>
-																<div class="DivRow">
-																	<div class="DivCellSPD"><div id="0102SPDOrder"></div><div id="0102SPD"></div></div>
+																	<div class="DivCellStat"><div id="0102SPDOrder"></div><div id="0102SPD"></div></div>
 																</div>
 															</div>
 														</div>
@@ -145,10 +185,10 @@
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0102WeaponSPD" type="number" min="0" max="200" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0102WeaponSPD" type="number" min="0" max="200" value="0" onchange="Speed(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
@@ -156,10 +196,10 @@
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0102SoulSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0102SoulSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
@@ -175,7 +215,7 @@
 							<div class="DivRow">
 								<div class="DivCell">
 									<img class="FrameCharacter" id="0103Character" src="PNG/Character Icon/100000 01.png" onClick="SelectCharacterList(this.id)">
-									<img class="FrameDestiny" id="UI0103Destiny" src="PNG/UI/Destiny.png">
+									<img class="FrameDestiny" id="ID0103Destiny" src="PNG/UI/Destiny.png">
 								</div>
 								<div class="DivCell">
 									<div class="DivTable">
@@ -183,33 +223,53 @@
 											<div class="DivCell" style="padding-left:2px; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCell">
+														<div class="DivCell" style="width:32px">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameCharacterSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0103CharacterSPD" type="number" min="0" max="999" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0103CharacterSPD" type="number" min="0" max="999" value="0" onchange="Speed(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:68px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" id="FrameSupportSPD" src="PNG/UI/SPD Up.png"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0103SupportSPD" type="number" min="0" max="99" value="0" onchange="Speed(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:32px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/LB.png"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0103CharacterLB" type="number" min="0" max="4" value="0" onchange="LB(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:34px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" id="ID0103CharacterD" style="cursor:pointer" src="PNG/UI/DB.png" onClick="D(this.id)"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0103CharacterDB" type="number" min="0" max="8" value="0" onchange="DB(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameSupportSPD" src="PNG/UI/SPD Up.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0103SupportSPD" type="number" min="0" max="99" value="0" onchange="Speed(this.id)"></input></div>
-																</div>
-															</div>
-														</div>
-														<div class="DivCell" style="padding-left:2px">
-															<div class="DivTable">
-																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameCharacterSPD" src="PNG/UI/SPD.png"></div>
-																</div>
-																<div class="DivRow">
-																	<div class="DivCellSPD"><div id="0103SPDOrder"></div><div id="0103SPD"></div></div>
+																	<div class="DivCellStat"><div id="0103SPDOrder"></div><div id="0103SPD"></div></div>
 																</div>
 															</div>
 														</div>
@@ -225,10 +285,10 @@
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0103WeaponSPD" type="number" min="0" max="200" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0103WeaponSPD" type="number" min="0" max="200" value="0" onchange="Speed(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
@@ -236,10 +296,10 @@
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0103SoulSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0103SoulSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
@@ -255,7 +315,7 @@
 							<div class="DivRow">
 								<div class="DivCell">
 									<img class="FrameCharacter" id="0104Character" src="PNG/Character Icon/100000 01.png" onClick="SelectCharacterList(this.id)">
-									<img class="FrameDestiny" id="UI0104Destiny" src="PNG/UI/Destiny.png">
+									<img class="FrameDestiny" id="ID0104Destiny" src="PNG/UI/Destiny.png">
 								</div>
 								<div class="DivCell">
 									<div class="DivTable">
@@ -263,33 +323,53 @@
 											<div class="DivCell" style="padding-left:2px; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCell">
+														<div class="DivCell" style="width:32px">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameCharacterSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0104CharacterSPD" type="number" min="0" max="999" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0104CharacterSPD" type="number" min="0" max="999" value="0" onchange="Speed(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:68px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" id="FrameSupportSPD" src="PNG/UI/SPD Up.png"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0104SupportSPD" type="number" min="0" max="99" value="0" onchange="Speed(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:32px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/LB.png"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0104CharacterLB" type="number" min="0" max="4" value="0" onchange="LB(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:34px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" id="ID0104CharacterD" style="cursor:pointer" src="PNG/UI/DB.png" onClick="D(this.id)"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0104CharacterDB" type="number" min="0" max="8" value="0" onchange="DB(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameSupportSPD" src="PNG/UI/SPD Up.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0104SupportSPD" type="number" min="0" max="99" value="0" onchange="Speed(this.id)"></input></div>
-																</div>
-															</div>
-														</div>
-														<div class="DivCell" style="padding-left:2px">
-															<div class="DivTable">
-																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameCharacterSPD" src="PNG/UI/SPD.png"></div>
-																</div>
-																<div class="DivRow">
-																	<div class="DivCellSPD"><div id="0104SPDOrder"></div><div id="0104SPD"></div></div>
+																	<div class="DivCellStat"><div id="0104SPDOrder"></div><div id="0104SPD"></div></div>
 																</div>
 															</div>
 														</div>
@@ -305,10 +385,10 @@
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0104WeaponSPD" type="number" min="0" max="200" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0104WeaponSPD" type="number" min="0" max="200" value="0" onchange="Speed(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
@@ -316,10 +396,10 @@
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0104SoulSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0104SoulSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
@@ -336,54 +416,90 @@
 								<div class="DivCell">
 									<div class="DivTable">
 										<div class="DivRow">
-											<div class="DivCell" style="width:134px"><img class="FrameSymbol" id="01IdoMag" src="PNG/IdoMag Icon/12700000 00.png" onClick="SelectIdoMagList(this.id)"></div>
-											<div class="DivCell" style="width:33px">
+											<div class="DivCell" style="width:134px; vertical-align:top"><img class="FrameSymbol" id="01IdoMag" src="PNG/IdoMag Icon/12700000 00.png" onClick="SelectIdoMagList(this.id)"></div>
+											<div class="DivCell" style="width:66px; vertical-align:top; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 													</div>
 													<div class="DivRow">
-														<div class="DivCellSPD"><input class="FrameSPDNumber" id="01IdoMagSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+														<div class="DivCellStat"><input class="FrameStatNumber" id="01IdoMagSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
 													</div>
 												</div>
 											</div>
-											<div class="DivCell" style="width:33px">
+											<div class="DivCell" style="width:34px; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD01.png"></div>
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD01.png"></div>
 													</div>
 													<div class="DivRow">
-														<div class="DivCellSPD"><input class="FrameSPDNumber" id="01IdoMagSPD01" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+														<div class="DivCellStat"><input class="FrameStatNumber" id="01IdoMagSPD01" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/ELE01.png"></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat" style="height:16px"><input class="FrameStatNumber" id="01IdoMagELE01" type="number" min="0" max="10" value="0" onchange="Element(this.id)"></input></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat"><div id="01ELE01Total"></div></div>
 													</div>
 												</div>
 											</div>
-											<div class="DivCell" style="width:33px">
+											<div class="DivCell" style="width:32px; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD02.png"></div>
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD02.png"></div>
 													</div>
 													<div class="DivRow">
-														<div class="DivCellSPD"><input class="FrameSPDNumber" id="01IdoMagSPD02" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+														<div class="DivCellStat"><input class="FrameStatNumber" id="01IdoMagSPD02" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/ELE02.png"></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat" style="height:16px"><input class="FrameStatNumber" id="01IdoMagELE02" type="number" min="0" max="10" value="0" onchange="Element(this.id)"></input></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat"><div id="01ELE02Total"></div></div>
 													</div>
 												</div>
 											</div>
-											<div class="DivCell" style="width:33px">
+											<div class="DivCell" style="width:34px; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD03.png"></div>
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD03.png"></div>
 													</div>
 													<div class="DivRow">
-														<div class="DivCellSPD"><input class="FrameSPDNumber" id="01IdoMagSPD03" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+														<div class="DivCellStat"><input class="FrameStatNumber" id="01IdoMagSPD03" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/ELE03.png"></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat" style="height:16px"><input class="FrameStatNumber" id="01IdoMagELE03" type="number" min="0" max="10" value="0" onchange="Element(this.id)"></input></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat"><div id="01ELE03Total"></div></div>
 													</div>
 												</div>
 											</div>
-											<div class="DivCell" style="width:33px">
+											<div class="DivCell" style="padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD04.png"></div>
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD04.png"></div>
 													</div>
 													<div class="DivRow">
-														<div class="DivCellSPD"><input class="FrameSPDNumber" id="01IdoMagSPD04" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+														<div class="DivCellStat"><input class="FrameStatNumber" id="01IdoMagSPD04" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/ELE04.png"></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat" style="height:16px"><input class="FrameStatNumber" id="01IdoMagELE04" type="number" min="0" max="10" value="0" onchange="Element(this.id)"></input></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat"><div id="01ELE04Total"></div></div>
 													</div>
 												</div>
 											</div>
@@ -399,12 +515,12 @@
 			<div class="Frame" id="Frame02">
 				<div class="FrameT" id="Frame02T" onClick="SelectParty('02')"><div style="font-size:32px; position:relative; left:120px; top:10px">CHAOS</div></div>
 				<div class="FrameM" id="Frame02M">
-					<div style="position:absolute; z-index:2; left:8px; top:4px">
+					<div style="position:absolute; z-index:2; left:4px; top:2px">
 						<div class="DivTable" style="border-bottom:2px solid white">
 							<div class="DivRow">
 								<div class="DivCell">
 									<img class="FrameCharacter" id="0201Character" src="PNG/Character Icon/100000 02.png" onClick="SelectCharacterList(this.id)">
-									<img class="FrameDestiny" id="UI0201Destiny" src="PNG/UI/Destiny.png">
+									<img class="FrameDestiny" id="ID0201Destiny" src="PNG/UI/Destiny.png">
 								</div>
 								<div class="DivCell">
 									<div class="DivTable">
@@ -412,33 +528,53 @@
 											<div class="DivCell" style="padding-left:2px; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCell">
+														<div class="DivCell" style="width:32px">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameCharacterSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0201CharacterSPD" type="number" min="0" max="999" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0201CharacterSPD" type="number" min="0" max="999" value="0" onchange="Speed(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:68px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" id="FrameSupportSPD" src="PNG/UI/SPD Up.png"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0201SupportSPD" type="number" min="0" max="99" value="0" onchange="Speed(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:32px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/LB.png"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0201CharacterLB" type="number" min="0" max="4" value="0" onchange="LB(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:34px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" id="ID0201CharacterD" style="cursor:pointer" src="PNG/UI/DB.png" onClick="D(this.id)"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0201CharacterDB" type="number" min="0" max="8" value="0" onchange="DB(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameSupportSPD" src="PNG/UI/SPD Up.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0201SupportSPD" type="number" min="0" max="99" value="0" onchange="Speed(this.id)"></input></div>
-																</div>
-															</div>
-														</div>
-														<div class="DivCell" style="padding-left:2px">
-															<div class="DivTable">
-																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameCharacterSPD" src="PNG/UI/SPD.png"></div>
-																</div>
-																<div class="DivRow">
-																	<div class="DivCellSPD"><div id="0201SPDOrder"></div><div id="0201SPD"></div></div>
+																	<div class="DivCellStat"><div id="0201SPDOrder"></div><div id="0201SPD"></div></div>
 																</div>
 															</div>
 														</div>
@@ -454,10 +590,10 @@
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0201WeaponSPD" type="number" min="0" max="200" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0201WeaponSPD" type="number" min="0" max="200" value="0" onchange="Speed(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
@@ -465,10 +601,10 @@
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0201SoulSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0201SoulSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
@@ -484,7 +620,7 @@
 							<div class="DivRow">
 								<div class="DivCell">
 									<img class="FrameCharacter" id="0202Character" src="PNG/Character Icon/100000 02.png" onClick="SelectCharacterList(this.id)">
-									<img class="FrameDestiny" id="UI0202Destiny" src="PNG/UI/Destiny.png">
+									<img class="FrameDestiny" id="ID0202Destiny" src="PNG/UI/Destiny.png">
 								</div>
 								<div class="DivCell">
 									<div class="DivTable">
@@ -492,33 +628,53 @@
 											<div class="DivCell" style="padding-left:2px; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCell">
+														<div class="DivCell" style="width:32px">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameCharacterSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0202CharacterSPD" type="number" min="0" max="999" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0202CharacterSPD" type="number" min="0" max="999" value="0" onchange="Speed(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:68px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" id="FrameSupportSPD" src="PNG/UI/SPD Up.png"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0202SupportSPD" type="number" min="0" max="99" value="0" onchange="Speed(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:32px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/LB.png"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0202CharacterLB" type="number" min="0" max="4" value="0" onchange="LB(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:34px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" id="ID0202CharacterD" style="cursor:pointer" src="PNG/UI/DB.png" onClick="D(this.id)"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0202CharacterDB" type="number" min="0" max="8" value="0" onchange="DB(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameSupportSPD" src="PNG/UI/SPD Up.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0202SupportSPD" type="number" min="0" max="99" value="0" onchange="Speed(this.id)"></input></div>
-																</div>
-															</div>
-														</div>
-														<div class="DivCell" style="padding-left:2px">
-															<div class="DivTable">
-																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameCharacterSPD" src="PNG/UI/SPD.png"></div>
-																</div>
-																<div class="DivRow">
-																	<div class="DivCellSPD"><div id="0202SPDOrder"></div><div id="0202SPD"></div></div>
+																	<div class="DivCellStat"><div id="0202SPDOrder"></div><div id="0202SPD"></div></div>
 																</div>
 															</div>
 														</div>
@@ -534,10 +690,10 @@
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0202WeaponSPD" type="number" min="0" max="200" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0202WeaponSPD" type="number" min="0" max="200" value="0" onchange="Speed(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
@@ -545,10 +701,10 @@
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0202SoulSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0202SoulSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
@@ -564,7 +720,7 @@
 							<div class="DivRow">
 								<div class="DivCell">
 									<img class="FrameCharacter" id="0203Character" src="PNG/Character Icon/100000 02.png" onClick="SelectCharacterList(this.id)">
-									<img class="FrameDestiny" id="UI0203Destiny" src="PNG/UI/Destiny.png">
+									<img class="FrameDestiny" id="ID0203Destiny" src="PNG/UI/Destiny.png">
 								</div>
 								<div class="DivCell">
 									<div class="DivTable">
@@ -572,33 +728,53 @@
 											<div class="DivCell" style="padding-left:2px; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCell">
+														<div class="DivCell" style="width:32px">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameCharacterSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0203CharacterSPD" type="number" min="0" max="999" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0203CharacterSPD" type="number" min="0" max="999" value="0" onchange="Speed(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:68px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" id="FrameSupportSPD" src="PNG/UI/SPD Up.png"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0203SupportSPD" type="number" min="0" max="99" value="0" onchange="Speed(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:32px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/LB.png"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0203CharacterLB" type="number" min="0" max="4" value="0" onchange="LB(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:34px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" id="ID0203CharacterD" style="cursor:pointer" src="PNG/UI/DB.png" onClick="D(this.id)"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0203CharacterDB" type="number" min="0" max="8" value="0" onchange="DB(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameSupportSPD" src="PNG/UI/SPD Up.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0203SupportSPD" type="number" min="0" max="99" value="0" onchange="Speed(this.id)"></input></div>
-																</div>
-															</div>
-														</div>
-														<div class="DivCell" style="padding-left:2px">
-															<div class="DivTable">
-																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameCharacterSPD" src="PNG/UI/SPD.png"></div>
-																</div>
-																<div class="DivRow">
-																	<div class="DivCellSPD"><div id="0203SPDOrder"></div><div id="0203SPD"></div></div>
+																	<div class="DivCellStat"><div id="0203SPDOrder"></div><div id="0203SPD"></div></div>
 																</div>
 															</div>
 														</div>
@@ -614,10 +790,10 @@
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0203WeaponSPD" type="number" min="0" max="200" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0203WeaponSPD" type="number" min="0" max="200" value="0" onchange="Speed(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
@@ -625,10 +801,10 @@
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0203SoulSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0203SoulSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
@@ -644,7 +820,7 @@
 							<div class="DivRow">
 								<div class="DivCell">
 									<img class="FrameCharacter" id="0204Character" src="PNG/Character Icon/100000 02.png" onClick="SelectCharacterList(this.id)">
-									<img class="FrameDestiny" id="UI0204Destiny" src="PNG/UI/Destiny.png">
+									<img class="FrameDestiny" id="ID0204Destiny" src="PNG/UI/Destiny.png">
 								</div>
 								<div class="DivCell">
 									<div class="DivTable">
@@ -652,33 +828,53 @@
 											<div class="DivCell" style="padding-left:2px; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCell">
+														<div class="DivCell" style="width:32px">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameCharacterSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0204CharacterSPD" type="number" min="0" max="999" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0204CharacterSPD" type="number" min="0" max="999" value="0" onchange="Speed(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:68px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" id="FrameSupportSPD" src="PNG/UI/SPD Up.png"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0204SupportSPD" type="number" min="0" max="99" value="0" onchange="Speed(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:32px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/LB.png"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0204CharacterLB" type="number" min="0" max="4" value="0" onchange="LB(this.id)"></input></div>
+																</div>
+															</div>
+														</div>
+														<div class="DivCell" style="width:34px">
+															<div class="DivTable">
+																<div class="DivRow">
+																	<div class="DivCellStat"><img class="FrameStatIcon" id="ID0204CharacterD" style="cursor:pointer" src="PNG/UI/DB.png" onClick="D(this.id)"></div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0204CharacterDB" type="number" min="0" max="8" value="0" onchange="DB(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameSupportSPD" src="PNG/UI/SPD Up.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0204SupportSPD" type="number" min="0" max="99" value="0" onchange="Speed(this.id)"></input></div>
-																</div>
-															</div>
-														</div>
-														<div class="DivCell" style="padding-left:2px">
-															<div class="DivTable">
-																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" id="FrameCharacterSPD" src="PNG/UI/SPD.png"></div>
-																</div>
-																<div class="DivRow">
-																	<div class="DivCellSPD"><div id="0204SPDOrder"></div><div id="0204SPD"></div></div>
+																	<div class="DivCellStat"><div id="0204SPDOrder"></div><div id="0204SPD"></div></div>
 																</div>
 															</div>
 														</div>
@@ -694,10 +890,10 @@
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0204WeaponSPD" type="number" min="0" max="200" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0204WeaponSPD" type="number" min="0" max="200" value="0" onchange="Speed(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
@@ -705,10 +901,10 @@
 														<div class="DivCell">
 															<div class="DivTable">
 																<div class="DivRow">
-																	<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+																	<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellSPD"><input class="FrameSPDNumber" id="0204SoulSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+																	<div class="DivCellStat"><input class="FrameStatNumber" id="0204SoulSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
 																</div>
 															</div>
 														</div>
@@ -725,54 +921,90 @@
 								<div class="DivCell">
 									<div class="DivTable">
 										<div class="DivRow">
-											<div class="DivCell" style="width:134px"><img class="FrameSymbol" id="02IdoMag" src="PNG/IdoMag Icon/12700000 00.png" onClick="SelectIdoMagList(this.id)"></div>
-											<div class="DivCell" style="width:33px">
+											<div class="DivCell" style="width:134px; vertical-align:top"><img class="FrameSymbol" id="02IdoMag" src="PNG/IdoMag Icon/12700000 00.png" onClick="SelectIdoMagList(this.id)"></div>
+											<div class="DivCell" style="width:66px; vertical-align:top; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD.png"></div>
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD.png"></div>
 													</div>
 													<div class="DivRow">
-														<div class="DivCellSPD"><input class="FrameSPDNumber" id="02IdoMagSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+														<div class="DivCellStat"><input class="FrameStatNumber" id="02IdoMagSPD" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
 													</div>
 												</div>
 											</div>
-											<div class="DivCell" style="width:33px">
+											<div class="DivCell" style="width:33px; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD01.png"></div>
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD01.png"></div>
 													</div>
 													<div class="DivRow">
-														<div class="DivCellSPD"><input class="FrameSPDNumber" id="02IdoMagSPD01" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+														<div class="DivCellStat"><input class="FrameStatNumber" id="02IdoMagSPD01" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/ELE01.png"></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat" style="height:16px"><input class="FrameStatNumber" id="02IdoMagELE01" type="number" min="0" max="10" value="0" onchange="Element(this.id)"></input></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat"><div id="02ELE01Total"></div></div>
 													</div>
 												</div>
 											</div>
-											<div class="DivCell" style="width:33px">
+											<div class="DivCell" style="width:33px; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD02.png"></div>
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD02.png"></div>
 													</div>
 													<div class="DivRow">
-														<div class="DivCellSPD"><input class="FrameSPDNumber" id="02IdoMagSPD02" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+														<div class="DivCellStat"><input class="FrameStatNumber" id="02IdoMagSPD02" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/ELE02.png"></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat" style="height:16px"><input class="FrameStatNumber" id="02IdoMagELE02" type="number" min="0" max="10" value="0" onchange="Element(this.id)"></input></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat"><div id="02ELE02Total"></div></div>
 													</div>
 												</div>
 											</div>
-											<div class="DivCell" style="width:33px">
+											<div class="DivCell" style="width:33px; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD03.png"></div>
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD03.png"></div>
 													</div>
 													<div class="DivRow">
-														<div class="DivCellSPD"><input class="FrameSPDNumber" id="02IdoMagSPD03" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+														<div class="DivCellStat"><input class="FrameStatNumber" id="02IdoMagSPD03" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/ELE03.png"></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat" style="height:16px"><input class="FrameStatNumber" id="02IdoMagELE03" type="number" min="0" max="10" value="0" onchange="Element(this.id)"></input></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat"><div id="02ELE03Total"></div></div>
 													</div>
 												</div>
 											</div>
-											<div class="DivCell" style="width:33px">
+											<div class="DivCell" style="width:33px; padding-top:2px">
 												<div class="DivTable">
 													<div class="DivRow">
-														<div class="DivCellSPD"><img class="FrameSPD" src="PNG/UI/SPD04.png"></div>
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/SPD04.png"></div>
 													</div>
 													<div class="DivRow">
-														<div class="DivCellSPD"><input class="FrameSPDNumber" id="02IdoMagSPD04" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+														<div class="DivCellStat"><input class="FrameStatNumber" id="02IdoMagSPD04" type="number" min="0" max="100" value="0" onchange="Speed(this.id)"></input></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat"><img class="FrameStatIcon" src="PNG/UI/ELE04.png"></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat" style="height:16px"><input class="FrameStatNumber" id="02IdoMagELE04" type="number" min="0" max="10" value="0" onchange="Element(this.id)"></input></div>
+													</div>
+													<div class="DivRow">
+														<div class="DivCellStat"><div id="02ELE04Total"></div></div>
 													</div>
 												</div>
 											</div>
