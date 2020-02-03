@@ -116,6 +116,7 @@ function Start()
 			};
 		SelectParty("01");
 		Element("01IdoMagELE01");
+		LB("0101CharacterLB");
 		DB("0101CharacterDB");
 		Speed("0101CharacterSPD");
 		var DataList = document.createElement("option");
@@ -597,6 +598,7 @@ function DataLoad()
 			}
 		Speed("0101CharacterSPD");
 		Element("01IdoMagELE01");
+		LB("0101CharacterLB");
 		DB("0101CharacterDB");
 		SelectCharacterDone();
 		SelectSymbolDone();
