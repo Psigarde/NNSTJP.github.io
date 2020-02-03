@@ -94,10 +94,10 @@ function Start()
 			{
 				Party: "01",
 				CharacterID: ["100000 01", "100000 01", "100000 01", "100000 01", "100000 02", "100000 02", "100000 02", "100000 02"],
-				CharacterSPD: ["0", "0", "0", "0", "0", "0", "0", "0"],
 				CharacterLB: ["0", "0", "0", "0", "0", "0", "0", "0"],
-				CharacterDB: ["0", "0", "0", "0", "0", "0", "0", "0"],
 				CharacterD: ["0.5", "0.5", "0.5", "0.5", "0.5", "0.5", "0.5", "0.5"],
+				CharacterDB: ["0", "0", "0", "0", "0", "0", "0", "0"],
+				CharacterSPD: ["0", "0", "0", "0", "0", "0", "0", "0"],
 				WeaponID: ["200000000", "200000000", "200000000", "200000000", "200000000", "200000000", "200000000", "200000000"],
 				WeaponSPD: ["0", "0", "0", "0", "0", "0", "0", "0"],
 				SoulID: ["300000000", "300000000", "300000000", "300000000", "300000000", "300000000", "300000000", "300000000"],
@@ -118,12 +118,16 @@ function Start()
 		Element("01IdoMagELE01");
 		DB("0101CharacterDB");
 		Speed("0101CharacterSPD");
+		var DataList = document.createElement("option");
+		DataList.text = "NEW SAVE";
+		document.getElementById("DataList").options.add(DataList);
 		for(var Count = 0; Count < localStorage.length; Count ++)
 			{
 				var DataList = document.createElement("option");
 				DataList.text = localStorage.key(Count);
 				document.getElementById("DataList").options.add(DataList);
 			}
+		DataChange();
 		document.getElementById("Loading").style.backgroundColor = "rgba(0, 0, 0, 0)";
 		document.getElementById("LoadingText").style.color = "rgba(0, 0, 0, 0)";
 		setTimeout(function() { document.getElementById("Loading").style.display = "none"; }, 1500);
@@ -215,7 +219,7 @@ function SelectCharacter(ID)
 				Data.CharacterID[parseInt(CharacterIDCurr.charAt(3)) + 3] = ID;
 			}
 		document.getElementById("ID" + CharacterIDCurr + "Destiny").style.display = (ID.charAt(7) == "0") ? "none" : "inline";
-		document.getElementById("ID" + CharacterIDCurr + "Element").style.display = (["100000 01", "100000 01"].indexOf(ID) > -1) ? "none" : "inline";
+		document.getElementById("ID" + CharacterIDCurr + "Element").style.display = (["100000 01", "100000 02"].indexOf(ID) > -1) ? "none" : "inline";
 		if(CharactersELE00.some(String => ID.includes(String)))
 			{
 				document.getElementById("ID" + CharacterIDCurr + "Element").src = "PNG/UI/ELE00.png";
@@ -509,74 +513,94 @@ function Speed(ID)
 				document.getElementById("0" + Count01 + SPDOrder[3][0] + "SPDOrder").innerHTML = "4TH";
 			}
 	}
+function DataChange()
+	{
+		if(document.getElementById("DataList").options.selectedIndex == 0)
+			{
+				document.getElementById("DataName").style.opacity = "1";
+				document.getElementById("DataName").style.pointerEvents = "auto";
+				document.getElementById("DataName").disabled = false;
+				document.getElementById("DataLoad").style.opacity = "0.5";
+				document.getElementById("DataLoad").style.pointerEvents = "none";
+				document.getElementById("DataDelete").style.opacity = "0.5";
+				document.getElementById("DataDelete").style.pointerEvents = "none";
+			}
+		else
+			{
+				document.getElementById("DataName").style.opacity = "0.5";
+				document.getElementById("DataName").style.pointerEvents = "none";
+				document.getElementById("DataName").disabled = true;
+				document.getElementById("DataLoad").style.opacity = "1";
+				document.getElementById("DataLoad").style.pointerEvents = "auto";
+				document.getElementById("DataDelete").style.opacity = "1";
+				document.getElementById("DataDelete").style.pointerEvents = "auto";
+			}
+	}
 function DataSave()
 	{
-		if(document.getElementById("DataName").value == "")
+		if(document.getElementById("DataList").options.selectedIndex == 0)
 			{
-				document.getElementById("DataName").value = "SAVE " + (parseInt(localStorage.length) + 1);
-			}
-		localStorage.setItem(document.getElementById("DataName").value, JSON.stringify(Data));
-		var CountBool = false;
-		for(var Count = 0; Count < document.getElementById("DataList").options.length; Count ++)
-			{
-				if(document.getElementById("DataList").options[Count].text == document.getElementById("DataName").value)
+				if(document.getElementById("DataName").value == "")
 					{
-						CountBool = true;
+						document.getElementById("DataName").value = "SAVE " + (parseInt(localStorage.length) + 1);
 					}
-			}
-		if(!CountBool)
-			{
+				localStorage.setItem(document.getElementById("DataName").value, JSON.stringify(Data));
 				var DataList = document.createElement("option");
-				DataList.text = localStorage.key(document.getElementById("DataName").value);
+				DataList.text = document.getElementById("DataName").value;
 				document.getElementById("DataList").options.add(DataList);
+				document.getElementById("DataList").options.selectedIndex = document.getElementById("DataList").options.length - 1;
 			}
+		else
+			{
+				localStorage.setItem(document.getElementById("DataList").options[document.getElementById("DataList").selectedIndex].text, JSON.stringify(Data));
+			}
+		document.getElementById("DataName").value = "";
+		DataChange();
 	}
 function DataLoad()
 	{
-		if(localStorage.length > 0)
+		var DataLoad = JSON.parse(localStorage.getItem(document.getElementById("DataList").value));
+		SelectParty(DataLoad.Party);
+		for(var Count01 = 1; Count01 < 3; Count01 ++)
 			{
-				var DataLoad = JSON.parse(localStorage.getItem(document.getElementById("DataList").value));
-				SelectParty(DataLoad.Party);
-				for(var Count01 = 1; Count01 < 3; Count01 ++)
+				for(var Count02 = 1; Count02 < 5; Count02 ++)
 					{
-						for(var Count02 = 1; Count02 < 5; Count02 ++)
-							{
-								CharacterIDCurr = "0" + Count01 + "0" + Count02;
-								SelectCharacter(DataLoad.CharacterID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
-								document.getElementById("0" + Count01 + "0" + Count02 + "CharacterSPD").value = DataLoad.CharacterSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
-								document.getElementById("0" + Count01 + "0" + Count02 + "CharacterLB").value = DataLoad.CharacterLB[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
-								document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterD").style.opacity = DataLoad.CharacterD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
-								document.getElementById("0" + Count01 + "0" + Count02 + "CharacterDB").value = DataLoad.CharacterDB[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
-								SymbolIDCurr = "0" + Count01 + "0" + Count02;
-								SelectWeapon(DataLoad.WeaponID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
-								document.getElementById("0" + Count01 + "0" + Count02 + "WeaponSPD").value = DataLoad.WeaponSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
-								SelectSoul(DataLoad.SoulID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
-								document.getElementById("0" + Count01 + "0" + Count02 + "SoulSPD").value = DataLoad.SoulSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
-								document.getElementById("0" + Count01 + "0" + Count02 + "SupportSPD").value = DataLoad.SupportSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
-							}
-						IdoMagIDCurr = "0" + Count01;
-						SelectIdoMag(DataLoad.IdoMagID[Count01 - 1]);
-						document.getElementById("0" + Count01 + "IdoMagSPD").value = DataLoad.IdoMagSPD[Count01 - 1];
-						document.getElementById("0" + Count01 + "IdoMagSPD01").value = DataLoad.IdoMagSPD01[Count01 - 1];
-						document.getElementById("0" + Count01 + "IdoMagSPD02").value = DataLoad.IdoMagSPD02[Count01 - 1];
-						document.getElementById("0" + Count01 + "IdoMagSPD03").value = DataLoad.IdoMagSPD03[Count01 - 1];
-						document.getElementById("0" + Count01 + "IdoMagSPD04").value = DataLoad.IdoMagSPD04[Count01 - 1];
-						document.getElementById("0" + Count01 + "IdoMagELE01").value = DataLoad.IdoMagELE01[Count01 - 1];
-						document.getElementById("0" + Count01 + "IdoMagELE02").value = DataLoad.IdoMagELE02[Count01 - 1];
-						document.getElementById("0" + Count01 + "IdoMagELE03").value = DataLoad.IdoMagELE03[Count01 - 1];
-						document.getElementById("0" + Count01 + "IdoMagELE04").value = DataLoad.IdoMagELE04[Count01 - 1];
+						CharacterIDCurr = "0" + Count01 + "0" + Count02;
+						SelectCharacter(DataLoad.CharacterID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
+						document.getElementById("0" + Count01 + "0" + Count02 + "CharacterLB").value = DataLoad.CharacterLB[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+						document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterD").style.opacity = DataLoad.CharacterD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+						document.getElementById("0" + Count01 + "0" + Count02 + "CharacterDB").value = DataLoad.CharacterDB[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+						document.getElementById("0" + Count01 + "0" + Count02 + "CharacterSPD").value = DataLoad.CharacterSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+						SymbolIDCurr = "0" + Count01 + "0" + Count02;
+						SelectWeapon(DataLoad.WeaponID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
+						document.getElementById("0" + Count01 + "0" + Count02 + "WeaponSPD").value = DataLoad.WeaponSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+						SelectSoul(DataLoad.SoulID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
+						document.getElementById("0" + Count01 + "0" + Count02 + "SoulSPD").value = DataLoad.SoulSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+						document.getElementById("0" + Count01 + "0" + Count02 + "SupportSPD").value = DataLoad.SupportSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 					}
-				Speed("0101CharacterSPD");
-				Element("01IdoMagELE01");
-				DB("0101CharacterDB");
-				document.getElementById("DataName").value = document.getElementById("DataList").value;
+				IdoMagIDCurr = "0" + Count01;
+				SelectIdoMag(DataLoad.IdoMagID[Count01 - 1]);
+				document.getElementById("0" + Count01 + "IdoMagSPD").value = DataLoad.IdoMagSPD[Count01 - 1];
+				document.getElementById("0" + Count01 + "IdoMagSPD01").value = DataLoad.IdoMagSPD01[Count01 - 1];
+				document.getElementById("0" + Count01 + "IdoMagSPD02").value = DataLoad.IdoMagSPD02[Count01 - 1];
+				document.getElementById("0" + Count01 + "IdoMagSPD03").value = DataLoad.IdoMagSPD03[Count01 - 1];
+				document.getElementById("0" + Count01 + "IdoMagSPD04").value = DataLoad.IdoMagSPD04[Count01 - 1];
+				document.getElementById("0" + Count01 + "IdoMagELE01").value = DataLoad.IdoMagELE01[Count01 - 1];
+				document.getElementById("0" + Count01 + "IdoMagELE02").value = DataLoad.IdoMagELE02[Count01 - 1];
+				document.getElementById("0" + Count01 + "IdoMagELE03").value = DataLoad.IdoMagELE03[Count01 - 1];
+				document.getElementById("0" + Count01 + "IdoMagELE04").value = DataLoad.IdoMagELE04[Count01 - 1];
 			}
+		Speed("0101CharacterSPD");
+		Element("01IdoMagELE01");
+		DB("0101CharacterDB");
+		SelectCharacterDone();
+		SelectSymbolDone();
+		SelectIdoMagDone();
+		SelectBorder();
 	}
 function DataDelete()
 	{
-		if(localStorage.length > 0)
-			{
-				localStorage.removeItem(document.getElementById("DataList").value);
-				document.getElementById("DataList").remove(document.getElementById("DataList").selectedIndex);
-			}
+		localStorage.removeItem(document.getElementById("DataList").value);
+		document.getElementById("DataList").remove(document.getElementById("DataList").selectedIndex);
+		DataChange();
 	}

@@ -1165,7 +1165,7 @@
 				<div class="DivTable">
 					<div class="DivRow">
 						<div class="DivCell">
-							<select class="DivInput" id="DataList">
+							<select class="DivInput" id="DataList" onChange="DataChange()">
 							</select>
 						</div>
 					</div>
@@ -1174,13 +1174,13 @@
 							<div class="DivTable">
 								<div class="DivRow">
 									<div class="DivCell">
-										<div class="DivButton" onClick="DataSave()">SAVE</div>
+										<div class="DivButton" id="DataSave" onClick="DataSave()">SAVE</div>
 									</div>
 									<div class="DivCell">
-										<div class="DivButton" onClick="DataLoad()">LOAD</div>
+										<div class="DivButton" id="DataLoad" onClick="DataLoad()">LOAD</div>
 									</div>
 									<div class="DivCell">
-										<div class="DivButton" onClick="DataDelete()">DELETE</div>
+										<div class="DivButton" id="DataDelete" onClick="DataDelete()">DELETE</div>
 									</div>
 								</div>
 							</div>
