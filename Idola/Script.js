@@ -473,6 +473,7 @@ function Element(ID)
 				Data.IdoMagELE03[Count01 - 1] = document.getElementById("0" + Count01 + "IdoMagELE03").value;
 				Data.IdoMagELE04[Count01 - 1] = document.getElementById("0" + Count01 + "IdoMagELE04").value;
 			}
+		Speed("0101CharacterSPD");
 	}
 function Speed(ID)
 	{
@@ -488,6 +489,10 @@ function Speed(ID)
 						SPD += parseInt(document.getElementById("0" + Count01 + "0" + Count02 + "WeaponSPD").value);
 						SPD += parseInt(document.getElementById("0" + Count01 + "0" + Count02 + "SoulSPD").value);
 						SPD += parseInt(document.getElementById("0" + Count01 + "IdoMagSPD").value);
+						SPD += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE01.png") ? parseInt(document.getElementById("0" + Count01 + "IdoMagSPD01").value) : 0;
+						SPD += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE02.png") ? parseInt(document.getElementById("0" + Count01 + "IdoMagSPD02").value) : 0;
+						SPD += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE03.png") ? parseInt(document.getElementById("0" + Count01 + "IdoMagSPD03").value) : 0;
+						SPD += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE04.png") ? parseInt(document.getElementById("0" + Count01 + "IdoMagSPD04").value) : 0;
 						SPD *= (100 + parseInt(document.getElementById("0" + Count01 + "0" + Count02 + "SupportSPD").value)) / 100;
 						SPDOrder[Count02 - 1][1] = parseFloat(SPD.toFixed(4));
 						var SPDTXT = SPD.toFixed(2);
