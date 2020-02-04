@@ -148,31 +148,15 @@ function Resize()
 	}
 function SelectParty(ID)
 	{
-		if(ID == "01")
+		for(var Count01 = 1; Count01 < 3; Count01 ++)
 			{
-				document.getElementById("SelectParty01").style.display = "inline";
-				document.getElementById("SelectParty02").style.display = "none";
-				document.getElementById("01ELE01Total").style.display = "inline";
-				document.getElementById("01ELE02Total").style.display = "inline";
-				document.getElementById("01ELE03Total").style.display = "inline";
-				document.getElementById("01ELE04Total").style.display = "inline";
-				document.getElementById("02ELE01Total").style.display = "none";
-				document.getElementById("02ELE02Total").style.display = "none";
-				document.getElementById("02ELE03Total").style.display = "none";
-				document.getElementById("02ELE04Total").style.display = "none";
-			}
-		else
-			{
-				document.getElementById("SelectParty01").style.display = "none";
-				document.getElementById("SelectParty02").style.display = "inline";
-				document.getElementById("01ELE01Total").style.display = "none";
-				document.getElementById("01ELE02Total").style.display = "none";
-				document.getElementById("01ELE03Total").style.display = "none";
-				document.getElementById("01ELE04Total").style.display = "none";
-				document.getElementById("02ELE01Total").style.display = "inline";
-				document.getElementById("02ELE02Total").style.display = "inline";
-				document.getElementById("02ELE03Total").style.display = "inline";
-				document.getElementById("02ELE04Total").style.display = "inline";
+				document.getElementById("SelectParty0" + Count01).style.display = (ID == ("0" + Count01)) ? "inline" : "none";
+				for(var Count02 = 1; Count02 < 5; Count02 ++)
+					{
+						document.getElementById("0" + Count01 + "IdoMagELEIMG0" + Count02).style.display = (ID == ("0" + Count01)) ? "inline" : "none";
+						document.getElementById("0" + Count01 + "IdoMagELE0" + Count02).style.display = (ID == ("0" + Count01)) ? "inline" : "none";
+						document.getElementById("0" + Count01 + "ELE0" + Count02 + "Total").style.display = (ID == ("0" + Count01)) ? "inline" : "none";
+					}
 			}
 		Data.Party = (ID == "01") ? "01" : "02";
 	}
