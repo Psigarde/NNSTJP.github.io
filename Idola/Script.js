@@ -16,7 +16,8 @@ var IdoMagIDCurr;
 var IdoMagIDPrev;
 var LeftMargin;
 var RightMargin;
-var RightBool = false;
+var RightMarginBool = false;
+var RightMarginList = "";
 var Data;
 function Start()
 	{
@@ -135,15 +136,13 @@ function Start()
 	}
 function Resize()
 	{
-		if(RightBool)
+		if(RightMarginBool)
 			{
 				document.getElementById("SelectCharacterList02").style.transition = "0s";
 				document.getElementById("SelectSoulList").style.transition = "0s";
 				document.getElementById("SelectIdoMagList02").style.transition = "0s";
-				RightMargin = window.innerWidth - parseInt(window.getComputedStyle(document.getElementById("SelectCharacterList02")).getPropertyValue("width")) - 8;
-				document.getElementById("SelectCharacterList02").style.marginLeft = RightMargin;
-				document.getElementById("SelectSoulList").style.marginLeft = RightMargin;
-				document.getElementById("SelectIdoMagList02").style.marginLeft = RightMargin;
+				RightMargin = window.innerWidth - parseInt(window.getComputedStyle(document.getElementById("SelectCharacterList02")).getPropertyValue("width")) - 16;
+				document.getElementById(RightMarginList).style.marginLeft = RightMargin;
 			}
 	}
 function SelectParty(ID)
@@ -170,19 +169,20 @@ function SelectCharacterList(ID)
 			{
 				if(["0101", "0102", "0103", "0104"].indexOf(CharacterIDCurr) > -1)
 					{
-						document.getElementById("SelectCharacterList01").style.marginLeft = "0px";
-						RightBool = false;
+						document.getElementById("SelectCharacterList01").style.marginLeft = "-8px";
+						RightMarginBool = false;
 						document.getElementById("SelectCharacterList02").style.transition = "0.5s";
 						document.getElementById("SelectCharacterList02").style.marginLeft = "100%";
 					}
 				else
 					{
-						LeftMargin = - 8 - parseInt(window.getComputedStyle(document.getElementById("SelectCharacterList01")).getPropertyValue("width"));
+						LeftMargin = - 16 - parseInt(window.getComputedStyle(document.getElementById("SelectCharacterList01")).getPropertyValue("width"));
 						document.getElementById("SelectCharacterList01").style.marginLeft = LeftMargin;
-						RightBool = true;
+						RightMarginBool = true;
 						document.getElementById("SelectCharacterList02").style.transition = "0.5s";
-						RightMargin = window.innerWidth - parseInt(window.getComputedStyle(document.getElementById("SelectCharacterList02")).getPropertyValue("width")) - 8;
+						RightMargin = window.innerWidth - parseInt(window.getComputedStyle(document.getElementById("SelectCharacterList02")).getPropertyValue("width")) - 16;
 						document.getElementById("SelectCharacterList02").style.marginLeft = RightMargin;
+						RightMarginList = "SelectCharacterList02";
 					}
 				CharacterIDPrev = CharacterIDCurr;
 				document.getElementById(CharacterIDCurr + "Character").style.border = "2px solid rgba(255, 64, 64, 1)";
@@ -239,9 +239,9 @@ function SelectCharacter(ID)
 	}
 function SelectCharacterDone()
 	{
-		LeftMargin = - 8 - parseInt(window.getComputedStyle(document.getElementById("SelectCharacterList01")).getPropertyValue("width"));
+		LeftMargin = - 16 - parseInt(window.getComputedStyle(document.getElementById("SelectCharacterList01")).getPropertyValue("width"));
 		document.getElementById("SelectCharacterList01").style.marginLeft = LeftMargin;
-		RightBool = false;
+		RightMarginBool = false;
 		document.getElementById("SelectCharacterList02").style.transition = "0.5s";
 		document.getElementById("SelectCharacterList02").style.marginLeft = "100%";
 		CharacterIDPrev = "";
@@ -287,11 +287,12 @@ function SelectSymbolList(ID)
 		SymbolIDCurr = ID.replace("Weapon", "").replace("Soul", "");
 		if(SymbolIDCurr != SymbolIDPrev)
 			{
-				document.getElementById("SelectWeaponList").style.marginLeft = "0px";
-				RightBool = true;
+				document.getElementById("SelectWeaponList").style.marginLeft = "-8px";
+				RightMarginBool = true;
 				document.getElementById("SelectSoulList").style.transition = "0.5s";
-				RightMargin = window.innerWidth - parseInt(window.getComputedStyle(document.getElementById("SelectSoulList")).getPropertyValue("width")) - 8;
+				RightMargin = window.innerWidth - parseInt(window.getComputedStyle(document.getElementById("SelectSoulList")).getPropertyValue("width")) - 16;
 				document.getElementById("SelectSoulList").style.marginLeft = RightMargin;
+				RightMarginList = "SelectSoulList";
 				SymbolIDPrev = ID.replace("Weapon", "").replace("Soul", "");
 				document.getElementById(SymbolIDCurr + "Weapon").style.border = "2px solid rgba(255, 64, 64, 1)";
 				document.getElementById(SymbolIDCurr + "Soul").style.border = "2px solid rgba(255, 64, 64, 1)";
@@ -327,9 +328,9 @@ function SelectSoul(ID)
 	}
 function SelectSymbolDone()
 	{
-		LeftMargin = - 8 - parseInt(window.getComputedStyle(document.getElementById("SelectWeaponList")).getPropertyValue("width"));
+		LeftMargin = - 16 - parseInt(window.getComputedStyle(document.getElementById("SelectWeaponList")).getPropertyValue("width"));
 		document.getElementById("SelectWeaponList").style.marginLeft = LeftMargin;
-		RightBool = false;
+		RightMarginBool = false;
 		document.getElementById("SelectSoulList").style.transition = "0.5s";
 		document.getElementById("SelectSoulList").style.marginLeft = "100%";
 		SymbolIDPrev = "";
@@ -344,19 +345,20 @@ function SelectIdoMagList(ID)
 			{
 				if(IdoMagIDCurr == "01")
 					{
-						document.getElementById("SelectIdoMagList01").style.marginLeft = "0px";
-						RightBool = false;
+						document.getElementById("SelectIdoMagList01").style.marginLeft = "-8px";
+						RightMarginBool = false;
 						document.getElementById("SelectIdoMagList02").style.transition = "0.5s";
 						document.getElementById("SelectIdoMagList02").style.marginLeft = "100%";
 					}
 				else
 					{
-						LeftMargin = - 8 - parseInt(window.getComputedStyle(document.getElementById("SelectIdoMagList01")).getPropertyValue("width"));
+						LeftMargin = - 16 - parseInt(window.getComputedStyle(document.getElementById("SelectIdoMagList01")).getPropertyValue("width"));
 						document.getElementById("SelectIdoMagList01").style.marginLeft = LeftMargin;
-						RightBool = true;
+						RightMarginBool = true;
 						document.getElementById("SelectIdoMagList02").style.transition = "0.5s";
-						RightMargin = window.innerWidth - parseInt(window.getComputedStyle(document.getElementById("SelectIdoMagList02")).getPropertyValue("width")) - 8;
+						RightMargin = window.innerWidth - parseInt(window.getComputedStyle(document.getElementById("SelectIdoMagList02")).getPropertyValue("width")) - 16;
 						document.getElementById("SelectIdoMagList02").style.marginLeft = RightMargin;
+						RightMarginList = "SelectIdoMagList02";
 					}
 				IdoMagIDPrev = IdoMagIDCurr;
 				document.getElementById(IdoMagIDCurr + "IdoMag").style.border = "2px solid rgba(255, 64, 64, 1)";
@@ -373,9 +375,9 @@ function SelectIdoMag(ID)
 	}
 function SelectIdoMagDone()
 	{
-		LeftMargin = - 8 - parseInt(window.getComputedStyle(document.getElementById("SelectIdoMagList01")).getPropertyValue("width"));
+		LeftMargin = - 16 - parseInt(window.getComputedStyle(document.getElementById("SelectIdoMagList01")).getPropertyValue("width"));
 		document.getElementById("SelectIdoMagList01").style.marginLeft = LeftMargin;
-		RightBool = false;
+		RightMarginBool = false;
 		document.getElementById("SelectIdoMagList02").style.transition = "0.5s";
 		document.getElementById("SelectIdoMagList02").style.marginLeft = "100%";
 		IdoMagIDPrev = "";
