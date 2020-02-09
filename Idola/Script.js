@@ -116,10 +116,8 @@ function Start()
 				IdoMagELE04: ["0", "0"]
 			};
 		SelectParty("01");
-		Element("01IdoMagELE01");
 		LB("0101CharacterLB");
 		DB("0101CharacterDB");
-		Speed("0101CharacterSPD");
 		var DataList = document.createElement("option");
 		DataList.text = "NEW SAVE";
 		document.getElementById("DataList").options.add(DataList);
@@ -408,6 +406,7 @@ function LB(ID)
 					}
 			}
 		Element("01IdoMagELE01");
+		CharacterSpeed();
 	}
 function DB(ID)
 	{
@@ -428,6 +427,7 @@ function DB(ID)
 						Data.CharacterDB[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("0" + Count01 + "0" + Count02 + "CharacterDB").value;
 					}
 			}
+		CharacterSpeed();
 	}
 function Element(ID)
 	{
@@ -459,6 +459,33 @@ function Element(ID)
 				Data.IdoMagELE02[Count01 - 1] = document.getElementById("0" + Count01 + "IdoMagELE02").value;
 				Data.IdoMagELE03[Count01 - 1] = document.getElementById("0" + Count01 + "IdoMagELE03").value;
 				Data.IdoMagELE04[Count01 - 1] = document.getElementById("0" + Count01 + "IdoMagELE04").value;
+			}
+	}
+function CharacterSpeed()
+	{
+		for(var Count01 = 1; Count01 < 3; Count01 ++)
+			{
+				for(var Count02 = 1; Count02 < 5; Count02 ++)
+					{
+						var ID = Data.CharacterID[(Count01 == 1) ? Count02 - 1 : Count02 + 3].substring(0, 6);
+						if(ID in CharacterSPD)
+							{
+								if(document.getElementById("0" + Count01 + "0" + Count02 + "CharacterDB").style.display == "none")
+									{
+										document.getElementById("0" + Count01 + "0" + Count02 + "CharacterSPD").value = CharacterSPD[ID][document.getElementById("0" + Count01 + "0" + Count02 + "CharacterLB").value * 10];
+									}
+								else
+									{
+										document.getElementById("0" + Count01 + "0" + Count02 + "CharacterSPD").value = CharacterSPD[ID][(document.getElementById("0" + Count01 + "0" + Count02 + "CharacterLB").value * 10) + 1 + parseInt(document.getElementById("0" + Count01 + "0" + Count02 + "CharacterDB").value)];
+									}
+								document.getElementById("0" + Count01 + "0" + Count02 + "CharacterSPD").disabled = true;
+							}
+						else
+							{
+								document.getElementById("0" + Count01 + "0" + Count02 + "CharacterSPD").value = 0;
+								document.getElementById("0" + Count01 + "0" + Count02 + "CharacterSPD").disabled = false;
+							}
+					}
 			}
 		Speed("0101CharacterSPD");
 	}
@@ -582,8 +609,6 @@ function DataLoad()
 				document.getElementById("0" + Count01 + "IdoMagELE03").value = DataLoad.IdoMagELE03[Count01 - 1];
 				document.getElementById("0" + Count01 + "IdoMagELE04").value = DataLoad.IdoMagELE04[Count01 - 1];
 			}
-		Speed("0101CharacterSPD");
-		Element("01IdoMagELE01");
 		LB("0101CharacterLB");
 		DB("0101CharacterDB");
 		SelectCharacterDone();
