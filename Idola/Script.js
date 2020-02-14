@@ -138,7 +138,7 @@ function SelectCharacterFilter(ID)
 function SelectCharacter(ID)
 	{
 		document.getElementById("ID" + IDCurr + "Character").src = "PNG/Character Icon/" + ID + ".png";
-		var Select = (IDCurr.charAt(1) == "1") ? 1 : 3;
+		var Select = (IDCurr.charAt(1) == "1") ? 1 : -3;
 		Data.CharacterID[parseInt(IDCurr.charAt(3)) - Select] = ID;
 		document.getElementById("ID" + IDCurr + "Destiny").style.display = (ID.charAt(7) == "0") ? "none" : "inline";
 		document.getElementById("ID" + IDCurr + "Element").style.display = (["100000 01", "100000 02"].indexOf(ID) > -1) ? "none" : "inline";
@@ -239,7 +239,7 @@ function SelectWeaponFilter(ID)
 function SelectWeapon(ID)
 	{
 		document.getElementById("ID" + IDCurr + "Weapon").src = "PNG/Weapon Icon/" + ID + ".png";
-		var Select = (IDCurr.charAt(1) == "1") ? 1 : 3;
+		var Select = (IDCurr.charAt(1) == "1") ? 1 : -3;
 		Data.WeaponID[parseInt(IDCurr.charAt(3)) - Select] = ID;
 		SelectDone();
 	}
@@ -288,7 +288,7 @@ function SelectSoulFilter(ID)
 function SelectSoul(ID)
 	{
 		document.getElementById("ID" + IDCurr + "Soul").src = "PNG/Soul Icon/" + ID + ".png";
-		var Select = (IDCurr.charAt(1) == "1") ? 1 : 3;
+		var Select = (IDCurr.charAt(1) == "1") ? 1 : -3;
 		Data.SoulID[parseInt(IDCurr.charAt(3)) - Select] = ID;
 		SelectDone();
 	}
