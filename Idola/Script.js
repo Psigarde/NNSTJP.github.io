@@ -566,20 +566,19 @@ function DataLoad()
 			{
 				for(var Count02 = 1; Count02 < 5; Count02 ++)
 					{
-						CharacterIDCurr = "0" + Count01 + "0" + Count02;
+						IDCurr = "0" + Count01 + "0" + Count02;
 						SelectCharacter(DataLoad.CharacterID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
 						document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value = DataLoad.CharacterLB[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 						document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterD").style.opacity = DataLoad.CharacterD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 						document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterDB").value = DataLoad.CharacterDB[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 						document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterSPD").value = DataLoad.CharacterSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
-						SymbolIDCurr = "0" + Count01 + "0" + Count02;
 						SelectWeapon(DataLoad.WeaponID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
 						document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponSPD").value = DataLoad.WeaponSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 						SelectSoul(DataLoad.SoulID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
 						document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulSPD").value = DataLoad.SoulSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 						document.getElementById("ID0" + Count01 + "0" + Count02 + "SupportSPD").value = DataLoad.SupportSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 					}
-				IdoMagIDCurr = "0" + Count01;
+				IDCurr = "0" + Count01;
 				SelectIdoMag(DataLoad.IdoMagID[Count01 - 1]);
 				document.getElementById("ID0" + Count01 + "IdoMagSPD").value = DataLoad.IdoMagSPD[Count01 - 1];
 				document.getElementById("ID0" + Count01 + "IdoMagSPD01").value = DataLoad.IdoMagSPD01[Count01 - 1];
