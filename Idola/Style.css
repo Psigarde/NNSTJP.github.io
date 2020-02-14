@@ -8,9 +8,14 @@ body
 		user-select:none;
 		overflow:hidden;
 	}
-
 .DivTable
 	{
+		display:table;
+	}
+.DivTableSymbol
+	{
+		width:64px;
+		margin:auto;
 		display:table;
 	}
 .DivRow
@@ -23,6 +28,12 @@ body
 		vertical-align:middle;
 		display:table-cell;
 	}
+.DivCellIdoMag
+	{
+		padding-top:2px;
+		display:table-cell;
+		vertical-align:top; 
+	}
 .DivCellStat
 	{
 		height:16px;
@@ -32,16 +43,16 @@ body
 		text-align:center;
 		font-family:"Ubuntu Mono";
 	}
-.DivCellOrder
+.DivCellText
 	{
-		width:194px;
 		height:16px;
 		display:table-cell;
-		vertical-align:top;
+		vertical-align:middle;
 		font-size:16px;
-		text-align:right;
+		text-align:center;
 		font-family:"Ubuntu Mono";
 	}
+
 .DivButton
 	{
 		width:64px;
@@ -77,88 +88,120 @@ body
 		height:100%;
 		max-height:auto;
 		background-image:url("PNG/Background.png");
-		background-size:100%;
-		background-repeat:no-repeat;
+		background-size:cover;
+		background-position:50%, 50%;
 		font-size:0;
 		display:table;
 		transition:0.5s;
 	}
 
-.Frame
+.Party
 	{
 		position:absolute;
-		z-index:1;
+		z-index:2;
 		left:50%;
 		top:50%;
 		transition:0.5s;
 	}
-#Frame01
+#Party01
 	{
-		transform:translate(calc(-100% - 4px), -50%);
+		transform:translate(-50%, calc(-100% - 57px));
 		color:rgba(0, 0, 0, 1);
 	}
-#Frame02
+#Party02
 	{
-		transform:translate(4px, -50%);
+		transform:translate(-50%, calc(0% + 2px));
 		color:rgba(255, 255, 255, 1);
 	}
 
-.FrameT
+.PartyT
 	{
 		position:absolute;
-		width:342px;
+		width:798px;
 		height:54px;
 		cursor:pointer;
 	}
-#Frame01T
+#Party01T
 	{
-		background-image:url("PNG/Frame/N0101.png");
+		background-image:url("PNG/Party/N0101.png");
 		
 	}
-#Frame02T
+#Party02T
 	{
-		background-image:url("PNG/Frame/N0201.png");
-	}
-.FrameM
-	{
-		position:relative;
-		top:54px;
-		width:342px;
-		height:680px;
-		background-size:100%;
-	}
-#Frame01M
-	{
-		background-image:url("PNG/Frame/N0102.png");
-	}
-#Frame02M
-	{
-		background-image:url("PNG/Frame/N0202.png");
-	}
-.FrameB
-	{
-		position:relative;
-		top:54px;
-		width:342px;
-		height:15px;
-	}
-#Frame01B
-	{
-		background-image:url("PNG/Frame/N0103.png");
-	}
-#Frame02B
-	{
-		background-image:url("PNG/Frame/N0203.png");
+		background-image:url("PNG/Party/N0201.png");
 	}
 
-.FrameCharacter
+.PartyM
+	{
+		position:relative;
+		top:54px;
+		width:798px;
+		height:332px;
+		background-size:100%;
+	}
+#Party01M
+	{
+		background-image:url("PNG/Party/N0102.png");
+	}
+#Party02M
+	{
+		background-image:url("PNG/Party/N0202.png");
+	}
+
+.PartyB
+	{
+		position:relative;
+		top:54px;
+		width:798px;
+		height:15px;
+	}
+#Party01B
+	{
+		background-image:url("PNG/Party/N0103.png");
+	}
+#Party02B
+	{
+		background-image:url("PNG/Party/N0203.png");
+	}
+
+.SelectParty
+	{
+		position:absolute;
+		z-index:1;
+		left:calc(50% - 107px);
+		width:256px;
+		height:33px;
+		transform:skew(35deg);
+		background-color:rgba(128, 32, 32, 1);
+	}
+#SelectParty01
+	{
+		top:calc(50% - 400px);
+	}
+#SelectParty02
+	{
+		top:calc(50% + 6px);
+		display:none;
+	}
+.SelectPartyText
+	{
+		height:33px;
+		transform:skew(-35deg);
+		font-size:32px;
+		line-height:33px;
+		text-align:center;
+		vertical-align:middle;
+		color:rgba(255, 255, 255, 1);
+	}
+
+.PartyCharacter
 	{
 		width:128px;
 		height:128px;
 		border:2px solid rgba(0, 0, 0, 0);
 		cursor:pointer;
 	}
-.FrameDestiny
+.PartyDestiny
 	{
 		position:absolute;
 		z-index:2;
@@ -168,7 +211,7 @@ body
 		height:128px;
 		pointer-events:none;
 	}
-.FrameElement
+.PartyElement
 	{
 		position:absolute;
 		z-index:2;
@@ -178,21 +221,35 @@ body
 		height:28px;
 		cursor:default;
 	}
-.FrameSymbol
+.PartySymbolWeapon
 	{
-		position:relative;
+		width:64px;
+		height:64px;
+		border:solid rgba(0, 0, 0, 0);
+		border-width:2px 0px 2px 2px;
+		cursor:pointer;
+	}
+.PartySymbolSoul
+	{
+		width:64px;
+		height:64px;
+		border:solid rgba(0, 0, 0, 0);
+		border-width:2px 2px 2px 0px;
+		cursor:pointer;
+	}
+.PartyIdoMag
+	{
 		width:64px;
 		height:64px;
 		border:2px solid rgba(0, 0, 0, 0);
 		cursor:pointer;
 	}
-.FrameStatIcon
+.PartyStatIcon
 	{
-		position:relative;
 		width:32px;
 		height:32px;
 	}
-.FrameStatNumber
+.PartyStatNumber
 	{
 		height:16px;
 		width:32px;
@@ -204,111 +261,57 @@ body
 		text-align:center;
 	}
 
-.SelectParty
-	{
-		position:absolute;
-		z-index:0;
-		top:calc(50% - 343px);
-		width:38px;
-		height:33px;
-		transform:skew(35deg);
-		background-color:rgba(128, 32, 32, 1);
-	}
-#SelectParty01
-	{
-		left:calc(50% - 54px);
-	}
-#SelectParty02
-	{
-		left:calc(50% + 296px);
-		display:none;
-	}
-.SelectPartyText
-	{
-		height:33px;
-		transform:skew(-35deg);
-		font-size:12px;
-		line-height:33px;
-		text-align:center;
-		vertical-align:middle;
-		color:rgba(255, 255, 255, 1);
-	}
-
-.SelectCharacterList
-	{
-		position:absolute;
-		z-index:5;
-		top:50%;
-		width:408px;
-		height:95%;
-		padding:4px;
-		transform:translate(0%, -50%);
-		overflow-y:scroll;
-		transition:0.5s;
-	}
-#SelectCharacterList01
-	{
-		margin-left:-424px;
-		background-color:rgba(128, 128, 128, 1);
-	}
-#SelectCharacterList02
-	{
-		margin-left:100%;
-		background-color:rgba(128, 128, 128, 1);
-	}
-
-.SelectSymbolList
+.SelectList
 	{
 		position:absolute;
 		z-index:4;
+		left:50%;
 		top:50%;
-		width:408px;
-		height:95%;
-		padding:4px;
-		transform:translate(0%, -50%);
+		height:0%;
+		border:4px solid rgba(128, 128, 128, 1);
+		transform:translate(-50%, -50%);
+		background-color:rgba(128, 128, 128, 1);
+		display:none;
+		overflow:hidden;
+		transition:0.25s;
+	}
+.Select
+	{
+		height:calc(100% - 48px);
+		display:grid;
+		grid-auto-columns:64px;
+		grid-auto-rows:64px;
+		grid-gap:2px;
+		grid-auto-flow:row;
+		grid-template-columns:auto auto auto auto auto auto auto auto auto auto;
 		overflow-y:scroll;
-		transition:0.5s;
 	}
-#SelectWeaponList
+.SelectFilter
 	{
-		margin-left:-424px;
-		background-color:rgba(128, 128, 128, 1);
+		width:32px;
+		height:32px;
+		margin:8px;
+		cursor:pointer;
 	}
-#SelectSoulList
-	{
-		margin-left:100%;
-		background-color:rgba(128, 128, 128, 1);
-	}
-
-.SelectIdoMagList
-	{
-		position:absolute;
-		z-index:3;
-		top:50%;
-		width:408px;
-		height:95%;
-		padding:4px;
-		transform:translate(0%, -50%);
-		overflow-y:scroll;
-		transition:0.5s;
-	}
-#SelectIdoMagList01
-	{
-		margin-left:-424px;
-		background-color:rgba(128, 128, 128, 1);
-	}
-#SelectIdoMagList02
-	{
-		margin-left:100%;
-		background-color:rgba(128, 128, 128, 1);
-	}
-
 .SelectIMG
 	{
 		width:64px;
 		height:64px;
-		margin:2px;
 		cursor:pointer;
+	}
+#SelectCancel
+	{
+		position:absolute;
+		z-index:3;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+		background-color:rgba(0, 0, 0, 1);
+		opacity:0;
+		display:none;
+		cursor:pointer;
+		transition:0.25s;
 	}
 
 #ID0101Destiny
@@ -410,16 +413,68 @@ body
 		opacity:0.5;
 	}
 
+#SelectCharacterELE00
+	{
+		opacity:1;
+	}
+#SelectCharacterELE01
+	{
+		opacity:0.5;
+	}
+#SelectCharacterELE02
+	{
+		opacity:0.5;
+	}
+#SelectCharacterELE03
+	{
+		opacity:0.5;
+	}
+#SelectCharacterELE04
+	{
+		opacity:0.5;
+	}
+#SelectCharacterELE00
+	{
+		opacity:1;
+	}
+
+#SelectWeaponRarity00
+	{
+		opacity:1;
+	}
+#SelectWeaponRarity01
+	{
+		opacity:0.5;
+	}
+#SelectWeaponRarity02
+	{
+		opacity:0.5;
+	}
+
+#SelectSoulRarity00
+	{
+		opacity:1;
+	}
+#SelectSoulRarity01
+	{
+		opacity:0.5;
+	}
+#SelectSoulRarity02
+	{
+		opacity:0.5;
+	}
+
 #Loading
 	{
 		position:absolute;
-		z-index:9;
+		z-index:5;
 		left:0;
 		top:0;
 		width:100%;
 		height:100%;
 		background-color:rgba(0, 0, 0, 1);
-		transition:1.5s;
+		opacity:1;
+		transition:1s;
 	}
 #LoadingText
 	{
@@ -429,16 +484,18 @@ body
 		font-size:64px;
 		text-align:center;
 		color:rgba(255, 255, 255, 1);
-		transition:1.5s;
+		opacity:1;
+		transition:1s;
 	}
 
 .Data
 	{
 		position:absolute;
-		z-index:8;
+		z-index:1;
 		left:50%;
-		top:32px;
-		border:4px solid black;
+		top:0px;
+		border:solid black;
+		border-width:0px 4px 4px 4px;
 		transform:translate(-50%, 0);
 		background-color:rgba(255, 255, 255, 0.5);
 	}
@@ -455,19 +512,4 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 input[type="number"]
 	{
 		-moz-appearance:textfield;
-	}
-
-@media(min-width:0px)
-	{
-		.Main
-			{
-				transform:scale(0.75);
-			}
-	}
-@media(min-width:1520px)
-	{
-		.Main
-			{
-				transform:scale(1);
-			}
 	}
