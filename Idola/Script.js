@@ -592,9 +592,6 @@ function DataLoad()
 			}
 		LB("ID0101CharacterLB");
 		DB("ID0101CharacterDB");
-		SelectCharacterDone();
-		SelectSymbolDone();
-		SelectIdoMagDone();
 	}
 function DataDelete()
 	{
