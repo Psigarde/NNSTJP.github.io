@@ -1,5 +1,6 @@
 var IDCurr;
 var Data;
+var DataLink;
 var Timeout;
 function Start()
 	{
@@ -62,6 +63,43 @@ function Start()
 		document.getElementById("Loading").style.opacity = "0";
 		document.getElementById("LoadingText").style.opacity = "0";
 		setTimeout(function() { document.getElementById("Loading").style.display = "none"; }, 1000);
+		if(document.location.href.indexOf("?") != -1)
+			{
+				DataLink = document.location.href.substring(document.location.href.indexOf("?") + 1);
+				var DataLoad = JSON.parse(decodeURI(DataLink));
+				SelectParty("ID" + DataLoad.Party);
+				for(var Count01 = 1; Count01 < 3; Count01 ++)
+					{
+						for(var Count02 = 1; Count02 < 5; Count02 ++)
+							{
+								IDCurr = "0" + Count01 + "0" + Count02;
+								SelectCharacter(DataLoad.CharacterID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value = DataLoad.CharacterLB[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterD").style.opacity = DataLoad.CharacterD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterDB").value = DataLoad.CharacterDB[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterSPD").value = DataLoad.CharacterSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								SelectWeapon(DataLoad.WeaponID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponSPD").value = DataLoad.WeaponSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								SelectSoul(DataLoad.SoulID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulSPD").value = DataLoad.SoulSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "SupportSPD").value = DataLoad.SupportSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+							}
+						IDCurr = "0" + Count01;
+						SelectIdoMag(DataLoad.IdoMagID[Count01 - 1]);
+						document.getElementById("ID0" + Count01 + "IdoMagSPD").value = DataLoad.IdoMagSPD[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagSPD01").value = DataLoad.IdoMagSPD01[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagSPD02").value = DataLoad.IdoMagSPD02[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagSPD03").value = DataLoad.IdoMagSPD03[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagSPD04").value = DataLoad.IdoMagSPD04[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagELE01").value = DataLoad.IdoMagELE01[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagELE02").value = DataLoad.IdoMagELE02[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagELE03").value = DataLoad.IdoMagELE03[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagELE04").value = DataLoad.IdoMagELE04[Count01 - 1];
+					}
+				LB("ID0101CharacterLB");
+				DB("ID0101CharacterDB");
+				window.history.pushState("object or string", "Idola Party Visualizer", "http://nnstjp.github.io/Idola/index.html");
+			}
 	}
 function SelectParty(ID)
 	{
@@ -99,10 +137,10 @@ function SelectCharacterFilter(ID)
 						document.getElementById("SelectCharacterELE0" + Count).style.opacity = (ID == ("SelectCharacterELE0" + Count)) ? "1" : "0.5";
 					}
 			}
-		var Select = (["0101", "0102", "0103", "0104"].indexOf(IDCurr) > -1) ? "1" : "2";
+		var Select = (["0101", "0102", "0103", "0104"].indexOf(IDCurr) != -1) ? "1" : "2";
 		for(var Count = 0; Count < Characters.length; Count ++)
 			{
-				if(["0", Select].indexOf(Characters[Count].charAt(8)) > -1 || ["100001 00", "100001 11", "100001 12"].indexOf(Characters[Count]) > -1)
+				if(["0", Select].indexOf(Characters[Count].charAt(8)) != -1 || ["100001 00", "100001 11", "100001 12"].indexOf(Characters[Count]) != -1)
 					{
 						if(document.getElementById("SelectCharacterELE00").style.opacity == "1")
 							{
@@ -141,7 +179,7 @@ function SelectCharacter(ID)
 		var Select = (IDCurr.charAt(1) == "1") ? 1 : -3;
 		Data.CharacterID[parseInt(IDCurr.charAt(3)) - Select] = ID;
 		document.getElementById("ID" + IDCurr + "Destiny").style.display = (ID.charAt(7) == "0") ? "none" : "inline";
-		document.getElementById("ID" + IDCurr + "Element").style.display = (["100000 01", "100000 02"].indexOf(ID) > -1) ? "none" : "inline";
+		document.getElementById("ID" + IDCurr + "Element").style.display = (["100000 01", "100000 02"].indexOf(ID) != -1) ? "none" : "inline";
 		if(CharactersELE00.some(String => ID.includes(String)))
 			{
 				if(document.getElementById("SelectCharacterELE01").style.opacity == "1")
@@ -222,7 +260,7 @@ function SelectWeaponFilter(ID)
 					{
 						document.getElementById(Weapons[Count]).style.display = "inline";
 					}
-				else if(document.getElementById("SelectWeaponRarity01").style.opacity == "1" && ["1", "2", "3", "4", "5"].indexOf(Weapons[Count].charAt(2)) > -1)
+				else if(document.getElementById("SelectWeaponRarity01").style.opacity == "1" && ["1", "2", "3", "4", "5"].indexOf(Weapons[Count].charAt(2)) != -1)
 					{
 						document.getElementById(Weapons[Count]).style.display = "inline";
 					}
@@ -271,7 +309,7 @@ function SelectSoulFilter(ID)
 					{
 						document.getElementById(Souls[Count]).style.display = "inline";
 					}
-				else if(document.getElementById("SelectSoulRarity01").style.opacity == "1" && ["1", "2", "3", "4", "5"].indexOf(Souls[Count].charAt(2)) > -1)
+				else if(document.getElementById("SelectSoulRarity01").style.opacity == "1" && ["1", "2", "3", "4", "5"].indexOf(Souls[Count].charAt(2)) != -1)
 					{
 						document.getElementById(Souls[Count]).style.display = "inline";
 					}
@@ -557,6 +595,20 @@ function DataSave()
 			}
 		document.getElementById("DataName").value = "";
 		DataChange();
+	}
+function DataShare()
+	{
+		DataLink = "http://nnstjp.github.io/Idola/index.html?" + encodeURI(JSON.stringify(Data));
+		
+		var DataCopy = document.createElement('textarea');
+		DataCopy.value = DataLink;
+		DataCopy.setAttribute('readonly', '');
+		DataCopy.style = { position: 'absolute', left: '-9999px' };
+		document.body.appendChild(DataCopy);
+		DataCopy.select();
+		document.execCommand('copy');
+		document.body.removeChild(DataCopy);
+		window.alert("Party Linked to Clipboard!");
 	}
 function DataLoad()
 	{
