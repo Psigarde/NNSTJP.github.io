@@ -23,7 +23,7 @@ function Start()
 		Data =
 			{
 				Party: "01",
-				CharacterID: ["100000 01", "100000 01", "100000 01", "100000 01", "100000 02", "100000 02", "100000 02", "100000 02"],
+				CharacterID: ["100000 00", "100000 00", "100000 00", "100000 00", "100000 00", "100000 00", "100000 00", "100000 00"],
 				CharacterLB: ["0", "0", "0", "0", "0", "0", "0", "0"],
 				CharacterD: ["0.5", "0.5", "0.5", "0.5", "0.5", "0.5", "0.5", "0.5"],
 				CharacterDB: ["0", "0", "0", "0", "0", "0", "0", "0"],
@@ -178,7 +178,7 @@ function SelectCharacter(ID)
 		var Select = (IDCurr.charAt(1) == "1") ? 1 : -3;
 		Data.CharacterID[parseInt(IDCurr.charAt(3)) - Select] = ID;
 		document.getElementById("ID" + IDCurr + "Destiny").style.display = (ID.charAt(7) == "0") ? "none" : "inline";
-		document.getElementById("ID" + IDCurr + "Element").style.display = (["100000 01", "100000 02"].indexOf(ID) != -1) ? "none" : "inline";
+		document.getElementById("ID" + IDCurr + "Element").style.display = (ID == "100000 00") ? "none" : "inline";
 		if(CharactersELE00.some(String => ID.includes(String)))
 			{
 				if(document.getElementById("SelectCharacterELE01").style.opacity == "1")
