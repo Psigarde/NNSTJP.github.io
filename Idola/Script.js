@@ -98,7 +98,6 @@ function Start()
 					}
 				LB("ID0101CharacterLB");
 				DB("ID0101CharacterDB");
-				window.history.pushState("object or string", "Idola Party Visualizer", "http://nnstjp.github.io/Idola/index.html");
 			}
 	}
 function SelectParty(ID)
@@ -599,11 +598,10 @@ function DataSave()
 function DataShare()
 	{
 		DataLink = "http://nnstjp.github.io/Idola/index.html?" + encodeURI(JSON.stringify(Data));
-		
 		var DataCopy = document.createElement('textarea');
+		DataCopy.setAttribute("readonly", "");
+		DataCopy.style = { position: "absolute", left: "-100%" };
 		DataCopy.value = DataLink;
-		DataCopy.setAttribute('readonly', '');
-		DataCopy.style = { position: 'absolute', left: '-9999px' };
 		document.body.appendChild(DataCopy);
 		DataCopy.select();
 		document.execCommand('copy');
