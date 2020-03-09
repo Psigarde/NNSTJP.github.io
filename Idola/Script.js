@@ -139,7 +139,7 @@ function SelectCharacterFilter(ID)
 		var Select = (["0101", "0102", "0103", "0104"].indexOf(IDCurr) != -1) ? "1" : "2";
 		for(var Count = 0; Count < Characters.length; Count ++)
 			{
-				if(["0", Select].indexOf(Characters[Count].charAt(8)) != -1 || ["100001 00", "100001 11", "100001 12"].indexOf(Characters[Count]) != -1)
+				if(["0", Select].indexOf(Characters[Count].charAt(8)) != -1 || ["100001 00", "100001 11", "100001 12", "100076 00", "100076 11", "100076 12"].indexOf(Characters[Count]) != -1)
 					{
 						if(document.getElementById("SelectCharacterELE00").style.opacity == "1")
 							{
