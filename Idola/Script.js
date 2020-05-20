@@ -27,22 +27,48 @@ function Start()
 				CharacterLB: ["0", "0", "0", "0", "0", "0", "0", "0"],
 				CharacterD: ["0.5", "0.5", "0.5", "0.5", "0.5", "0.5", "0.5", "0.5"],
 				CharacterDB: ["0", "0", "0", "0", "0", "0", "0", "0"],
-				CharacterSPD: ["0", "0", "0", "0", "0", "0", "0", "0"],
 				WeaponID: ["200000000", "200000000", "200000000", "200000000", "200000000", "200000000", "200000000", "200000000"],
+				WeaponHP: ["0", "0", "0", "0", "0", "0", "0", "0"],
+				WeaponATK: ["0", "0", "0", "0", "0", "0", "0", "0"],
+				WeaponDEF: ["0", "0", "0", "0", "0", "0", "0", "0"],
 				WeaponSPD: ["0", "0", "0", "0", "0", "0", "0", "0"],
+				WeaponCRT: ["0", "0", "0", "0", "0", "0", "0", "0"],
+				WeaponRES: ["0", "0", "0", "0", "0", "0", "0", "0"],
 				SoulID: ["300000000", "300000000", "300000000", "300000000", "300000000", "300000000", "300000000", "300000000"],
+				SoulHP: ["0", "0", "0", "0", "0", "0", "0", "0"],
+				SoulATK: ["0", "0", "0", "0", "0", "0", "0", "0"],
+				SoulDEF: ["0", "0", "0", "0", "0", "0", "0", "0"],
 				SoulSPD: ["0", "0", "0", "0", "0", "0", "0", "0"],
+				SoulRES: ["0", "0", "0", "0", "0", "0", "0", "0"],
+				SoulELE: ["0", "0", "0", "0", "0", "0", "0", "0"],
 				SupportSPD: ["0", "0", "0", "0", "0", "0", "0", "0"],
 				IdoMagID: ["12700000 00", "12700000 00"],
+				IdoMagHP: ["0", "0"],
+				IdoMagATK: ["0", "0"],
+				IdoMagDEF: ["0", "0"],
 				IdoMagSPD: ["0", "0"],
-				IdoMagSPD01: ["0", "0"],
-				IdoMagSPD02: ["0", "0"],
-				IdoMagSPD03: ["0", "0"],
-				IdoMagSPD04: ["0", "0"],
+				IdoMagCRT: ["0", "0"],
+				IdoMagRES: ["0", "0"],
+				IdoMagRED: ["0", "0"],
 				IdoMagELE01: ["0", "0"],
 				IdoMagELE02: ["0", "0"],
 				IdoMagELE03: ["0", "0"],
-				IdoMagELE04: ["0", "0"]
+				IdoMagELE04: ["0", "0"],
+				IdoMagEXP: ["0", "0"],
+				IdoMagKZN: ["0", "0"],
+				IdoMagMST: ["0", "0"],
+				IdoMagATK01: ["0", "0"],
+				IdoMagATK02: ["0", "0"],
+				IdoMagATK03: ["0", "0"],
+				IdoMagATK04: ["0", "0"],
+				IdoMagDEF01: ["0", "0"],
+				IdoMagDEF02: ["0", "0"],
+				IdoMagDEF03: ["0", "0"],
+				IdoMagDEF04: ["0", "0"],
+				IdoMagSPD01: ["0", "0"],
+				IdoMagSPD02: ["0", "0"],
+				IdoMagSPD03: ["0", "0"],
+				IdoMagSPD04: ["0", "0"]
 			};
 		SelectParty("ID01");
 		document.getElementById("SelectCharacterELE00").style.opacity = "1";
@@ -77,24 +103,50 @@ function Start()
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value = DataLoad.CharacterLB[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterD").style.opacity = DataLoad.CharacterD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterDB").value = DataLoad.CharacterDB[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
-								document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterSPD").value = DataLoad.CharacterSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 								SelectWeapon(DataLoad.WeaponID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponHP").value = DataLoad.WeaponHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponATK").value = DataLoad.WeaponATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponDEF").value = DataLoad.WeaponDEF[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponSPD").value = DataLoad.WeaponSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponCRT").value = DataLoad.WeaponCRT[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponRES").value = DataLoad.WeaponRES[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 								SelectSoul(DataLoad.SoulID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulHP").value = DataLoad.SoulHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulATK").value = DataLoad.SoulATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulDEF").value = DataLoad.SoulDEF[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulSPD").value = DataLoad.SoulSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulRES").value = DataLoad.SoulRES[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulELE").value = DataLoad.SoulELE[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "SupportSPD").value = DataLoad.SupportSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 							}
 						IDCurr = "0" + Count01;
 						SelectIdoMag(DataLoad.IdoMagID[Count01 - 1]);
+						document.getElementById("ID0" + Count01 + "IdoMagHP").value = DataLoad.IdoMagHP[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagATK").value = DataLoad.IdoMagATK[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagDEF").value = DataLoad.IdoMagDEF[Count01 - 1];
 						document.getElementById("ID0" + Count01 + "IdoMagSPD").value = DataLoad.IdoMagSPD[Count01 - 1];
-						document.getElementById("ID0" + Count01 + "IdoMagSPD01").value = DataLoad.IdoMagSPD01[Count01 - 1];
-						document.getElementById("ID0" + Count01 + "IdoMagSPD02").value = DataLoad.IdoMagSPD02[Count01 - 1];
-						document.getElementById("ID0" + Count01 + "IdoMagSPD03").value = DataLoad.IdoMagSPD03[Count01 - 1];
-						document.getElementById("ID0" + Count01 + "IdoMagSPD04").value = DataLoad.IdoMagSPD04[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagCRT").value = DataLoad.IdoMagCRT[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagRES").value = DataLoad.IdoMagRES[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagRED").value = DataLoad.IdoMagRED[Count01 - 1];
 						document.getElementById("ID0" + Count01 + "IdoMagELE01").value = DataLoad.IdoMagELE01[Count01 - 1];
 						document.getElementById("ID0" + Count01 + "IdoMagELE02").value = DataLoad.IdoMagELE02[Count01 - 1];
 						document.getElementById("ID0" + Count01 + "IdoMagELE03").value = DataLoad.IdoMagELE03[Count01 - 1];
 						document.getElementById("ID0" + Count01 + "IdoMagELE04").value = DataLoad.IdoMagELE04[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagEXP").value = DataLoad.IdoMagEXP[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagKZN").value = DataLoad.IdoMagKZN[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagMST").value = DataLoad.IdoMagMST[Count01 - 1];
+						//document.getElementById("ID0" + Count01 + "IdoMagATK01").value = DataLoad.IdoMagATK01[Count01 - 1];
+						//document.getElementById("ID0" + Count01 + "IdoMagATK02").value = DataLoad.IdoMagATK02[Count01 - 1];
+						//document.getElementById("ID0" + Count01 + "IdoMagATK03").value = DataLoad.IdoMagATK03[Count01 - 1];
+						//document.getElementById("ID0" + Count01 + "IdoMagATK04").value = DataLoad.IdoMagATK04[Count01 - 1];
+						//document.getElementById("ID0" + Count01 + "IdoMagDEF01").value = DataLoad.IdoMagDEF01[Count01 - 1];
+						//document.getElementById("ID0" + Count01 + "IdoMagDEF02").value = DataLoad.IdoMagDEF02[Count01 - 1];
+						//document.getElementById("ID0" + Count01 + "IdoMagDEF03").value = DataLoad.IdoMagDEF03[Count01 - 1];
+						//document.getElementById("ID0" + Count01 + "IdoMagDEF04").value = DataLoad.IdoMagDEF04[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagSPD01").value = DataLoad.IdoMagSPD01[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagSPD02").value = DataLoad.IdoMagSPD02[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagSPD03").value = DataLoad.IdoMagSPD03[Count01 - 1];
+						document.getElementById("ID0" + Count01 + "IdoMagSPD04").value = DataLoad.IdoMagSPD04[Count01 - 1];
 					}
 				LB("ID0101CharacterLB");
 				DB("ID0101CharacterDB");
@@ -105,12 +157,11 @@ function SelectParty(ID)
 		for(var Count01 = 1; Count01 < 3; Count01 ++)
 			{
 				document.getElementById("SelectParty0" + Count01).style.display = (ID == ("ID0" + Count01)) ? "inline" : "none";
-				for(var Count02 = 1; Count02 < 5; Count02 ++)
-					{
-						document.getElementById("ID0" + Count01 + "IdoMagELEIMG0" + Count02).style.display = (ID == ("ID0" + Count01)) ? "inline" : "none";
-						document.getElementById("ID0" + Count01 + "IdoMagELE0" + Count02).style.display = (ID == ("ID0" + Count01)) ? "inline" : "none";
-						document.getElementById("ID0" + Count01 + "ELE0" + Count02 + "Total").style.display = (ID == ("ID0" + Count01)) ? "inline" : "none";
-					}
+			}
+		var Expandable = document.getElementsByClassName("ExpandableMain");
+		for(var Count = 0; Count < Expandable.length; Count ++)
+			{
+				Expandable[Count].style.height = (Expandable[Count].id.includes(ID)) ? "40px" : "0px"
 			}
 		Data.Party = (ID == "ID01") ? "01" : "02";
 	}
@@ -229,7 +280,6 @@ function SelectCharacter(ID)
 			}
 		SelectDone();
 		DB("");
-		Element("ID01IdoMagELE01");
 	}
 function SelectWeaponList(ID)
 	{
@@ -390,7 +440,7 @@ function SelectElement(ID)
 						document.getElementById(ID).src = "PNG/UI/ELE01.png";
 					}
 			}
-		Element("ID01IdoMagELE01");
+		Stat("ID0101CharacterSPD");
 	}
 function SelectDB(ID)
 	{
@@ -400,6 +450,7 @@ function SelectDB(ID)
 function LB(ID)
 	{
 		if(document.getElementById(ID).value == "") { document.getElementById(ID).value = document.getElementById(ID).min; }
+		document.getElementById(ID).value = Math.trunc(document.getElementById(ID).value);
 		if(parseFloat(document.getElementById(ID).value) < parseFloat(document.getElementById(ID).min)) { document.getElementById(ID).value = document.getElementById(ID).min; }
 		if(parseFloat(document.getElementById(ID).value) > parseFloat(document.getElementById(ID).max)) { document.getElementById(ID).value = document.getElementById(ID).max; }
 		for(var Count01 = 1; Count01 < 3; Count01 ++)
@@ -409,14 +460,14 @@ function LB(ID)
 						Data.CharacterLB[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value;
 					}
 			}
-		Element("ID01IdoMagELE01");
-		CharacterSpeed();
+		Stat("ID0101CharacterSPD");
 	}
 function DB(ID)
 	{
 		if(ID != "")
 			{
 				if(document.getElementById(ID).value == "") { document.getElementById(ID).value = document.getElementById(ID).min; }
+				document.getElementById(ID).value = Math.trunc(document.getElementById(ID).value);
 				if(parseFloat(document.getElementById(ID).value) < parseFloat(document.getElementById(ID).min)) { document.getElementById(ID).value = document.getElementById(ID).min; }
 				if(parseFloat(document.getElementById(ID).value) > parseFloat(document.getElementById(ID).max)) { document.getElementById(ID).value = document.getElementById(ID).max; }
 			}
@@ -434,110 +485,239 @@ function DB(ID)
 						Data.CharacterDB[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterDB").value;
 					}
 			}
-		CharacterSpeed();
+		Stat("ID0101CharacterSPD");
 	}
-function Element(ID)
+function Expand()
+	{
+		var Expandable = document.getElementsByClassName("Expandable");
+		for(var Count = 0; Count < Expandable.length; Count ++)
+			{
+				Expandable[Count].style.height = (Expandable[Count].style.height == "0px") ? "24px" : "0px";
+			}
+		var Expandable = document.getElementsByClassName("ExpandableSymbol");
+		for(var Count = 0; Count < Expandable.length; Count ++)
+			{
+				Expandable[Count].style.height = (Expandable[Count].style.height == "72px") ? "0px" : "72px";
+			}
+	}
+function Stat(ID)
 	{
 		if(document.getElementById(ID).value == "") { document.getElementById(ID).value = document.getElementById(ID).min; }
+		document.getElementById(ID).value = (ID.includes("ELE")) ? (Math.trunc(document.getElementById(ID).value * 10) / 10) : Math.trunc(document.getElementById(ID).value);
 		if(parseFloat(document.getElementById(ID).value) < parseFloat(document.getElementById(ID).min)) { document.getElementById(ID).value = document.getElementById(ID).min; }
 		if(parseFloat(document.getElementById(ID).value) > parseFloat(document.getElementById(ID).max)) { document.getElementById(ID).value = document.getElementById(ID).max; }
+		
+		var TotalScore = 0;
 		for(var Count01 = 1; Count01 < 3; Count01 ++)
 			{
+				var IdoMagScore = 0;
+				
+				var SPDOrder = [["01", 0], ["02", 0], ["03", 0], ["04", 0]];
+				
 				var ELE01 = 1 + parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE01").value);
 				var ELE02 = 1 + parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE02").value);
 				var ELE03 = 1 + parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE03").value);
 				var ELE04 = 1 + parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE04").value);
 				for(var Count02 = 1; Count02 < 5; Count02 ++)
 					{
-						ELE01 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE01.png")) ? (0.25 * parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value)) : 0 ;
-						ELE02 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE02.png")) ? (0.25 * parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value)) : 0 ;
-						ELE03 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE03.png")) ? (0.25 * parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value)) : 0 ;
-						ELE04 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE04.png")) ? (0.25 * parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value)) : 0 ;
-					}
-				if(ELE01 > 10) { ELE01 = 10; }
-				if(ELE02 > 10) { ELE02 = 10; }
-				if(ELE03 > 10) { ELE03 = 10; }
-				if(ELE04 > 10) { ELE04 = 10; }
-				document.getElementById("ID0" + Count01 + "ELE01Total").innerHTML = ELE01;
-				document.getElementById("ID0" + Count01 + "ELE02Total").innerHTML = ELE02;
-				document.getElementById("ID0" + Count01 + "ELE03Total").innerHTML = ELE03;
-				document.getElementById("ID0" + Count01 + "ELE04Total").innerHTML = ELE04;
-				Data.IdoMagELE01[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagELE01").value;
-				Data.IdoMagELE02[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagELE02").value;
-				Data.IdoMagELE03[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagELE03").value;
-				Data.IdoMagELE04[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagELE04").value;
-			}
-	}
-function CharacterSpeed()
-	{
-		for(var Count01 = 1; Count01 < 3; Count01 ++)
-			{
-				for(var Count02 = 1; Count02 < 5; Count02 ++)
-					{
-						var ID = Data.CharacterID[(Count01 == 1) ? Count02 - 1 : Count02 + 3].substring(0, 6);
-						if(ID in CharacterSPD)
+						var CID = Data.CharacterID[(Count01 == 1) ? Count02 - 1 : Count02 + 3].substring(0, 6);
+						if(CID == "100000")
 							{
-								if(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterDB").style.display == "none")
-									{
-										document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterSPD").value = CharacterSPD[ID][document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value * 10];
-									}
-								else
-									{
-										document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterSPD").value = CharacterSPD[ID][(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value * 10) + 1 + parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterDB").value)];
-									}
-								document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterSPD").disabled = true;
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalHP").value = 0;
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalATK").value = 0;
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalDEF").value = 0;
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalSPD").value = 0;
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "Score").value = 0;
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "SPD").innerHTML = 0;
 							}
 						else
 							{
-								document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterSPD").value = 0;
-								document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterSPD").disabled = false;
+								var LB = (document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterDB").style.display == "none") ? (document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value * 10) : ((document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value * 10) + 1 + parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterDB").value));
+								
+								var CharacterScore = 0;
+								var WeaponScore = 0;
+								var SoulScore = 0;
+								
+								var HP = parseInt(CharacterHP[CID][LB]);
+								HP += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponHP").value);
+								HP += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulHP").value);
+								HP += parseInt(document.getElementById("ID0" + Count01 + "IdoMagHP").value);
+								var HPTXT = HP.toFixed(0);
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalHP").value = HPTXT;
+								
+								var ATK = parseInt(CharacterATK[CID][LB]);
+								ATK += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponATK").value);
+								ATK += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulATK").value);
+								ATK += parseInt(document.getElementById("ID0" + Count01 + "IdoMagATK").value);
+								//ATK += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE01.png") ? parseInt(document.getElementById("ID0" + Count01 + "IdoMagATK01").value) : 0;
+								//ATK += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE02.png") ? parseInt(document.getElementById("ID0" + Count01 + "IdoMagATK02").value) : 0;
+								//ATK += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE03.png") ? parseInt(document.getElementById("ID0" + Count01 + "IdoMagATK03").value) : 0;
+								//ATK += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE04.png") ? parseInt(document.getElementById("ID0" + Count01 + "IdoMagATK04").value) : 0;
+								var ATKTXT = ATK.toFixed(0);
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalATK").value = ATKTXT;
+								
+								var DEF = parseInt(CharacterDEF[CID][LB]);
+								DEF += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponDEF").value);
+								DEF += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulDEF").value);
+								DEF += parseInt(document.getElementById("ID0" + Count01 + "IdoMagDEF").value);
+								//DEF += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE01.png") ? parseInt(document.getElementById("ID0" + Count01 + "IdoMagDEF01").value) : 0;
+								//DEF += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE02.png") ? parseInt(document.getElementById("ID0" + Count01 + "IdoMagDEF02").value) : 0;
+								//DEF += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE03.png") ? parseInt(document.getElementById("ID0" + Count01 + "IdoMagDEF03").value) : 0;
+								//DEF += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE04.png") ? parseInt(document.getElementById("ID0" + Count01 + "IdoMagDEF04").value) : 0;
+								var DEFTXT = DEF.toFixed(0);
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalDEF").value = DEFTXT;
+								
+								var SPD = parseInt(CharacterSPD[CID][LB]);
+								SPD += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponSPD").value);
+								SPD += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulSPD").value);
+								SPD += parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD").value);
+								SPD += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE01.png") ? parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD01").value) : 0;
+								SPD += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE02.png") ? parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD02").value) : 0;
+								SPD += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE03.png") ? parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD03").value) : 0;
+								SPD += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE04.png") ? parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD04").value) : 0;
+								var SPDTXT = SPD.toFixed(0);
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalSPD").value = SPDTXT;
+								
+								CharacterScore += parseInt(CharacterHP[CID][LB]) * 0.25;
+								CharacterScore += parseInt(CharacterATK[CID][LB]) * 5;
+								CharacterScore += parseInt(CharacterDEF[CID][LB]) * 5;
+								CharacterScore += parseInt(CharacterSPD[CID][LB]) * 5;
+								var CharacterScoreTXT = Math.ceil(CharacterScore);
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "Score").value = CharacterScoreTXT;
+								TotalScore += CharacterScoreTXT;
+								
+								WeaponScore += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponHP").value) * 0.25;
+								WeaponScore += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponATK").value) * 5;
+								WeaponScore += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponDEF").value) * 5;
+								WeaponScore += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponSPD").value) * 5;
+								WeaponScore += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponCRT").value) * 25;
+								WeaponScore += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponRES").value) * 25;
+								var WeaponScoreTXT = Math.ceil(WeaponScore);
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponScore").value = WeaponScoreTXT;
+								TotalScore += WeaponScoreTXT;
+								
+								SoulScore += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulHP").value) * 0.25;
+								SoulScore += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulATK").value) * 5;
+								SoulScore += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulDEF").value) * 5;
+								SoulScore += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulSPD").value) * 5;
+								SoulScore += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulRES").value) * 25;
+								SoulScore += parseFloat(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulELE").value) * 750;
+								var SoulScoreTXT = Math.ceil(SoulScore);
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulScore").value = SoulScoreTXT;
+								TotalScore += SoulScoreTXT;
+								
+								IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagHP").value) * 0.25;
+								IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagATK").value) * 5;
+								IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagDEF").value) * 5;
+								IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD").value) * 5;
+								IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagCRT").value) * 7.5;
+								IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagRES").value) * 7.5;
+								IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagRED").value) * 6.25;
+								//IdoMagScore += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE01.png") ? (parseInt(document.getElementById("ID0" + Count01 + "IdoMagATK01").value) * 2.25) : 0;
+								//IdoMagScore += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE02.png") ? (parseInt(document.getElementById("ID0" + Count01 + "IdoMagATK02").value) * 2.25) : 0;
+								//IdoMagScore += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE03.png") ? (parseInt(document.getElementById("ID0" + Count01 + "IdoMagATK03").value) * 2.25) : 0;
+								//IdoMagScore += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE04.png") ? (parseInt(document.getElementById("ID0" + Count01 + "IdoMagATK04").value) * 2.25) : 0;
+								//IdoMagScore += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE01.png") ? (parseInt(document.getElementById("ID0" + Count01 + "IdoMagDEF01").value) * 2.25) : 0;
+								//IdoMagScore += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE02.png") ? (parseInt(document.getElementById("ID0" + Count01 + "IdoMagDEF02").value) * 2.25) : 0;
+								//IdoMagScore += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE03.png") ? (parseInt(document.getElementById("ID0" + Count01 + "IdoMagDEF03").value) * 2.25) : 0;
+								//IdoMagScore += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE04.png") ? (parseInt(document.getElementById("ID0" + Count01 + "IdoMagDEF04").value) * 2.25) : 0;
+								IdoMagScore += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE01.png") ? (parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD01").value) * 2.25) : 0;
+								IdoMagScore += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE02.png") ? (parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD02").value) * 2.25) : 0;
+								IdoMagScore += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE04.png") ? (parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD04").value) * 2.25) : 0;
+								IdoMagScore += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE03.png") ? (parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD03").value) * 2.25) : 0;
+								
+								var SPDO = SPD;
+								SPDO *= (100 + parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SupportSPD").value)) / 100;
+								SPDOrder[Count02 - 1][1] = parseFloat(SPDO.toFixed(4));
+								var SPDOTXT = SPDO.toFixed(0);
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "SPD").innerHTML = SPDOTXT;
+								
+								ELE01 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE01.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
+								ELE02 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE02.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
+								ELE03 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE03.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
+								ELE04 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE04.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
 							}
-					}
-			}
-		Speed("ID0101CharacterSPD");
-	}
-function Speed(ID)
-	{
-		if(document.getElementById(ID).value == "") { document.getElementById(ID).value = document.getElementById(ID).min; }
-		if(parseFloat(document.getElementById(ID).value) < parseFloat(document.getElementById(ID).min)) { document.getElementById(ID).value = document.getElementById(ID).min; }
-		if(parseFloat(document.getElementById(ID).value) > parseFloat(document.getElementById(ID).max)) { document.getElementById(ID).value = document.getElementById(ID).max; }
-		for(var Count01 = 1; Count01 < 3; Count01 ++)
-			{
-				var SPDOrder = [["01", 0], ["02", 0], ["03", 0], ["04", 0]];
-				for(var Count02 = 1; Count02 < 5; Count02 ++)
-					{
-						var SPD = parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterSPD").value);
-						SPD += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponSPD").value);
-						SPD += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulSPD").value);
-						SPD += parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD").value);
-						SPD += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE01.png") ? parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD01").value) : 0;
-						SPD += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE02.png") ? parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD02").value) : 0;
-						SPD += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE03.png") ? parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD03").value) : 0;
-						SPD += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE04.png") ? parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD04").value) : 0;
-						SPD *= (100 + parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SupportSPD").value)) / 100;
-						SPDOrder[Count02 - 1][1] = parseFloat(SPD.toFixed(4));
-						var SPDTXT = SPD.toFixed(2);
-						if(SPDTXT.substring(SPDTXT.length - 3) == ".00")
-							{
-								SPDTXT = SPD.toFixed(0);
-							}
-						document.getElementById("ID0" + Count01 + "0" + Count02 + "SPD").innerHTML = SPDTXT;
-						Data.CharacterSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterSPD").value;
+						Data.WeaponHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponHP").value;
+						Data.WeaponATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponATK").value;
+						Data.WeaponDEF[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponDEF").value;
 						Data.WeaponSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponSPD").value;
+						Data.WeaponCRT[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponCRT").value;
+						Data.WeaponRES[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponRES").value;
+						Data.SoulHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulHP").value;
+						Data.SoulATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulATK").value;
+						Data.SoulDEF[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulDEF").value;
 						Data.SoulSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulSPD").value;
+						Data.SoulRES[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulRES").value;
+						Data.SoulELE[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulELE").value;
 						Data.SupportSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "SupportSPD").value;
-						Data.IdoMagSPD[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagSPD").value;
-						Data.IdoMagSPD01[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagSPD01").value;
-						Data.IdoMagSPD02[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagSPD02").value;
-						Data.IdoMagSPD03[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagSPD03").value;
-						Data.IdoMagSPD04[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagSPD04").value;
 					}
+				IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE01").value) * 100;
+				IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE02").value) * 100;
+				IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE03").value) * 100;
+				IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE04").value) * 100;
+				//IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPATK").value) * 6.25;
+				//IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPDEF").value) * 6.25;
+				//IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPSPD").value) * 6.25;
+				//IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPRES").value) * 2.25;
+				var IdoMagScoreTXT = Math.ceil(IdoMagScore);
+				document.getElementById("ID0" + Count01 + "IdoMagScore").value = IdoMagScoreTXT;
+				TotalScore += IdoMagScoreTXT;
+				
 				SPDOrder.sort(function(a, b) { return b[1] - a[1]; } );
 				document.getElementById("ID0" + Count01 + SPDOrder[0][0] + "SPDOrder").innerHTML = "1ST";
 				document.getElementById("ID0" + Count01 + SPDOrder[1][0] + "SPDOrder").innerHTML = "2ND";
 				document.getElementById("ID0" + Count01 + SPDOrder[2][0] + "SPDOrder").innerHTML = "3RD";
 				document.getElementById("ID0" + Count01 + SPDOrder[3][0] + "SPDOrder").innerHTML = "4TH";
+				
+				if(ELE01 > 10) { ELE01 = 10; }
+				if(ELE02 > 10) { ELE02 = 10; }
+				if(ELE03 > 10) { ELE03 = 10; }
+				if(ELE04 > 10) { ELE04 = 10; }
+				document.getElementById("ID0" + Count01 + "TotalELE01").value = ELE01;
+				document.getElementById("ID0" + Count01 + "TotalELE02").value = ELE02;
+				document.getElementById("ID0" + Count01 + "TotalELE03").value = ELE03;
+				document.getElementById("ID0" + Count01 + "TotalELE04").value = ELE04;
+				
+				Data.IdoMagHP[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagHP").value;
+				Data.IdoMagATK[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagATK").value;
+				Data.IdoMagDEF[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagDEF").value;
+				Data.IdoMagSPD[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagSPD").value;
+				Data.IdoMagCRT[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagCRT").value;
+				Data.IdoMagRES[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagRES").value;
+				Data.IdoMagRED[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagRED").value;
+				Data.IdoMagELE01[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagELE01").value;
+				Data.IdoMagELE02[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagELE02").value;
+				Data.IdoMagELE03[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagELE03").value;
+				Data.IdoMagELE04[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagELE04").value;
+				Data.IdoMagEXP[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagEXP").value;
+				Data.IdoMagKZN[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagKZN").value;
+				Data.IdoMagMST[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagMST").value;
+				//Data.IdoMagATK01[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagATK01").value;
+				//Data.IdoMagATK02[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagATK02").value;
+				//Data.IdoMagATK03[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagATK03").value;
+				//Data.IdoMagATK04[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagATK04").value;
+				//Data.IdoMagDEF01[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagDEF01").value;
+				//Data.IdoMagDEF02[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagDEF02").value;
+				//Data.IdoMagDEF03[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagDEF03").value;
+				//Data.IdoMagDEF04[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagDEF04").value;
+				Data.IdoMagSPD01[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagSPD01").value;
+				Data.IdoMagSPD02[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagSPD02").value;
+				Data.IdoMagSPD03[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagSPD03").value;
+				Data.IdoMagSPD04[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagSPD04").value;
 			}
+		document.getElementById("TotalScore").value = TotalScore;
+		document.getElementById("Rank").src = "PNG/UI/Rank01.png";
+		if(TotalScore >= 20000) { document.getElementById("Rank").src = "PNG/UI/Rank02.png"; }
+		if(TotalScore >= 28000) { document.getElementById("Rank").src = "PNG/UI/Rank03.png"; }
+		if(TotalScore >= 36000) { document.getElementById("Rank").src = "PNG/UI/Rank04.png"; }
+		if(TotalScore >= 44000) { document.getElementById("Rank").src = "PNG/UI/Rank05.png"; }
+		if(TotalScore >= 56000) { document.getElementById("Rank").src = "PNG/UI/Rank06.png"; }
+		if(TotalScore >= 64000) { document.getElementById("Rank").src = "PNG/UI/Rank07.png"; }
+		if(TotalScore >= 72000) { document.getElementById("Rank").src = "PNG/UI/Rank08.png"; }
+		if(TotalScore >= 84000) { document.getElementById("Rank").src = "PNG/UI/Rank09.png"; }
+		if(TotalScore >= 105000) { document.getElementById("Rank").src = "PNG/UI/Rank10.png"; }
+		if(TotalScore >= 120000) { document.getElementById("Rank").src = "PNG/UI/Rank11.png"; }
+		if(TotalScore >= 145000) { document.getElementById("Rank").src = "PNG/UI/Rank12.png"; }
 	}
 function DataChange()
 	{
@@ -611,34 +791,60 @@ function DataShare()
 function DataLoad()
 	{
 		var DataLoad = JSON.parse(localStorage.getItem(document.getElementById("DataList").value));
-		SelectParty("ID" + DataLoad.Party);
+		if(DataLoad.Party) { SelectParty("ID" + DataLoad.Party); }
 		for(var Count01 = 1; Count01 < 3; Count01 ++)
 			{
 				for(var Count02 = 1; Count02 < 5; Count02 ++)
 					{
 						IDCurr = "0" + Count01 + "0" + Count02;
-						SelectCharacter(DataLoad.CharacterID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
-						document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value = DataLoad.CharacterLB[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
-						document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterD").style.opacity = DataLoad.CharacterD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
-						document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterDB").value = DataLoad.CharacterDB[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
-						document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterSPD").value = DataLoad.CharacterSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
-						SelectWeapon(DataLoad.WeaponID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
-						document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponSPD").value = DataLoad.WeaponSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
-						SelectSoul(DataLoad.SoulID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]);
-						document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulSPD").value = DataLoad.SoulSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+						if(DataLoad.CharacterID) { SelectCharacter(DataLoad.CharacterID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]); }
+						if(DataLoad.CharacterLB) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value = DataLoad.CharacterLB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.CharacterD) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterD").style.opacity = DataLoad.CharacterD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.CharacterDB) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterDB").value = DataLoad.CharacterDB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.WeaponID) { SelectWeapon(DataLoad.WeaponID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]); }
+						if(DataLoad.WeaponHP) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponHP").value = DataLoad.WeaponHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.WeaponATK) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponATK").value = DataLoad.WeaponATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.WeaponDEF) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponDEF").value = DataLoad.WeaponDEF[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.WeaponSPD) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponSPD").value = DataLoad.WeaponSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.WeaponCRT) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponCRT").value = DataLoad.WeaponCRT[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.WeaponRES) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponRES").value = DataLoad.WeaponRES[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.SoulID) { SelectSoul(DataLoad.SoulID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]); }
+						if(DataLoad.SoulHP) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulHP").value = DataLoad.SoulHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.SoulATK) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulATK").value = DataLoad.SoulATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.SoulDEF) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulDEF").value = DataLoad.SoulDEF[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.SoulSPD) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulSPD").value = DataLoad.SoulSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.SoulRES) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulRES").value = DataLoad.SoulRES[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.SoulELE) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulELE").value = DataLoad.SoulELE[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
 						document.getElementById("ID0" + Count01 + "0" + Count02 + "SupportSPD").value = DataLoad.SupportSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 					}
 				IDCurr = "0" + Count01;
-				SelectIdoMag(DataLoad.IdoMagID[Count01 - 1]);
-				document.getElementById("ID0" + Count01 + "IdoMagSPD").value = DataLoad.IdoMagSPD[Count01 - 1];
-				document.getElementById("ID0" + Count01 + "IdoMagSPD01").value = DataLoad.IdoMagSPD01[Count01 - 1];
-				document.getElementById("ID0" + Count01 + "IdoMagSPD02").value = DataLoad.IdoMagSPD02[Count01 - 1];
-				document.getElementById("ID0" + Count01 + "IdoMagSPD03").value = DataLoad.IdoMagSPD03[Count01 - 1];
-				document.getElementById("ID0" + Count01 + "IdoMagSPD04").value = DataLoad.IdoMagSPD04[Count01 - 1];
-				document.getElementById("ID0" + Count01 + "IdoMagELE01").value = DataLoad.IdoMagELE01[Count01 - 1];
-				document.getElementById("ID0" + Count01 + "IdoMagELE02").value = DataLoad.IdoMagELE02[Count01 - 1];
-				document.getElementById("ID0" + Count01 + "IdoMagELE03").value = DataLoad.IdoMagELE03[Count01 - 1];
-				document.getElementById("ID0" + Count01 + "IdoMagELE04").value = DataLoad.IdoMagELE04[Count01 - 1];
+				if(DataLoad.IdoMagID) { SelectIdoMag(DataLoad.IdoMagID[Count01 - 1]); }
+				if(DataLoad.IdoMagHP) { document.getElementById("ID0" + Count01 + "IdoMagHP").value = DataLoad.IdoMagHP[Count01 - 1]; }
+				if(DataLoad.IdoMagATK) { document.getElementById("ID0" + Count01 + "IdoMagATK").value = DataLoad.IdoMagATK[Count01 - 1]; }
+				if(DataLoad.IdoMagDEF) { document.getElementById("ID0" + Count01 + "IdoMagDEF").value = DataLoad.IdoMagDEF[Count01 - 1]; }
+				if(DataLoad.IdoMagSPD) { document.getElementById("ID0" + Count01 + "IdoMagSPD").value = DataLoad.IdoMagSPD[Count01 - 1]; }
+				if(DataLoad.IdoMagCRT) { document.getElementById("ID0" + Count01 + "IdoMagCRT").value = DataLoad.IdoMagCRT[Count01 - 1]; }
+				if(DataLoad.IdoMagRES) { document.getElementById("ID0" + Count01 + "IdoMagRES").value = DataLoad.IdoMagRES[Count01 - 1]; }
+				if(DataLoad.IdoMagRED) { document.getElementById("ID0" + Count01 + "IdoMagRED").value = DataLoad.IdoMagRED[Count01 - 1]; }
+				if(DataLoad.IdoMagELE01) { document.getElementById("ID0" + Count01 + "IdoMagELE01").value = DataLoad.IdoMagELE01[Count01 - 1]; }
+				if(DataLoad.IdoMagELE02) { document.getElementById("ID0" + Count01 + "IdoMagELE02").value = DataLoad.IdoMagELE02[Count01 - 1]; }
+				if(DataLoad.IdoMagELE03) { document.getElementById("ID0" + Count01 + "IdoMagELE03").value = DataLoad.IdoMagELE03[Count01 - 1]; }
+				if(DataLoad.IdoMagELE04) { document.getElementById("ID0" + Count01 + "IdoMagELE04").value = DataLoad.IdoMagELE04[Count01 - 1]; }
+				if(DataLoad.IdoMagEXP) { document.getElementById("ID0" + Count01 + "IdoMagEXP").value = DataLoad.IdoMagEXP[Count01 - 1]; }
+				if(DataLoad.IdoMagKZN) { document.getElementById("ID0" + Count01 + "IdoMagKZN").value = DataLoad.IdoMagKZN[Count01 - 1]; }
+				if(DataLoad.IdoMagMST) { document.getElementById("ID0" + Count01 + "IdoMagMST").value = DataLoad.IdoMagMST[Count01 - 1]; }
+				//if(DataLoad.IdoMagATK01) { document.getElementById("ID0" + Count01 + "IdoMagATK01").value = DataLoad.IdoMagATK01[Count01 - 1]; }
+				//if(DataLoad.IdoMagATK02) { document.getElementById("ID0" + Count01 + "IdoMagATK02").value = DataLoad.IdoMagATK02[Count01 - 1]; }
+				//if(DataLoad.IdoMagATK03) { document.getElementById("ID0" + Count01 + "IdoMagATK03").value = DataLoad.IdoMagATK03[Count01 - 1]; }
+				//if(DataLoad.IdoMagATK04) { document.getElementById("ID0" + Count01 + "IdoMagATK04").value = DataLoad.IdoMagATK04[Count01 - 1]; }
+				//if(DataLoad.IdoMagDEF01) { document.getElementById("ID0" + Count01 + "IdoMagDEF01").value = DataLoad.IdoMagDEF01[Count01 - 1]; }
+				//if(DataLoad.IdoMagDEF02) { document.getElementById("ID0" + Count01 + "IdoMagDEF02").value = DataLoad.IdoMagDEF02[Count01 - 1]; }
+				//if(DataLoad.IdoMagDEF03) { document.getElementById("ID0" + Count01 + "IdoMagDEF03").value = DataLoad.IdoMagDEF03[Count01 - 1]; }
+				//if(DataLoad.IdoMagDEF04) { document.getElementById("ID0" + Count01 + "IdoMagDEF04").value = DataLoad.IdoMagDEF04[Count01 - 1]; }
+				if(DataLoad.IdoMagSPD01) { document.getElementById("ID0" + Count01 + "IdoMagSPD01").value = DataLoad.IdoMagSPD01[Count01 - 1]; }
+				if(DataLoad.IdoMagSPD02) { document.getElementById("ID0" + Count01 + "IdoMagSPD02").value = DataLoad.IdoMagSPD02[Count01 - 1]; }
+				if(DataLoad.IdoMagSPD03) { document.getElementById("ID0" + Count01 + "IdoMagSPD03").value = DataLoad.IdoMagSPD03[Count01 - 1]; }
+				if(DataLoad.IdoMagSPD04) { document.getElementById("ID0" + Count01 + "IdoMagSPD04").value = DataLoad.IdoMagSPD04[Count01 - 1]; }
 			}
 		LB("ID0101CharacterLB");
 		DB("ID0101CharacterDB");

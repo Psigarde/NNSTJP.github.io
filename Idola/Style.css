@@ -8,33 +8,30 @@ body
 		user-select:none;
 		overflow:hidden;
 	}
-.DivTable
+.DivTable, .DivTableSymbol
 	{
 		display:table;
 	}
 .DivTableSymbol
 	{
-		width:64px;
 		margin:auto;
-		display:table;
+		width:64px;
 	}
 .DivRow
 	{
 		display:table-row;
 	}
-.DivCell
+.DivCell, .DivCellMiddle
 	{
 		position:relative;
-		vertical-align:middle;
+		vertical-align:top;
 		display:table-cell;
 	}
-.DivCellIdoMag
+.DivCellMiddle
 	{
-		padding-top:2px;
-		display:table-cell;
-		vertical-align:top; 
+		vertical-align:middle;
 	}
-.DivCellStat
+.DivCellStat, .DivCellStatMiddle
 	{
 		height:16px;
 		display:table-cell;
@@ -43,23 +40,18 @@ body
 		text-align:center;
 		font-family:"Ubuntu Mono";
 	}
-.DivCellText
+.DivCellStatMiddle
 	{
-		height:16px;
-		display:table-cell;
 		vertical-align:middle;
-		font-size:16px;
-		text-align:center;
-		font-family:"Ubuntu Mono";
 	}
 
 .DivButton
 	{
-		width:64px;
-		height:16px;
 		margin:2px;
 		border:2px solid rgba(0, 0, 0, 1);
 		padding:2px;
+		width:64px;
+		height:16px;
 		background-color:rgba(255, 255, 255, 1);
 		font-size:16px;
 		line-height:16px;
@@ -70,11 +62,11 @@ body
 	}
 .DivInput
 	{
-		width:224px;
-		height:24px;
 		margin:2px;
 		border:2px solid rgba(0, 0, 0, 1);
 		padding:2px;
+		width:192px;
+		height:24px;
 		font-size:16px;
 		font-family:"Ubuntu Mono";
 	}
@@ -117,7 +109,7 @@ body
 .PartyT
 	{
 		position:absolute;
-		width:798px;
+		width:931px;
 		height:54px;
 		cursor:pointer;
 	}
@@ -135,8 +127,8 @@ body
 	{
 		position:relative;
 		top:54px;
-		width:798px;
-		height:332px;
+		width:931px;
+		height:334px;
 		background-size:100%;
 	}
 #Party01M
@@ -152,8 +144,8 @@ body
 	{
 		position:relative;
 		top:54px;
-		width:798px;
-		height:15px;
+		width:931px;
+		height:46px;
 	}
 #Party01B
 	{
@@ -168,7 +160,7 @@ body
 	{
 		position:absolute;
 		z-index:1;
-		left:calc(50% - 107px);
+		left:calc(50% - 174px);
 		width:256px;
 		height:33px;
 		transform:skew(35deg);
@@ -176,7 +168,7 @@ body
 	}
 #SelectParty01
 	{
-		top:calc(50% - 400px);
+		top:calc(50% - 433px);
 	}
 #SelectParty02
 	{
@@ -223,25 +215,26 @@ body
 	}
 .PartySymbolWeapon
 	{
-		width:64px;
-		height:64px;
 		border:solid rgba(0, 0, 0, 0);
 		border-width:2px 0px 2px 2px;
+		width:64px;
+		height:64px;
 		cursor:pointer;
 	}
 .PartySymbolSoul
 	{
-		width:64px;
-		height:64px;
 		border:solid rgba(0, 0, 0, 0);
 		border-width:2px 2px 2px 0px;
+		width:64px;
+		height:64px;
 		cursor:pointer;
 	}
 .PartyIdoMag
 	{
+		border:2px solid rgba(0, 0, 0, 0);
+		border-width:2px 0px 2px 2px;
 		width:64px;
 		height:64px;
-		border:2px solid rgba(0, 0, 0, 0);
 		cursor:pointer;
 	}
 .PartyStatIcon
@@ -249,16 +242,38 @@ body
 		width:32px;
 		height:32px;
 	}
-.PartyStatNumber
+.PartyStatIconSmall
 	{
-		height:16px;
-		width:32px;
+		width:24px;
+		height:24px;
+	}
+.PartyStatNumber, .PartyStatNumberWide, .PartyStatNumberWider, .PartyStatNumberWideSmall
+	{
 		border:none;
+		width:32px;
+		height:16px;
 		font-size:16px;
 		font-family:"Ubuntu";
 		color:inherit;
 		background-color:rgba(0, 0, 0, 0);
 		text-align:center;
+	}
+.PartyStatNumberWide
+	{
+		width:40px;
+		text-align:left;
+	}
+.PartyStatNumberWider
+	{
+		width:64px;
+		font-size:16px;
+		text-align:center;
+	}
+.PartyStatNumberWideSmall
+	{
+		width:40px;
+		font-size:14px;
+		text-align:left;
 	}
 
 .SelectList
@@ -267,8 +282,8 @@ body
 		z-index:4;
 		left:50%;
 		top:50%;
-		height:0%;
 		border:4px solid rgba(128, 128, 128, 1);
+		height:0%;
 		transform:translate(-50%, -50%);
 		background-color:rgba(128, 128, 128, 1);
 		display:none;
@@ -288,9 +303,9 @@ body
 	}
 .SelectFilter
 	{
+		margin:8px;
 		width:32px;
 		height:32px;
-		margin:8px;
 		cursor:pointer;
 	}
 .SelectIMG
@@ -298,6 +313,14 @@ body
 		width:64px;
 		height:64px;
 		cursor:pointer;
+	}
+.SelectExpand
+	{
+		position:absolute;
+		z-index:4;
+		top:132px;
+		overflow:hidden;
+		transition:0.25s;
 	}
 #SelectCancel
 	{
@@ -314,139 +337,64 @@ body
 		transition:0.25s;
 	}
 
-#ID0101Destiny
+.Expandable, .ExpandableSymbol, .ExpandableMag, .ExpandableMain
 	{
-		display:none;
+		overflow:hidden;
+		transition:0.25s;
 	}
-#ID0102Destiny
-	{
-		display:none;
-	}
-#ID0103Destiny
-	{
-		display:none;
-	}
-#ID0104Destiny
-	{
-		display:none;
-	}
-#ID0201Destiny
-	{
-		display:none;
-	}
-#ID0202Destiny
-	{
-		display:none;
-	}
-#ID0203Destiny
-	{
-		display:none;
-	}
-#ID0204Destiny
+
+#ID0101Destiny, #ID0102Destiny, #ID0103Destiny, #ID0104Destiny, #ID0201Destiny, #ID0202Destiny, #ID0203Destiny, #ID0204Destiny
 	{
 		display:none;
 	}
 
-#ID0101Element
-	{
-		display:none;
-	}
-#ID0102Element
-	{
-		display:none;
-	}
-#ID0103Element
-	{
-		display:none;
-	}
-#ID0104Element
-	{
-		display:none;
-	}
-#ID0201Element
-	{
-		display:none;
-	}
-#ID0202Element
-	{
-		display:none;
-	}
-#ID0203Element
-	{
-		display:none;
-	}
-#ID0204Element
+#ID0101Element, #ID0102Element, #ID0103Element, #ID0104Element, #ID0201Element, #ID0202Element, #ID0203Element, #ID0204Element
 	{
 		display:none;
 	}
 
-#ID0101CharacterD
+#ID0101CharacterD, #ID0102CharacterD, #ID0103CharacterD, #ID0104CharacterD, #ID0201CharacterD, #ID0202CharacterD, #ID0203CharacterD, #ID0204CharacterD
 	{
 		opacity:0.5;
 	}
-#ID0102CharacterD
+
+#ID0101CharacterSPD, #ID0102CharacterSPD, #ID0103CharacterSPD, #ID0104CharacterSPD, #ID0201CharacterSPD, #ID0202CharacterSPD, #ID0203CharacterSPD, #ID0204CharacterSPD
 	{
-		opacity:0.5;
+		display:none;
 	}
-#ID0103CharacterD
+
+#ID0101Score, #ID0101TotalHP, #ID0101TotalATK, #ID0101TotalDEF, #ID0101TotalSPD, #ID0101SPD, #ID0101SPDOrder, #ID0101WeaponScore, #ID0101SoulScore,
+#ID0102Score, #ID0102TotalHP, #ID0102TotalATK, #ID0102TotalDEF, #ID0102TotalSPD, #ID0102SPD, #ID0102SPDOrder, #ID0102WeaponScore, #ID0102SoulScore,
+#ID0103Score, #ID0103TotalHP, #ID0103TotalATK, #ID0103TotalDEF, #ID0103TotalSPD, #ID0103SPD, #ID0103SPDOrder, #ID0103WeaponScore, #ID0103SoulScore,
+#ID0104Score, #ID0104TotalHP, #ID0104TotalATK, #ID0104TotalDEF, #ID0104TotalSPD, #ID0104SPD, #ID0104SPDOrder, #ID0104WeaponScore, #ID0104SoulScore,
+#ID01IdoMagScore, #ID01TotalELE01, #ID01TotalELE02, #ID01TotalELE03, #ID01TotalELE04
 	{
-		opacity:0.5;
+		color:rgba(64,64,64,1);
 	}
-#ID0104CharacterD
+
+#ID0201Score, #ID0201TotalHP, #ID0201TotalATK, #ID0201TotalDEF, #ID0201TotalSPD, #ID0201SPD, #ID0201SPDOrder, #ID0201WeaponScore, #ID0201SoulScore,
+#ID0202Score, #ID0202TotalHP, #ID0202TotalATK, #ID0202TotalDEF, #ID0202TotalSPD, #ID0202SPD, #ID0202SPDOrder, #ID0202WeaponScore, #ID0202SoulScore,
+#ID0203Score, #ID0203TotalHP, #ID0203TotalATK, #ID0203TotalDEF, #ID0203TotalSPD, #ID0203SPD, #ID0203SPDOrder, #ID0203WeaponScore, #ID0203SoulScore,
+#ID0204Score, #ID0204TotalHP, #ID0204TotalATK, #ID0204TotalDEF, #ID0204TotalSPD, #ID0204SPD, #ID0204SPDOrder, #ID0204WeaponScore, #ID0204SoulScore,
+#ID02IdoMagScore, #ID02TotalELE01, #ID02TotalELE02, #ID02TotalELE03, #ID02TotalELE04
 	{
-		opacity:0.5;
-	}
-#ID0201CharacterD
-	{
-		opacity:0.5;
-	}
-#ID0202CharacterD
-	{
-		opacity:0.5;
-	}
-#ID0203CharacterD
-	{
-		opacity:0.5;
-	}
-#ID0204CharacterD
-	{
-		opacity:0.5;
+		color:rgba(192,192,192,1);
 	}
 
 #SelectCharacterELE00
 	{
 		opacity:1;
 	}
-#SelectCharacterELE01
+#SelectCharacterELE01, #SelectCharacterELE02, #SelectCharacterELE03, #SelectCharacterELE04
 	{
 		opacity:0.5;
-	}
-#SelectCharacterELE02
-	{
-		opacity:0.5;
-	}
-#SelectCharacterELE03
-	{
-		opacity:0.5;
-	}
-#SelectCharacterELE04
-	{
-		opacity:0.5;
-	}
-#SelectCharacterELE00
-	{
-		opacity:1;
 	}
 
 #SelectWeaponRarity00
 	{
 		opacity:1;
 	}
-#SelectWeaponRarity01
-	{
-		opacity:0.5;
-	}
-#SelectWeaponRarity02
+#SelectWeaponRarity01, #SelectWeaponRarity02
 	{
 		opacity:0.5;
 	}
@@ -455,11 +403,7 @@ body
 	{
 		opacity:1;
 	}
-#SelectSoulRarity01
-	{
-		opacity:0.5;
-	}
-#SelectSoulRarity02
+#SelectSoulRarity01, #SelectSoulRarity02
 	{
 		opacity:0.5;
 	}
@@ -491,7 +435,7 @@ body
 .Data
 	{
 		position:absolute;
-		z-index:1;
+		z-index:2;
 		left:50%;
 		top:0px;
 		border:solid black;
