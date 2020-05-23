@@ -190,7 +190,7 @@ function SelectCharacterFilter(ID)
 		var Select = (["0101", "0102", "0103", "0104"].indexOf(IDCurr) != -1) ? "1" : "2";
 		for(var Count = 0; Count < Characters.length; Count ++)
 			{
-				if(["0", Select].indexOf(Characters[Count].charAt(8)) != -1 || ["100001 00", "100001 11", "100001 12", "100076 00", "100076 11", "100076 12"].indexOf(Characters[Count]) != -1)
+				if(["0", Select].indexOf(Characters[Count].charAt(8)) != -1 || CharactersNeutral.some(String => Characters[Count].includes(String)))
 					{
 						if(document.getElementById("SelectCharacterELE00").style.opacity == "1")
 							{
@@ -520,7 +520,9 @@ function Stat(ID)
 				var ELE04 = 1 + parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE04").value);
 				for(var Count02 = 1; Count02 < 5; Count02 ++)
 					{
-						var CID = Data.CharacterID[(Count01 == 1) ? Count02 - 1 : Count02 + 3].substring(0, 6);
+						var FID = Data.CharacterID[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+						var CID = FID.substring(0, 6);
+						var RID = FID.substring(0, 7) + "0";
 						if(CID == "100000")
 							{
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalHP").value = 0;
@@ -538,14 +540,117 @@ function Stat(ID)
 								var WeaponScore = 0;
 								var SoulScore = 0;
 								
-								var HP = parseInt(CharacterHP[CID][LB]);
+								var TypeHP = 0;
+								var TypeATK = 0;
+								var TypeDEF = 0;
+								var TypeSPD = 0;
+								var TypeCRT = 0;
+								var TypeRES = 0;
+								var TypeWEA = 0;
+								
+								if(FID.charAt(7) == "0")
+									{
+										if(CharactersTypeCRT.some(String => FID.includes(String)))
+											{
+												TypeCRT += 40;
+											}
+										else if(CharactersTypeRES.some(String => FID.includes(String)))
+											{
+												TypeRES += 50;
+											}
+										else if(CharactersTypeWEA.some(String => FID.includes(String)))
+											{
+												TypeWEA += 20;
+											}
+									}
+								else
+									{
+										if(CharactersTypeATK.some(String => String.indexOf(RID) != -1))
+											{
+												TypeHP -= 200;
+												TypeATK -= 110;
+												TypeDEF -= 50;
+											}
+										else if(CharactersTypeDEF.some(String => String.indexOf(RID) != -1))
+											{
+												TypeHP -= 400;
+												TypeDEF -= 130;
+												TypeSPD -= 40;
+											}
+										else if(CharactersTypeSPD.some(String => String.indexOf(RID) != -1))
+											{
+												TypeHP -= 200;
+												TypeATK -= 60;
+												TypeSPD -= 90;
+											}
+										else if(CharactersTypeCRT.some(String => String.indexOf(RID) != -1))
+											{
+												TypeATK -= 30;
+												TypeDEF -= 50;
+												TypeSPD -= 70;
+											}
+										else if(CharactersTypeRES.some(String => String.indexOf(RID) != -1))
+											{
+												TypeATK -= 50;
+												TypeDEF -= 50;
+												TypeSPD -= 50;
+											}
+										else if(CharactersTypeWEA.some(String => String.indexOf(RID) != -1))
+											{
+												TypeATK -= 70;
+												TypeDEF -= 70;
+											}
+										
+										if(CharactersTypeATK.some(String => FID.includes(String)))
+											{
+												TypeHP += 200;
+												TypeATK += 110;
+												TypeDEF += 50;
+											}
+										else if(CharactersTypeDEF.some(String => FID.includes(String)))
+											{
+												TypeHP += 400;
+												TypeDEF += 130;
+												TypeSPD += 40;
+											}
+										else if(CharactersTypeSPD.some(String => FID.includes(String)))
+											{
+												TypeHP += 200;
+												TypeATK += 60;
+												TypeSPD += 90;
+											}
+										else if(CharactersTypeCRT.some(String => FID.includes(String)))
+											{
+												TypeATK += 30;
+												TypeDEF += 50;
+												TypeSPD += 70;
+												TypeCRT += 40;
+											}
+										else if(CharactersTypeRES.some(String => FID.includes(String)))
+											{
+												TypeATK += 50;
+												TypeDEF += 50;
+												TypeSPD += 50;
+												TypeRES += 50;
+											}
+										else if(CharactersTypeWEA.some(String => FID.includes(String)))
+											{
+												TypeATK += 70;
+												TypeDEF += 70;
+												TypeWEA += 20;
+											}
+									}
+								
+								var HP = parseInt(CharacterStat[CID].HP[LB]);
+								HP += TypeHP;
 								HP += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponHP").value);
 								HP += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulHP").value);
 								HP += parseInt(document.getElementById("ID0" + Count01 + "IdoMagHP").value);
 								var HPTXT = HP.toFixed(0);
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalHP").value = HPTXT;
 								
-								var ATK = parseInt(CharacterATK[CID][LB]);
+								var ATK = parseInt(CharacterStat[CID].ATK[LB]);
+								ATK += TypeATK;
 								ATK += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponATK").value);
 								ATK += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulATK").value);
 								ATK += parseInt(document.getElementById("ID0" + Count01 + "IdoMagATK").value);
@@ -556,7 +661,8 @@ function Stat(ID)
 								var ATKTXT = ATK.toFixed(0);
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalATK").value = ATKTXT;
 								
-								var DEF = parseInt(CharacterDEF[CID][LB]);
+								var DEF = parseInt(CharacterStat[CID].DEF[LB]);
+								DEF += TypeDEF;
 								DEF += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponDEF").value);
 								DEF += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulDEF").value);
 								DEF += parseInt(document.getElementById("ID0" + Count01 + "IdoMagDEF").value);
@@ -567,7 +673,8 @@ function Stat(ID)
 								var DEFTXT = DEF.toFixed(0);
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalDEF").value = DEFTXT;
 								
-								var SPD = parseInt(CharacterSPD[CID][LB]);
+								var SPD = parseInt(CharacterStat[CID].SPD[LB]);
+								SPD += TypeSPD;
 								SPD += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponSPD").value);
 								SPD += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulSPD").value);
 								SPD += parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD").value);
@@ -578,10 +685,21 @@ function Stat(ID)
 								var SPDTXT = SPD.toFixed(0);
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalSPD").value = SPDTXT;
 								
-								CharacterScore += parseInt(CharacterHP[CID][LB]) * 0.25;
-								CharacterScore += parseInt(CharacterATK[CID][LB]) * 5;
-								CharacterScore += parseInt(CharacterDEF[CID][LB]) * 5;
-								CharacterScore += parseInt(CharacterSPD[CID][LB]) * 5;
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalCRT").value = TypeCRT;
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalRES").value = TypeRES;
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalWEA").value = TypeWEA;
+								
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TypeCRT").style.height = (TypeCRT != 0) ? "24px" : "0px";
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TypeRES").style.height = (TypeRES != 0) ? "24px" : "0px";
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TypeWEA").style.height = (TypeWEA != 0) ? "24px" : "0px";
+								
+								CharacterScore += (parseInt(CharacterStat[CID].HP[LB]) + TypeHP) * 0.25;
+								CharacterScore += (parseInt(CharacterStat[CID].ATK[LB]) + TypeATK)* 5;
+								CharacterScore += (parseInt(CharacterStat[CID].DEF[LB]) + TypeDEF)* 5;
+								CharacterScore += (parseInt(CharacterStat[CID].SPD[LB]) + TypeSPD)* 5;
+								CharacterScore += TypeCRT * 25;
+								CharacterScore += TypeRES * 25;
+								CharacterScore += TypeWEA * 12.5;
 								var CharacterScoreTXT = Math.ceil(CharacterScore);
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "Score").value = CharacterScoreTXT;
 								TotalScore += CharacterScoreTXT;

@@ -5,10 +5,7 @@
 		<link rel="icon" href="PNG/UI/Icon.png">
 		<script type="text/javascript" src="Script.js"></script>
 		<script type="text/javascript" src="DataID.js"></script>
-		<script type="text/javascript" src="DataCharacterHP.js"></script>
-		<script type="text/javascript" src="DataCharacterATK.js"></script>
-		<script type="text/javascript" src="DataCharacterDEF.js"></script>
-		<script type="text/javascript" src="DataCharacterSPD.js"></script>
+		<script type="text/javascript" src="DataCharacterStat.js"></script>
 	</head>
 	<body onload="Start()">
 		<div id="Loading"><div id="LoadingText">LOADING</div></div>
@@ -103,7 +100,7 @@
 																					<div class="DivTable" style="padding-left:2px">
 																						<div class="DivRow">
 																							<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101WeaponScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101WeaponScore" type="number" value="0" disabled="true"></input></div>
 																						</div>
 																					</div>
 																				</div>
@@ -204,7 +201,7 @@
 																					<div class="DivTable" style="padding-left:1px">
 																						<div class="DivRow">
 																							<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101SoulScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101SoulScore" type="number" value="0" disabled="true"></input></div>
 																						</div>
 																					</div>
 																				</div>
@@ -285,24 +282,90 @@
 														<div class="DivCell">
 															<div class="DivTable" style="margin:auto; padding-top:8px">
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101Score" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101Score" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/HPTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101TotalHP" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalHP.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101TotalHP" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/ATKTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101TotalATK" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalATK.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101TotalATK" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/DEFTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101TotalDEF" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalDEF.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101TotalDEF" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/SPDTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101TotalSPD" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalSPD.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101TotalSPD" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0101TypeCRT" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalCRT.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101TotalCRT" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0101TypeRES" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalRES.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101TotalRES" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0101TypeWEA" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalWEA.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0101TotalWEA" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -394,7 +457,7 @@
 																					<div class="DivTable" style="padding-left:2px">
 																						<div class="DivRow">
 																							<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102WeaponScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102WeaponScore" type="number" value="0" disabled="true"></input></div>
 																						</div>
 																					</div>
 																				</div>
@@ -495,7 +558,7 @@
 																					<div class="DivTable" style="padding-left:1px">
 																						<div class="DivRow">
 																							<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102SoulScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102SoulScore" type="number" value="0" disabled="true"></input></div>
 																						</div>
 																					</div>
 																				</div>
@@ -576,24 +639,90 @@
 														<div class="DivCell">
 															<div class="DivTable" style="margin:auto; padding-top:8px">
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102Score" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102Score" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/HPTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102TotalHP" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalHP.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102TotalHP" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/ATKTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102TotalATK" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalATK.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102TotalATK" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/DEFTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102TotalDEF" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalDEF.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102TotalDEF" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/SPDTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102TotalSPD" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalSPD.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102TotalSPD" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0102TypeCRT" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalCRT.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102TotalCRT" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0102TypeRES" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalRES.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102TotalRES" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0102TypeWEA" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalWEA.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0102TotalWEA" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -685,7 +814,7 @@
 																					<div class="DivTable" style="padding-left:2px">
 																						<div class="DivRow">
 																							<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103WeaponScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103WeaponScore" type="number" value="0" disabled="true"></input></div>
 																						</div>
 																					</div>
 																				</div>
@@ -786,7 +915,7 @@
 																					<div class="DivTable" style="padding-left:1px">
 																						<div class="DivRow">
 																							<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103SoulScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103SoulScore" type="number" value="0" disabled="true"></input></div>
 																						</div>
 																					</div>
 																				</div>
@@ -867,24 +996,90 @@
 														<div class="DivCell">
 															<div class="DivTable" style="margin:auto; padding-top:8px">
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103Score" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103Score" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/HPTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103TotalHP" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalHP.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103TotalHP" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/ATKTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103TotalATK" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalATK.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103TotalATK" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/DEFTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103TotalDEF" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalDEF.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103TotalDEF" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/SPDTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103TotalSPD" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalSPD.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103TotalSPD" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0103TypeCRT" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalCRT.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103TotalCRT" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0103TypeRES" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalRES.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103TotalRES" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0103TypeWEA" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalWEA.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0103TotalWEA" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -976,7 +1171,7 @@
 																					<div class="DivTable" style="padding-left:2px">
 																						<div class="DivRow">
 																							<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104WeaponScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104WeaponScore" type="number" value="0" disabled="true"></input></div>
 																						</div>
 																					</div>
 																				</div>
@@ -1077,7 +1272,7 @@
 																					<div class="DivTable" style="padding-left:1px">
 																						<div class="DivRow">
 																							<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104SoulScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104SoulScore" type="number" value="0" disabled="true"></input></div>
 																						</div>
 																					</div>
 																				</div>
@@ -1158,24 +1353,90 @@
 														<div class="DivCell">
 															<div class="DivTable" style="margin:auto; padding-top:8px">
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104Score" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104Score" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/HPTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104TotalHP" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalHP.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104TotalHP" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/ATKTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104TotalATK" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalATK.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104TotalATK" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/DEFTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104TotalDEF" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalDEF.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104TotalDEF" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/SPDTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104TotalSPD" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalSPD.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104TotalSPD" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0104TypeCRT" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalCRT.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104TotalCRT" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0104TypeRES" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalRES.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104TotalRES" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0104TypeWEA" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalWEA.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0104TotalWEA" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -1288,7 +1549,7 @@
 																			<div class="DivTable" style="padding-left:1px">
 																				<div class="DivRow">
 																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID01IdoMagScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID01IdoMagScore" type="number" value="0" disabled="true"></input></div>
 																				</div>
 																			</div>
 																		</div>
@@ -1432,10 +1693,10 @@
 					<div class="ExpandableMain" id="ID01ExpandableMain" style="position:absolute; left:38px; top:2px; height:0px">
 						<div class="DivTable" style="padding-left:2px">
 							<div class="DivRow">
-								<div class="DivCellStat"><img class="PartyStatIconSmall" id="ID01TotalELE01IMG" src="PNG/UI/ELE01Total.png"></div>
-								<div class="DivCellStat" style="padding-left:8px"><img class="PartyStatIconSmall" id="ID01TotalELE02IMG" src="PNG/UI/ELE02Total.png"></div>
-								<div class="DivCellStat" style="padding-left:7px"><img class="PartyStatIconSmall" id="ID01TotalELE03IMG" src="PNG/UI/ELE03Total.png"></div>
-								<div class="DivCellStat" style="padding-left:8px"><img class="PartyStatIconSmall" id="ID01TotalELE04IMG" src="PNG/UI/ELE04Total.png"></div>
+								<div class="DivCellStat"><img class="PartyStatIconSmall" id="ID01TotalELE01IMG" src="PNG/UI/TotalELE01.png"></div>
+								<div class="DivCellStat" style="padding-left:8px"><img class="PartyStatIconSmall" id="ID01TotalELE02IMG" src="PNG/UI/TotalELE02.png"></div>
+								<div class="DivCellStat" style="padding-left:7px"><img class="PartyStatIconSmall" id="ID01TotalELE03IMG" src="PNG/UI/TotalELE03.png"></div>
+								<div class="DivCellStat" style="padding-left:8px"><img class="PartyStatIconSmall" id="ID01TotalELE04IMG" src="PNG/UI/TotalELE04.png"></div>
 							</div>
 							<div class="DivRow">
 								<div class="DivCellStatMiddle"><input class="PartyStatNumber" id="ID01TotalELE01" type="number" min="0" max="10" value="1" disabled="true"></input></div>
@@ -1537,7 +1798,7 @@
 																					<div class="DivTable" style="padding-left:2px">
 																						<div class="DivRow">
 																							<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201WeaponScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201WeaponScore" type="number" value="0" disabled="true"></input></div>
 																						</div>
 																					</div>
 																				</div>
@@ -1638,7 +1899,7 @@
 																					<div class="DivTable" style="padding-left:1px">
 																						<div class="DivRow">
 																							<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201SoulScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201SoulScore" type="number" value="0" disabled="true"></input></div>
 																						</div>
 																					</div>
 																				</div>
@@ -1719,24 +1980,90 @@
 														<div class="DivCell">
 															<div class="DivTable" style="margin:auto; padding-top:8px">
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201Score" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201Score" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/HPTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201TotalHP" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalHP.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201TotalHP" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/ATKTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201TotalATK" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalATK.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201TotalATK" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/DEFTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201TotalDEF" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalDEF.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201TotalDEF" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/SPDTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201TotalSPD" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalSPD.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201TotalSPD" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0201TypeCRT" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalCRT.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201TotalCRT" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0201TypeRES" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalRES.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201TotalRES" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0201TypeWEA" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalWEA.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0201TotalWEA" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -1828,7 +2155,7 @@
 																					<div class="DivTable" style="padding-left:2px">
 																						<div class="DivRow">
 																							<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202WeaponScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202WeaponScore" type="number" value="0" disabled="true"></input></div>
 																						</div>
 																					</div>
 																				</div>
@@ -1929,7 +2256,7 @@
 																					<div class="DivTable" style="padding-left:1px">
 																						<div class="DivRow">
 																							<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202SoulScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202SoulScore" type="number" value="0" disabled="true"></input></div>
 																						</div>
 																					</div>
 																				</div>
@@ -2010,24 +2337,90 @@
 														<div class="DivCell">
 															<div class="DivTable" style="margin:auto; padding-top:8px">
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202Score" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202Score" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/HPTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202TotalHP" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalHP.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202TotalHP" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/ATKTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202TotalATK" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalATK.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202TotalATK" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/DEFTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202TotalDEF" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalDEF.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202TotalDEF" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/SPDTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202TotalSPD" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalSPD.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202TotalSPD" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0202TypeCRT" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalCRT.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202TotalCRT" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0202TypeRES" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalRES.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202TotalRES" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0202TypeWEA" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalWEA.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0202TotalWEA" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -2119,7 +2512,7 @@
 																					<div class="DivTable" style="padding-left:2px">
 																						<div class="DivRow">
 																							<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203WeaponScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203WeaponScore" type="number" value="0" disabled="true"></input></div>
 																						</div>
 																					</div>
 																				</div>
@@ -2220,7 +2613,7 @@
 																					<div class="DivTable" style="padding-left:1px">
 																						<div class="DivRow">
 																							<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203SoulScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203SoulScore" type="number" value="0" disabled="true"></input></div>
 																						</div>
 																					</div>
 																				</div>
@@ -2301,24 +2694,90 @@
 														<div class="DivCell">
 															<div class="DivTable" style="margin:auto; padding-top:8px">
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203Score" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203Score" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/HPTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203TotalHP" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalHP.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203TotalHP" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/ATKTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203TotalATK" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalATK.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203TotalATK" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/DEFTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203TotalDEF" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalDEF.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203TotalDEF" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/SPDTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203TotalSPD" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalSPD.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203TotalSPD" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0203TypeCRT" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalCRT.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203TotalCRT" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0203TypeRES" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalRES.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203TotalRES" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0203TypeWEA" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalWEA.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0203TotalWEA" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -2410,7 +2869,7 @@
 																					<div class="DivTable" style="padding-left:2px">
 																						<div class="DivRow">
 																							<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204WeaponScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204WeaponScore" type="number" value="0" disabled="true"></input></div>
 																						</div>
 																					</div>
 																				</div>
@@ -2511,7 +2970,7 @@
 																					<div class="DivTable" style="padding-left:1px">
 																						<div class="DivRow">
 																							<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204SoulScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																							<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204SoulScore" type="number" value="0" disabled="true"></input></div>
 																						</div>
 																					</div>
 																				</div>
@@ -2592,24 +3051,90 @@
 														<div class="DivCell">
 															<div class="DivTable" style="margin:auto; padding-top:8px">
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204Score" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204Score" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/HPTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204TotalHP" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalHP.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204TotalHP" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/ATKTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204TotalATK" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalATK.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204TotalATK" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/DEFTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204TotalDEF" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalDEF.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204TotalDEF" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="DivRow">
-																	<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/SPDTotal.png"></div>
-																	<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204TotalSPD" type="number" min="0" max="9999" value="0" disabled="true"></input></div>
+																	<div class="DivCell">
+																		<div class="DivTable">
+																			<div class="DivRow">
+																				<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalSPD.png"></div>
+																				<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204TotalSPD" type="number" value="0" disabled="true"></input></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0204TypeCRT" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalCRT.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204TotalCRT" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0204TypeRES" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalRES.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204TotalRES" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="DivRow">
+																	<div class="DivCell">
+																		<div class="Type" id="ID0204TypeWEA" style="height:0px">
+																			<div class="DivTable">
+																				<div class="DivRow">
+																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/TotalWEA.png"></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID0204TotalWEA" type="number" value="0" disabled="true"></input></div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -2722,7 +3247,7 @@
 																			<div class="DivTable" style="padding-left:1px">
 																				<div class="DivRow">
 																					<div class="DivCellStat"><img class="PartyStatIconSmall" src="PNG/UI/Score.png"></div>
-																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID02IdoMagScore" type="number" min="0" max="99999" value="0" disabled="true"></input></div>
+																					<div class="DivCellStatMiddle"><input class="PartyStatNumberWideSmall" id="ID02IdoMagScore" type="number" value="0" disabled="true"></input></div>
 																				</div>
 																			</div>
 																		</div>
@@ -2866,10 +3391,10 @@
 					<div class="ExpandableMain" id="ID02ExpandableMain" style="position:absolute; left:38px; top:2px; height:0px">
 						<div class="DivTable" style="padding-left:2px">
 							<div class="DivRow">
-								<div class="DivCellStat"><img class="PartyStatIconSmall" id="ID02TotalELE01IMG" src="PNG/UI/ELE01Total.png"></div>
-								<div class="DivCellStat" style="padding-left:8px"><img class="PartyStatIconSmall" id="ID02TotalELE02IMG" src="PNG/UI/ELE02Total.png"></div>
-								<div class="DivCellStat" style="padding-left:7px"><img class="PartyStatIconSmall" id="ID02TotalELE03IMG" src="PNG/UI/ELE03Total.png"></div>
-								<div class="DivCellStat" style="padding-left:8px"><img class="PartyStatIconSmall" id="ID02TotalELE04IMG" src="PNG/UI/ELE04Total.png"></div>
+								<div class="DivCellStat"><img class="PartyStatIconSmall" id="ID02TotalELE01IMG" src="PNG/UI/TotalELE01.png"></div>
+								<div class="DivCellStat" style="padding-left:8px"><img class="PartyStatIconSmall" id="ID02TotalELE02IMG" src="PNG/UI/TotalELE02.png"></div>
+								<div class="DivCellStat" style="padding-left:7px"><img class="PartyStatIconSmall" id="ID02TotalELE03IMG" src="PNG/UI/TotalELE03.png"></div>
+								<div class="DivCellStat" style="padding-left:8px"><img class="PartyStatIconSmall" id="ID02TotalELE04IMG" src="PNG/UI/TotalELE04.png"></div>
 							</div>
 							<div class="DivRow">
 								<div class="DivCellStatMiddle"><input class="PartyStatNumber" id="ID02TotalELE01" type="number" min="0" max="10" value="1" disabled="true"></input></div>
