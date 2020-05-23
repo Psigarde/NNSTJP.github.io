@@ -530,6 +530,9 @@ function Stat(ID)
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalDEF").value = 0;
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalSPD").value = 0;
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "Score").value = 0;
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalCRT").value = 0;
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalRES").value = 0;
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalWEA").value = 0;
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "SPD").innerHTML = 0;
 							}
 						else
@@ -689,10 +692,6 @@ function Stat(ID)
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalRES").value = TypeRES;
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalWEA").value = TypeWEA;
 								
-								document.getElementById("ID0" + Count01 + "0" + Count02 + "TypeCRT").style.height = (TypeCRT != 0) ? "24px" : "0px";
-								document.getElementById("ID0" + Count01 + "0" + Count02 + "TypeRES").style.height = (TypeRES != 0) ? "24px" : "0px";
-								document.getElementById("ID0" + Count01 + "0" + Count02 + "TypeWEA").style.height = (TypeWEA != 0) ? "24px" : "0px";
-								
 								CharacterScore += (parseInt(CharacterStat[CID].HP[LB]) + TypeHP) * 0.25;
 								CharacterScore += (parseInt(CharacterStat[CID].ATK[LB]) + TypeATK)* 5;
 								CharacterScore += (parseInt(CharacterStat[CID].DEF[LB]) + TypeDEF)* 5;
@@ -768,6 +767,10 @@ function Stat(ID)
 						Data.SoulRES[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulRES").value;
 						Data.SoulELE[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulELE").value;
 						Data.SupportSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "SupportSPD").value;
+						
+						document.getElementById("ID0" + Count01 + "0" + Count02 + "TypeCRT").style.height = (document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalCRT").value != 0) ? "24px" : "0px";
+						document.getElementById("ID0" + Count01 + "0" + Count02 + "TypeRES").style.height = (document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalRES").value != 0) ? "24px" : "0px";
+						document.getElementById("ID0" + Count01 + "0" + Count02 + "TypeWEA").style.height = (document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalWEA").value != 0) ? "24px" : "0px";
 					}
 				IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE01").value) * 100;
 				IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE02").value) * 100;
