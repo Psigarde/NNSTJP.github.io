@@ -252,7 +252,7 @@ body
 		border:none;
 		width:32px;
 		height:16px;
-		font-size:16px;
+		font-size:14px;
 		font-family:"Ubuntu";
 		color:inherit;
 		background-color:rgba(0, 0, 0, 0);
@@ -268,12 +268,6 @@ body
 		width:64px;
 		font-size:16px;
 		text-align:center;
-	}
-.PartyStatNumberWideSmall
-	{
-		width:40px;
-		font-size:14px;
-		text-align:left;
 	}
 
 .SelectList
