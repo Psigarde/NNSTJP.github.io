@@ -699,7 +699,7 @@ function Stat(ID)
 								CharacterScore += (parseInt(CharacterStat[CID].SPD[LB]) + TypeSPD)* 5;
 								CharacterScore += TypeCRT * 25;
 								CharacterScore += TypeRES * 25;
-								CharacterScore += TypeWEA * 15;
+								CharacterScore += TypeWEA * 12.5;
 								var CharacterScoreTXT = Math.ceil(CharacterScore);
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "Score").value = CharacterScoreTXT;
 								TotalScore += CharacterScoreTXT;
