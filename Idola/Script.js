@@ -640,6 +640,7 @@ function Stat(ID)
 											{
 												TypeATK += 70;
 												TypeDEF += 70;
+												TypeSPD += 10;
 												TypeWEA += 20;
 											}
 									}
