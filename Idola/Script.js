@@ -118,8 +118,6 @@ function Start()
 								if(DataLoad.SoulRES) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulRES").value = DataLoad.SoulRES[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
 								if(DataLoad.SoulELE) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulELE").value = DataLoad.SoulELE[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "SupportSPD").value = DataLoad.SupportSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
-								LB("ID0" + Count01 + "0" + Count02 + "CharacterLB");
-								DB("ID0" + Count01 + "0" + Count02 + "CharacterDB");
 							}
 						IDCurr = "0" + Count01;
 						if(DataLoad.IdoMagID) { SelectIdoMag(DataLoad.IdoMagID[Count01 - 1]); }
@@ -150,6 +148,8 @@ function Start()
 						if(DataLoad.IdoMagSPD03) { document.getElementById("ID0" + Count01 + "IdoMagSPD03").value = DataLoad.IdoMagSPD03[Count01 - 1]; }
 						if(DataLoad.IdoMagSPD04) { document.getElementById("ID0" + Count01 + "IdoMagSPD04").value = DataLoad.IdoMagSPD04[Count01 - 1]; }
 					}
+				LB("ID0101CharacterLB");
+				DB("ID0101CharacterDB");
 			}
 	}
 function SelectParty(ID)
