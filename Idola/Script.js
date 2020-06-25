@@ -689,8 +689,8 @@ function Stat(ID)
 								var SPDTXT = SPD.toFixed(0);
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalSPD").value = SPDTXT;
 								
-								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalCRT").value = TypeCRT;
-								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalRES").value = TypeRES;
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalCRT").value = TypeCRT + parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponCRT").value) + parseInt(document.getElementById("ID0" + Count01 + "IdoMagCRT").value);
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalRES").value = TypeRES + parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponRES").value) + parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulRES").value) + parseInt(document.getElementById("ID0" + Count01 + "IdoMagRES").value);
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalWEA").value = TypeWEA;
 								
 								CharacterScore += (parseInt(CharacterStat[CID].HP[LB]) + TypeHP) * 0.25;
