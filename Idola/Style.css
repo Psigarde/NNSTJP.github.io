@@ -37,7 +37,7 @@ body
 		height:16px;
 		display:table-cell;
 		vertical-align:top;
-		font-size:16px;
+		font-size:14px;
 		text-align:center;
 		font-family:"Ubuntu Mono";
 	}
@@ -98,12 +98,12 @@ body
 	}
 #Party01
 	{
-		transform:translate(-50%, calc(-100% - 57px));
+		transform:translate(calc(-50% + 0.5px), calc(-100% - 57px));
 		color:rgba(0, 0, 0, 1);
 	}
 #Party02
 	{
-		transform:translate(-50%, calc(0% + 2px));
+		transform:translate(calc(-50% + 0.5px), calc(0% + 2px));
 		color:rgba(255, 255, 255, 1);
 	}
 
@@ -117,7 +117,6 @@ body
 #Party01T
 	{
 		background-image:url("PNG/Party/N0101.png");
-		
 	}
 #Party02T
 	{
@@ -129,7 +128,7 @@ body
 		position:relative;
 		top:54px;
 		width:931px;
-		height:334px;
+		height:392px;
 		background-size:100%;
 	}
 #Party01M
@@ -146,7 +145,7 @@ body
 		position:relative;
 		top:54px;
 		width:931px;
-		height:46px;
+		height:4px;
 	}
 #Party01B
 	{
@@ -161,7 +160,7 @@ body
 	{
 		position:absolute;
 		z-index:1;
-		left:calc(50% - 174px);
+		left:calc(50% + 123px);
 		width:256px;
 		height:33px;
 		transform:skew(35deg);
@@ -169,7 +168,7 @@ body
 	}
 #SelectParty01
 	{
-		top:calc(50% - 433px);
+		top:calc(50% - 449px);
 	}
 #SelectParty02
 	{
@@ -187,24 +186,14 @@ body
 		color:rgba(255, 255, 255, 1);
 	}
 
-.PartyCharacter
+.Character
 	{
 		width:128px;
 		height:128px;
 		border:2px solid rgba(0, 0, 0, 0);
 		cursor:pointer;
 	}
-.PartyDestiny
-	{
-		position:absolute;
-		z-index:2;
-		left:2px;
-		top:2px;
-		width:128px;
-		height:128px;
-		pointer-events:none;
-	}
-.PartyElement
+.Element
 	{
 		position:absolute;
 		z-index:2;
@@ -214,7 +203,22 @@ body
 		height:28px;
 		cursor:default;
 	}
-.PartySymbolWeapon
+.Destiny
+	{
+		position:absolute;
+		z-index:2;
+		left:2px;
+		top:2px;
+		width:128px;
+		height:128px;
+		pointer-events:none;
+	}
+.Type
+	{
+		overflow:hidden;
+		transition:0.25s;
+	}
+.SymbolWeapon
 	{
 		border:solid rgba(0, 0, 0, 0);
 		border-width:2px 0px 2px 2px;
@@ -222,7 +226,7 @@ body
 		height:64px;
 		cursor:pointer;
 	}
-.PartySymbolSoul
+.SymbolSoul
 	{
 		border:solid rgba(0, 0, 0, 0);
 		border-width:2px 2px 2px 0px;
@@ -230,7 +234,12 @@ body
 		height:64px;
 		cursor:pointer;
 	}
-.PartyIdoMag
+.MainElement
+	{
+		overflow:hidden;
+		transition:0.25s;
+	}
+.IdoMag
 	{
 		border:2px solid rgba(0, 0, 0, 0);
 		border-width:2px 0px 2px 2px;
@@ -238,33 +247,33 @@ body
 		height:64px;
 		cursor:pointer;
 	}
-.PartyStatIcon
+.StatIcon
 	{
 		width:32px;
 		height:32px;
 	}
-.PartyStatIconSmall
+.StatIconSmall
 	{
 		width:24px;
 		height:24px;
 	}
-.PartyStatNumber, .PartyStatNumberWide, .PartyStatNumberWider, .PartyStatNumberWideSmall
+.StatNumber, .StatNumberWide, .StatNumberWider, .StatNumberWideSmall
 	{
 		border:none;
 		width:32px;
 		height:16px;
-		font-size:13px;
+		font-size:12px;
 		font-family:"Ubuntu";
 		color:inherit;
 		background-color:rgba(0, 0, 0, 0);
 		text-align:center;
 	}
-.PartyStatNumberWide
+.StatNumberWide
 	{
 		width:40px;
 		text-align:left;
 	}
-.PartyStatNumberWider
+.StatNumberWider
 	{
 		width:64px;
 		font-size:16px;
@@ -329,12 +338,6 @@ body
 		opacity:0;
 		display:none;
 		cursor:pointer;
-		transition:0.25s;
-	}
-
-.Expandable, .ExpandableSymbol, .ExpandableMag, .ExpandableMain, .Type
-	{
-		overflow:hidden;
 		transition:0.25s;
 	}
 

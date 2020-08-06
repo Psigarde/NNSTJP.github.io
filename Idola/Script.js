@@ -27,6 +27,7 @@ function Start()
 				CharacterLB: ["0", "0", "0", "0", "0", "0", "0", "0"],
 				CharacterD: ["0.5", "0.5", "0.5", "0.5", "0.5", "0.5", "0.5", "0.5"],
 				CharacterDB: ["0", "0", "0", "0", "0", "0", "0", "0"],
+				CharacterTB: ["0", "0", "0", "0", "0", "0", "0", "0"],
 				WeaponID: ["200000000", "200000000", "200000000", "200000000", "200000000", "200000000", "200000000", "200000000"],
 				WeaponHP: ["0", "0", "0", "0", "0", "0", "0", "0"],
 				WeaponATK: ["0", "0", "0", "0", "0", "0", "0", "0"],
@@ -103,6 +104,7 @@ function Start()
 								if(DataLoad.CharacterLB) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value = DataLoad.CharacterLB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
 								if(DataLoad.CharacterD) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterD").style.opacity = DataLoad.CharacterD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
 								if(DataLoad.CharacterDB) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterDB").value = DataLoad.CharacterDB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								if(DataLoad.CharacterTB) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value = DataLoad.CharacterTB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
 								if(DataLoad.WeaponID) { SelectWeapon(DataLoad.WeaponID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]); }
 								if(DataLoad.WeaponHP) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponHP").value = DataLoad.WeaponHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
 								if(DataLoad.WeaponATK) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponATK").value = DataLoad.WeaponATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
@@ -158,10 +160,10 @@ function SelectParty(ID)
 			{
 				document.getElementById("SelectParty0" + Count01).style.display = (ID == ("ID0" + Count01)) ? "inline" : "none";
 			}
-		var Expandable = document.getElementsByClassName("ExpandableMain");
-		for(var Count = 0; Count < Expandable.length; Count ++)
+		var MainElement = document.getElementsByClassName("MainElement");
+		for(var Count = 0; Count < MainElement.length; Count ++)
 			{
-				Expandable[Count].style.height = (Expandable[Count].id.includes(ID)) ? "40px" : "0px"
+				MainElement[Count].style.height = (MainElement[Count].id.includes(ID)) ? "37px" : "0px"
 			}
 		Data.Party = (ID == "ID01") ? "01" : "02";
 	}
@@ -487,18 +489,20 @@ function DB(ID)
 			}
 		Stat("ID0101CharacterSPD");
 	}
-function Expand()
+function TB(ID)
 	{
-		var Expandable = document.getElementsByClassName("Expandable");
-		for(var Count = 0; Count < Expandable.length; Count ++)
+		if(document.getElementById(ID).value == "") { document.getElementById(ID).value = document.getElementById(ID).min; }
+		document.getElementById(ID).value = Math.trunc(document.getElementById(ID).value);
+		if(parseFloat(document.getElementById(ID).value) < parseFloat(document.getElementById(ID).min)) { document.getElementById(ID).value = document.getElementById(ID).min; }
+		if(parseFloat(document.getElementById(ID).value) > parseFloat(document.getElementById(ID).max)) { document.getElementById(ID).value = document.getElementById(ID).max; }
+		for(var Count01 = 1; Count01 < 3; Count01 ++)
 			{
-				Expandable[Count].style.height = (Expandable[Count].style.height == "0px") ? "24px" : "0px";
+				for(var Count02 = 1; Count02 < 5; Count02 ++)
+					{
+						Data.CharacterTB[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value;
+					}
 			}
-		var Expandable = document.getElementsByClassName("ExpandableSymbol");
-		for(var Count = 0; Count < Expandable.length; Count ++)
-			{
-				Expandable[Count].style.height = (Expandable[Count].style.height == "72px") ? "0px" : "72px";
-			}
+		Stat("ID0101CharacterSPD");
 	}
 function Stat(ID)
 	{
@@ -534,6 +538,7 @@ function Stat(ID)
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalRES").value = 0;
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalWEA").value = 0;
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "SPD").innerHTML = 0;
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterT").style.height = "0px";
 							}
 						else
 							{
@@ -551,19 +556,57 @@ function Stat(ID)
 								var TypeRES = 0;
 								var TypeWEA = 0;
 								
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterT").style.height = "64px";
+								
 								if(FID.charAt(7) == "0")
 									{
-										if(CharactersTypeCRT.some(String => FID.includes(String)))
+										if(CharactersTypeATK.some(String => FID.includes(String)))
 											{
+												TypeHP += CharacterType.TypeATK.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												TypeATK += CharacterType.TypeATK.ATK[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												TypeDEF += CharacterType.TypeATK.DEF[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeATK.png";
+											}
+										else if(CharactersTypeDEF.some(String => FID.includes(String)))
+											{
+												TypeHP += CharacterType.TypeDEF.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												TypeDEF += CharacterType.TypeDEF.DEF[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												TypeSPD += CharacterType.TypeDEF.SPD[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeDEF.png";
+											}
+										else if(CharactersTypeSPD.some(String => FID.includes(String)))
+											{
+												TypeHP += CharacterType.TypeSPD.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												TypeATK += CharacterType.TypeSPD.ATK[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												TypeSPD += CharacterType.TypeSPD.SPD[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeSPD.png";
+											}
+										else if(CharactersTypeCRT.some(String => FID.includes(String)))
+											{
+												TypeHP += CharacterType.TypeCRT.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												TypeDEF += CharacterType.TypeCRT.DEF[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												TypeSPD += CharacterType.TypeCRT.SPD[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeCRT += 40;
+												TypeCRT += CharacterType.TypeCRT.CRT[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeCRT.png";
 											}
 										else if(CharactersTypeRES.some(String => FID.includes(String)))
 											{
+												TypeHP += CharacterType.TypeRES.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												TypeATK += CharacterType.TypeRES.ATK[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												TypeDEF += CharacterType.TypeRES.DEF[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeRES += 50;
+												TypeRES += CharacterType.TypeRES.RES[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeRES.png";
 											}
 										else if(CharactersTypeWEA.some(String => FID.includes(String)))
 											{
+												TypeHP += CharacterType.TypeWEA.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												TypeATK += CharacterType.TypeWEA.ATK[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												TypeSPD += CharacterType.TypeWEA.SPD[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeWEA += 20;
+												TypeWEA += CharacterType.TypeWEA.WEA[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeWEA.png";
 											}
 									}
 								else
@@ -607,41 +650,68 @@ function Stat(ID)
 										if(CharactersTypeATK.some(String => FID.includes(String)))
 											{
 												TypeHP += 200;
+												TypeHP += CharacterType.TypeATK.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeATK += 110;
+												TypeATK += CharacterType.TypeATK.ATK[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeDEF += 50;
+												TypeDEF += CharacterType.TypeATK.DEF[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeATK.png";
 											}
 										else if(CharactersTypeDEF.some(String => FID.includes(String)))
 											{
 												TypeHP += 400;
+												TypeHP += CharacterType.TypeDEF.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeDEF += 130;
+												TypeDEF += CharacterType.TypeDEF.DEF[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeSPD += 40;
+												TypeSPD += CharacterType.TypeDEF.SPD[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeDEF.png";
 											}
 										else if(CharactersTypeSPD.some(String => FID.includes(String)))
 											{
 												TypeHP += 200;
+												TypeHP += CharacterType.TypeSPD.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeATK += 60;
+												TypeATK += CharacterType.TypeSPD.ATK[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeSPD += 90;
+												TypeSPD += CharacterType.TypeSPD.SPD[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeSPD.png";
 											}
 										else if(CharactersTypeCRT.some(String => FID.includes(String)))
 											{
+												TypeHP += CharacterType.TypeCRT.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeATK += 30;
 												TypeDEF += 50;
+												TypeDEF += CharacterType.TypeCRT.DEF[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeSPD += 70;
+												TypeSPD += CharacterType.TypeCRT.SPD[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeCRT += 40;
+												TypeCRT += CharacterType.TypeCRT.CRT[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeCRT.png";
 											}
 										else if(CharactersTypeRES.some(String => FID.includes(String)))
 											{
+												TypeHP += CharacterType.TypeRES.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeATK += 50;
+												TypeATK += CharacterType.TypeRES.ATK[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeDEF += 50;
+												TypeDEF += CharacterType.TypeRES.DEF[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeSPD += 50;
 												TypeRES += 50;
+												TypeRES += CharacterType.TypeRES.RES[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeRES.png";
 											}
 										else if(CharactersTypeWEA.some(String => FID.includes(String)))
 											{
+												TypeHP += CharacterType.TypeWEA.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeATK += 70;
+												TypeATK += CharacterType.TypeWEA.ATK[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeDEF += 70;
 												TypeSPD += 10;
+												TypeSPD += CharacterType.TypeWEA.SPD[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeWEA += 20;
+												TypeWEA += CharacterType.TypeWEA.WEA[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
+												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeWEA.png";
 											}
 									}
 								
@@ -923,6 +993,7 @@ function DataLoad()
 						if(DataLoad.CharacterLB) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value = DataLoad.CharacterLB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
 						if(DataLoad.CharacterD) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterD").style.opacity = DataLoad.CharacterD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
 						if(DataLoad.CharacterDB) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterDB").value = DataLoad.CharacterDB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.CharacterTB) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value = DataLoad.CharacterTB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
 						if(DataLoad.WeaponID) { SelectWeapon(DataLoad.WeaponID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]); }
 						if(DataLoad.WeaponHP) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponHP").value = DataLoad.WeaponHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
 						if(DataLoad.WeaponATK) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponATK").value = DataLoad.WeaponATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
@@ -970,6 +1041,7 @@ function DataLoad()
 			}
 		LB("ID0101CharacterLB");
 		DB("ID0101CharacterDB");
+		TB("ID0101CharacterTB");
 	}
 function DataDelete()
 	{
