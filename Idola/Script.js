@@ -73,6 +73,7 @@ function Start()
 			};
 		SelectParty("ID01");
 		document.getElementById("SelectCharacterELE00").style.opacity = "1";
+		document.getElementById("SelectCharacterType00").style.opacity = "1";
 		document.getElementById("SelectWeaponRarity00").style.opacity = "1";
 		document.getElementById("SelectSoulRarity00").style.opacity = "1";
 		LB("ID0101CharacterLB");
@@ -182,11 +183,18 @@ function SelectCharacterList(ID)
 	}
 function SelectCharacterFilter(ID)
 	{
-		if(ID != "")
+		if(ID != "" && ID.includes("ELE"))
 			{
 				for(var Count = 0; Count < 5; Count ++)
 					{
 						document.getElementById("SelectCharacterELE0" + Count).style.opacity = (ID == ("SelectCharacterELE0" + Count)) ? "1" : "0.5";
+					}
+			}
+		if(ID != "" && ID.includes("Type"))
+			{
+				for(var Count = 0; Count < 7; Count ++)
+					{
+						document.getElementById("SelectCharacterType0" + Count).style.opacity = (ID == ("SelectCharacterType0" + Count)) ? "1" : "0.5";
 					}
 			}
 		var Select = (["0101", "0102", "0103", "0104"].indexOf(IDCurr) != -1) ? "1" : "2";
@@ -194,23 +202,56 @@ function SelectCharacterFilter(ID)
 			{
 				if(["0", Select].indexOf(Characters[Count].charAt(8)) != -1 || CharactersNeutral.some(String => Characters[Count].includes(String)))
 					{
+						var Score = 0;
 						if(document.getElementById("SelectCharacterELE00").style.opacity == "1")
 							{
-								document.getElementById(Characters[Count]).style.display = "inline";
+								Score += 1;
 							}
 						else if(document.getElementById("SelectCharacterELE01").style.opacity == "1" && (CharactersELE00.some(String => Characters[Count].includes(String)) || CharactersELE01.some(String => Characters[Count].includes(String))))
 							{
-								document.getElementById(Characters[Count]).style.display = "inline";
+								Score += 1;
 							}
 						else if(document.getElementById("SelectCharacterELE02").style.opacity == "1" && (CharactersELE00.some(String => Characters[Count].includes(String)) || CharactersELE02.some(String => Characters[Count].includes(String))))
 							{
-								document.getElementById(Characters[Count]).style.display = "inline";
+								Score += 1;
 							}
 						else if(document.getElementById("SelectCharacterELE03").style.opacity == "1" && (CharactersELE00.some(String => Characters[Count].includes(String)) || CharactersELE03.some(String => Characters[Count].includes(String))))
 							{
-								document.getElementById(Characters[Count]).style.display = "inline";
+								Score += 1;
 							}
 						else if(document.getElementById("SelectCharacterELE04").style.opacity == "1" && (CharactersELE00.some(String => Characters[Count].includes(String)) || CharactersELE04.some(String => Characters[Count].includes(String))))
+							{
+								Score += 1;
+							}
+						if(document.getElementById("SelectCharacterType00").style.opacity == "1")
+							{
+								Score += 1;
+							}
+						else if(document.getElementById("SelectCharacterType01").style.opacity == "1" && CharactersTypeATK.some(String => Characters[Count].includes(String)))
+							{
+								Score += 1;
+							}
+						else if(document.getElementById("SelectCharacterType02").style.opacity == "1" && CharactersTypeDEF.some(String => Characters[Count].includes(String)))
+							{
+								Score += 1;
+							}
+						else if(document.getElementById("SelectCharacterType03").style.opacity == "1" && CharactersTypeSPD.some(String => Characters[Count].includes(String)))
+							{
+								Score += 1;
+							}
+						else if(document.getElementById("SelectCharacterType04").style.opacity == "1" && CharactersTypeCRT.some(String => Characters[Count].includes(String)))
+							{
+								Score += 1;
+							}
+						else if(document.getElementById("SelectCharacterType05").style.opacity == "1" && CharactersTypeRES.some(String => Characters[Count].includes(String)))
+							{
+								Score += 1;
+							}
+						else if(document.getElementById("SelectCharacterType06").style.opacity == "1" && CharactersTypeWEA.some(String => Characters[Count].includes(String)))
+							{
+								Score += 1;
+							}
+						if(Score == 2)
 							{
 								document.getElementById(Characters[Count]).style.display = "inline";
 							}
@@ -224,6 +265,7 @@ function SelectCharacterFilter(ID)
 						document.getElementById(Characters[Count]).style.display = "none";
 					}
 			}
+		document.getElementById(Characters[0]).style.display = "inline";
 	}
 function SelectCharacter(ID)
 	{

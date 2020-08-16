@@ -302,7 +302,7 @@ body
 		grid-auto-rows:64px;
 		grid-gap:2px;
 		grid-auto-flow:row;
-		grid-template-columns:auto auto auto auto auto auto auto auto auto auto;
+		grid-template-columns:repeat(10, 1fr);
 		overflow-y:scroll;
 	}
 .SelectFilter
@@ -379,11 +379,11 @@ body
 		color:rgba(192,192,192,1);
 	}
 
-#SelectCharacterELE00
+#SelectCharacterELE00, #SelectCharacterType00
 	{
 		opacity:1;
 	}
-#SelectCharacterELE01, #SelectCharacterELE02, #SelectCharacterELE03, #SelectCharacterELE04
+#SelectCharacterELE01, #SelectCharacterELE02, #SelectCharacterELE03, #SelectCharacterELE04, #SelectCharacterType01, #SelectCharacterType02, #SelectCharacterType03, #SelectCharacterType04, #SelectCharacterType05, #SelectCharacterType06
 	{
 		opacity:0.5;
 	}
