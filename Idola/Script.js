@@ -366,6 +366,7 @@ function SelectWeaponFilter(ID)
 						document.getElementById(Weapons[Count]).style.display = "none";
 					}
 			}
+		document.getElementById(Weapons[0]).style.display = "inline";
 	}
 function SelectWeapon(ID)
 	{
@@ -415,6 +416,7 @@ function SelectSoulFilter(ID)
 						document.getElementById(Souls[Count]).style.display = "none";
 					}
 			}
+		document.getElementById(Souls[0]).style.display = "inline";
 	}
 function SelectSoul(ID)
 	{
