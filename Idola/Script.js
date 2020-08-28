@@ -22,6 +22,7 @@ function Start()
 			}
 		Data =
 			{
+				Element: 0,
 				Party: "01",
 				CharacterID: ["100000 00", "100000 00", "100000 00", "100000 00", "100000 00", "100000 00", "100000 00", "100000 00"],
 				CharacterLB: ["0", "0", "0", "0", "0", "0", "0", "0"],
@@ -102,57 +103,59 @@ function Start()
 							{
 								IDCurr = "0" + Count01 + "0" + Count02;
 								if(DataLoad.CharacterID) { SelectCharacter(DataLoad.CharacterID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]); }
-								if(DataLoad.CharacterLB) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value = DataLoad.CharacterLB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-								if(DataLoad.CharacterD) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterD").style.opacity = DataLoad.CharacterD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-								if(DataLoad.CharacterDB) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterDB").value = DataLoad.CharacterDB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-								if(DataLoad.CharacterTB) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value = DataLoad.CharacterTB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								if(DataLoad.CharacterLB) { document.getElementById("ID" + IDCurr + "CharacterLB").value = DataLoad.CharacterLB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								if(DataLoad.CharacterD) { document.getElementById("ID" + IDCurr + "CharacterD").style.opacity = DataLoad.CharacterD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								if(DataLoad.CharacterDB) { document.getElementById("ID" + IDCurr + "CharacterDB").value = DataLoad.CharacterDB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								if(DataLoad.CharacterTB) { document.getElementById("ID" + IDCurr + "CharacterTB").value = DataLoad.CharacterTB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
 								if(DataLoad.WeaponID) { SelectWeapon(DataLoad.WeaponID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]); }
-								if(DataLoad.WeaponHP) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponHP").value = DataLoad.WeaponHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-								if(DataLoad.WeaponATK) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponATK").value = DataLoad.WeaponATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-								if(DataLoad.WeaponDEF) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponDEF").value = DataLoad.WeaponDEF[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-								if(DataLoad.WeaponSPD) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponSPD").value = DataLoad.WeaponSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-								if(DataLoad.WeaponCRT) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponCRT").value = DataLoad.WeaponCRT[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-								if(DataLoad.WeaponRES) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponRES").value = DataLoad.WeaponRES[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								if(DataLoad.WeaponHP) { document.getElementById("ID" + IDCurr + "WeaponHP").value = DataLoad.WeaponHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								if(DataLoad.WeaponATK) { document.getElementById("ID" + IDCurr + "WeaponATK").value = DataLoad.WeaponATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								if(DataLoad.WeaponDEF) { document.getElementById("ID" + IDCurr + "WeaponDEF").value = DataLoad.WeaponDEF[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								if(DataLoad.WeaponSPD) { document.getElementById("ID" + IDCurr + "WeaponSPD").value = DataLoad.WeaponSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								if(DataLoad.WeaponCRT) { document.getElementById("ID" + IDCurr + "WeaponCRT").value = DataLoad.WeaponCRT[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								if(DataLoad.WeaponRES) { document.getElementById("ID" + IDCurr + "WeaponRES").value = DataLoad.WeaponRES[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
 								if(DataLoad.SoulID) { SelectSoul(DataLoad.SoulID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]); }
-								if(DataLoad.SoulHP) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulHP").value = DataLoad.SoulHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-								if(DataLoad.SoulATK) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulATK").value = DataLoad.SoulATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-								if(DataLoad.SoulDEF) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulDEF").value = DataLoad.SoulDEF[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-								if(DataLoad.SoulSPD) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulSPD").value = DataLoad.SoulSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-								if(DataLoad.SoulRES) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulRES").value = DataLoad.SoulRES[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-								if(DataLoad.SoulELE) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulELE").value = DataLoad.SoulELE[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-								document.getElementById("ID0" + Count01 + "0" + Count02 + "SupportSPD").value = DataLoad.SupportSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+								if(DataLoad.SoulHP) { document.getElementById("ID" + IDCurr + "SoulHP").value = DataLoad.SoulHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								if(DataLoad.SoulATK) { document.getElementById("ID" + IDCurr + "SoulATK").value = DataLoad.SoulATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								if(DataLoad.SoulDEF) { document.getElementById("ID" + IDCurr + "SoulDEF").value = DataLoad.SoulDEF[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								if(DataLoad.SoulSPD) { document.getElementById("ID" + IDCurr + "SoulSPD").value = DataLoad.SoulSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								if(DataLoad.SoulRES) { document.getElementById("ID" + IDCurr + "SoulRES").value = DataLoad.SoulRES[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								if(DataLoad.SoulELE) { document.getElementById("ID" + IDCurr + "SoulELE").value = DataLoad.SoulELE[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+								document.getElementById("ID" + IDCurr + "SupportSPD").value = DataLoad.SupportSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 							}
 						IDCurr = "0" + Count01;
 						if(DataLoad.IdoMagID) { SelectIdoMag(DataLoad.IdoMagID[Count01 - 1]); }
-						if(DataLoad.IdoMagHP) { document.getElementById("ID0" + Count01 + "IdoMagHP").value = DataLoad.IdoMagHP[Count01 - 1]; }
-						if(DataLoad.IdoMagATK) { document.getElementById("ID0" + Count01 + "IdoMagATK").value = DataLoad.IdoMagATK[Count01 - 1]; }
-						if(DataLoad.IdoMagDEF) { document.getElementById("ID0" + Count01 + "IdoMagDEF").value = DataLoad.IdoMagDEF[Count01 - 1]; }
-						if(DataLoad.IdoMagSPD) { document.getElementById("ID0" + Count01 + "IdoMagSPD").value = DataLoad.IdoMagSPD[Count01 - 1]; }
-						if(DataLoad.IdoMagCRT) { document.getElementById("ID0" + Count01 + "IdoMagCRT").value = DataLoad.IdoMagCRT[Count01 - 1]; }
-						if(DataLoad.IdoMagRES) { document.getElementById("ID0" + Count01 + "IdoMagRES").value = DataLoad.IdoMagRES[Count01 - 1]; }
-						if(DataLoad.IdoMagRED) { document.getElementById("ID0" + Count01 + "IdoMagRED").value = DataLoad.IdoMagRED[Count01 - 1]; }
-						if(DataLoad.IdoMagELE01) { document.getElementById("ID0" + Count01 + "IdoMagELE01").value = DataLoad.IdoMagELE01[Count01 - 1]; }
-						if(DataLoad.IdoMagELE02) { document.getElementById("ID0" + Count01 + "IdoMagELE02").value = DataLoad.IdoMagELE02[Count01 - 1]; }
-						if(DataLoad.IdoMagELE03) { document.getElementById("ID0" + Count01 + "IdoMagELE03").value = DataLoad.IdoMagELE03[Count01 - 1]; }
-						if(DataLoad.IdoMagELE04) { document.getElementById("ID0" + Count01 + "IdoMagELE04").value = DataLoad.IdoMagELE04[Count01 - 1]; }
-						if(DataLoad.IdoMagEXP) { document.getElementById("ID0" + Count01 + "IdoMagEXP").value = DataLoad.IdoMagEXP[Count01 - 1]; }
-						if(DataLoad.IdoMagKZN) { document.getElementById("ID0" + Count01 + "IdoMagKZN").value = DataLoad.IdoMagKZN[Count01 - 1]; }
-						if(DataLoad.IdoMagMST) { document.getElementById("ID0" + Count01 + "IdoMagMST").value = DataLoad.IdoMagMST[Count01 - 1]; }
-						//if(DataLoad.IdoMagATK01) { document.getElementById("ID0" + Count01 + "IdoMagATK01").value = DataLoad.IdoMagATK01[Count01 - 1]; }
-						//if(DataLoad.IdoMagATK02) { document.getElementById("ID0" + Count01 + "IdoMagATK02").value = DataLoad.IdoMagATK02[Count01 - 1]; }
-						//if(DataLoad.IdoMagATK03) { document.getElementById("ID0" + Count01 + "IdoMagATK03").value = DataLoad.IdoMagATK03[Count01 - 1]; }
-						//if(DataLoad.IdoMagATK04) { document.getElementById("ID0" + Count01 + "IdoMagATK04").value = DataLoad.IdoMagATK04[Count01 - 1]; }
-						//if(DataLoad.IdoMagDEF01) { document.getElementById("ID0" + Count01 + "IdoMagDEF01").value = DataLoad.IdoMagDEF01[Count01 - 1]; }
-						//if(DataLoad.IdoMagDEF02) { document.getElementById("ID0" + Count01 + "IdoMagDEF02").value = DataLoad.IdoMagDEF02[Count01 - 1]; }
-						//if(DataLoad.IdoMagDEF03) { document.getElementById("ID0" + Count01 + "IdoMagDEF03").value = DataLoad.IdoMagDEF03[Count01 - 1]; }
-						//if(DataLoad.IdoMagDEF04) { document.getElementById("ID0" + Count01 + "IdoMagDEF04").value = DataLoad.IdoMagDEF04[Count01 - 1]; }
-						if(DataLoad.IdoMagSPD01) { document.getElementById("ID0" + Count01 + "IdoMagSPD01").value = DataLoad.IdoMagSPD01[Count01 - 1]; }
-						if(DataLoad.IdoMagSPD02) { document.getElementById("ID0" + Count01 + "IdoMagSPD02").value = DataLoad.IdoMagSPD02[Count01 - 1]; }
-						if(DataLoad.IdoMagSPD03) { document.getElementById("ID0" + Count01 + "IdoMagSPD03").value = DataLoad.IdoMagSPD03[Count01 - 1]; }
-						if(DataLoad.IdoMagSPD04) { document.getElementById("ID0" + Count01 + "IdoMagSPD04").value = DataLoad.IdoMagSPD04[Count01 - 1]; }
+						if(DataLoad.IdoMagHP) { document.getElementById("ID" + IDCurr + "IdoMagHP").value = DataLoad.IdoMagHP[Count01 - 1]; }
+						if(DataLoad.IdoMagATK) { document.getElementById("ID" + IDCurr + "IdoMagATK").value = DataLoad.IdoMagATK[Count01 - 1]; }
+						if(DataLoad.IdoMagDEF) { document.getElementById("ID" + IDCurr + "IdoMagDEF").value = DataLoad.IdoMagDEF[Count01 - 1]; }
+						if(DataLoad.IdoMagSPD) { document.getElementById("ID" + IDCurr + "IdoMagSPD").value = DataLoad.IdoMagSPD[Count01 - 1]; }
+						if(DataLoad.IdoMagCRT) { document.getElementById("ID" + IDCurr + "IdoMagCRT").value = DataLoad.IdoMagCRT[Count01 - 1]; }
+						if(DataLoad.IdoMagRES) { document.getElementById("ID" + IDCurr + "IdoMagRES").value = DataLoad.IdoMagRES[Count01 - 1]; }
+						if(DataLoad.IdoMagRED) { document.getElementById("ID" + IDCurr + "IdoMagRED").value = DataLoad.IdoMagRED[Count01 - 1]; }
+						if(DataLoad.IdoMagELE01) { document.getElementById("ID" + IDCurr + "IdoMagELE01").value = DataLoad.IdoMagELE01[Count01 - 1]; }
+						if(DataLoad.IdoMagELE02) { document.getElementById("ID" + IDCurr + "IdoMagELE02").value = DataLoad.IdoMagELE02[Count01 - 1]; }
+						if(DataLoad.IdoMagELE03) { document.getElementById("ID" + IDCurr + "IdoMagELE03").value = DataLoad.IdoMagELE03[Count01 - 1]; }
+						if(DataLoad.IdoMagELE04) { document.getElementById("ID" + IDCurr + "IdoMagELE04").value = DataLoad.IdoMagELE04[Count01 - 1]; }
+						if(DataLoad.IdoMagEXP) { document.getElementById("ID" + IDCurr + "IdoMagEXP").value = DataLoad.IdoMagEXP[Count01 - 1]; }
+						if(DataLoad.IdoMagKZN) { document.getElementById("ID" + IDCurr + "IdoMagKZN").value = DataLoad.IdoMagKZN[Count01 - 1]; }
+						if(DataLoad.IdoMagMST) { document.getElementById("ID" + IDCurr + "IdoMagMST").value = DataLoad.IdoMagMST[Count01 - 1]; }
+						//if(DataLoad.IdoMagATK01) { document.getElementById("ID" + IDCurr + "IdoMagATK01").value = DataLoad.IdoMagATK01[Count01 - 1]; }
+						//if(DataLoad.IdoMagATK02) { document.getElementById("ID" + IDCurr + "IdoMagATK02").value = DataLoad.IdoMagATK02[Count01 - 1]; }
+						//if(DataLoad.IdoMagATK03) { document.getElementById("ID" + IDCurr + "IdoMagATK03").value = DataLoad.IdoMagATK03[Count01 - 1]; }
+						//if(DataLoad.IdoMagATK04) { document.getElementById("ID" + IDCurr + "IdoMagATK04").value = DataLoad.IdoMagATK04[Count01 - 1]; }
+						//if(DataLoad.IdoMagDEF01) { document.getElementById("ID" + IDCurr + "IdoMagDEF01").value = DataLoad.IdoMagDEF01[Count01 - 1]; }
+						//if(DataLoad.IdoMagDEF02) { document.getElementById("ID" + IDCurr + "IdoMagDEF02").value = DataLoad.IdoMagDEF02[Count01 - 1]; }
+						//if(DataLoad.IdoMagDEF03) { document.getElementById("ID" + IDCurr + "IdoMagDEF03").value = DataLoad.IdoMagDEF03[Count01 - 1]; }
+						//if(DataLoad.IdoMagDEF04) { document.getElementById("ID" + IDCurr + "IdoMagDEF04").value = DataLoad.IdoMagDEF04[Count01 - 1]; }
+						if(DataLoad.IdoMagSPD01) { document.getElementById("ID" + IDCurr + "IdoMagSPD01").value = DataLoad.IdoMagSPD01[Count01 - 1]; }
+						if(DataLoad.IdoMagSPD02) { document.getElementById("ID" + IDCurr + "IdoMagSPD02").value = DataLoad.IdoMagSPD02[Count01 - 1]; }
+						if(DataLoad.IdoMagSPD03) { document.getElementById("ID" + IDCurr + "IdoMagSPD03").value = DataLoad.IdoMagSPD03[Count01 - 1]; }
+						if(DataLoad.IdoMagSPD04) { document.getElementById("ID" + IDCurr + "IdoMagSPD04").value = DataLoad.IdoMagSPD04[Count01 - 1]; }
 					}
+				if(DataLoad.Element) { Data.Element = DataLoad.Element;}
 				LB("ID0101CharacterLB");
 				DB("ID0101CharacterDB");
+				TB("ID0101CharacterTB");
 			}
 	}
 function SelectParty(ID)
@@ -203,53 +206,28 @@ function SelectCharacterFilter(ID)
 				if(["0", Select].indexOf(Characters[Count].charAt(8)) != -1 || CharactersNeutral.some(String => Characters[Count].includes(String)))
 					{
 						var Score = 0;
+						
 						if(document.getElementById("SelectCharacterELE00").style.opacity == "1")
 							{
 								Score += 1;
 							}
-						else if(document.getElementById("SelectCharacterELE01").style.opacity == "1" && (CharactersELE00.some(String => Characters[Count].includes(String)) || CharactersELE01.some(String => Characters[Count].includes(String))))
+						for(var CountELE = 1; CountELE < 5; CountELE ++)
 							{
-								Score += 1;
-							}
-						else if(document.getElementById("SelectCharacterELE02").style.opacity == "1" && (CharactersELE00.some(String => Characters[Count].includes(String)) || CharactersELE02.some(String => Characters[Count].includes(String))))
-							{
-								Score += 1;
-							}
-						else if(document.getElementById("SelectCharacterELE03").style.opacity == "1" && (CharactersELE00.some(String => Characters[Count].includes(String)) || CharactersELE03.some(String => Characters[Count].includes(String))))
-							{
-								Score += 1;
-							}
-						else if(document.getElementById("SelectCharacterELE04").style.opacity == "1" && (CharactersELE00.some(String => Characters[Count].includes(String)) || CharactersELE04.some(String => Characters[Count].includes(String))))
-							{
-								Score += 1;
+								if(document.getElementById("SelectCharacterELE0" + CountELE).style.opacity == "1" && (CharactersELE["0"].some(String => Characters[Count].includes(String)) || CharactersELE[CountELE].some(String => Characters[Count].includes(String))))
+									{
+										Score += 1;
+									}
 							}
 						if(document.getElementById("SelectCharacterType00").style.opacity == "1")
 							{
 								Score += 1;
 							}
-						else if(document.getElementById("SelectCharacterType01").style.opacity == "1" && CharactersTypeATK.some(String => Characters[Count].includes(String)))
+						for(var CountType = 1; CountType < 7; CountType ++)
 							{
-								Score += 1;
-							}
-						else if(document.getElementById("SelectCharacterType02").style.opacity == "1" && CharactersTypeDEF.some(String => Characters[Count].includes(String)))
-							{
-								Score += 1;
-							}
-						else if(document.getElementById("SelectCharacterType03").style.opacity == "1" && CharactersTypeSPD.some(String => Characters[Count].includes(String)))
-							{
-								Score += 1;
-							}
-						else if(document.getElementById("SelectCharacterType04").style.opacity == "1" && CharactersTypeCRT.some(String => Characters[Count].includes(String)))
-							{
-								Score += 1;
-							}
-						else if(document.getElementById("SelectCharacterType05").style.opacity == "1" && CharactersTypeRES.some(String => Characters[Count].includes(String)))
-							{
-								Score += 1;
-							}
-						else if(document.getElementById("SelectCharacterType06").style.opacity == "1" && CharactersTypeWEA.some(String => Characters[Count].includes(String)))
-							{
-								Score += 1;
+								if(document.getElementById("SelectCharacterType0" + CountType).style.opacity == "1" && CharactersType[CountType].some(String => Characters[Count].includes(String)))
+									{
+										Score += 1;
+									}
 							}
 						if(Score == 2)
 							{
@@ -274,51 +252,25 @@ function SelectCharacter(ID)
 		Data.CharacterID[parseInt(IDCurr.charAt(3)) - Select] = ID;
 		document.getElementById("ID" + IDCurr + "Destiny").style.display = (ID.charAt(7) == "0") ? "none" : "inline";
 		document.getElementById("ID" + IDCurr + "Element").style.display = (ID == "100000 00") ? "none" : "inline";
-		if(CharactersELE00.some(String => ID.includes(String)))
+		if(CharactersELE["0"].some(String => ID.includes(String)))
 			{
-				if(document.getElementById("SelectCharacterELE01").style.opacity == "1")
+				for(var Count = 0; Count < 5; Count ++)
 					{
-						document.getElementById("ID" + IDCurr + "Element").src = "PNG/UI/ELE01.png";
-					}
-				else if(document.getElementById("SelectCharacterELE02").style.opacity == "1")
-					{
-						document.getElementById("ID" + IDCurr + "Element").src = "PNG/UI/ELE02.png";
-					}
-				else if(document.getElementById("SelectCharacterELE03").style.opacity == "1")
-					{
-						document.getElementById("ID" + IDCurr + "Element").src = "PNG/UI/ELE03.png";
-					}
-				else if(document.getElementById("SelectCharacterELE04").style.opacity == "1")
-					{
-						document.getElementById("ID" + IDCurr + "Element").src = "PNG/UI/ELE04.png";
-					}
-				else
-					{
-						document.getElementById("ID" + IDCurr + "Element").src = "PNG/UI/ELE00.png";
+						if(document.getElementById("SelectCharacterELE0" + Count).style.opacity == "1")
+							{
+								Data.Element = Count;
+							}
 					}
 				document.getElementById("ID" + IDCurr + "Element").style.cursor = "pointer";
 			}
 		else
 			{
-				if(CharactersELE01.some(String => ID.includes(String)))
+				for(var Count = 0; Count < 5; Count ++)
 					{
-						document.getElementById("ID" + IDCurr + "Element").src = "PNG/UI/ELE01.png";
-					}
-				else if(CharactersELE02.some(String => ID.includes(String)))
-					{
-						document.getElementById("ID" + IDCurr + "Element").src = "PNG/UI/ELE02.png";
-					}
-				else if(CharactersELE03.some(String => ID.includes(String)))
-					{
-						document.getElementById("ID" + IDCurr + "Element").src = "PNG/UI/ELE03.png";
-					}
-				else if(CharactersELE04.some(String => ID.includes(String)))
-					{
-						document.getElementById("ID" + IDCurr + "Element").src = "PNG/UI/ELE04.png";
-					}
-				else
-					{
-						document.getElementById("ID" + IDCurr + "Element").src = "PNG/UI/ELE00.png";
+						if(CharactersELE[Count].some(String => ID.includes(String)))
+							{
+								document.getElementById("ID" + IDCurr + "Element").src = "PNG/UI/ELE0" + Count + ".png";
+							}
 					}
 				document.getElementById("ID" + IDCurr + "Element").style.cursor = "default";
 			}
@@ -464,27 +416,7 @@ function SelectElement(ID)
 	{
 		if(window.getComputedStyle(document.getElementById(ID)).getPropertyValue("cursor") == "pointer")
 			{
-				
-				if(document.getElementById(ID).src.includes("PNG/UI/ELE00.png"))
-					{
-						document.getElementById(ID).src = "PNG/UI/ELE01.png";
-					}
-				else if(document.getElementById(ID).src.includes("PNG/UI/ELE01.png"))
-					{
-						document.getElementById(ID).src = "PNG/UI/ELE02.png";
-					}
-				else if(document.getElementById(ID).src.includes("PNG/UI/ELE02.png"))
-					{
-						document.getElementById(ID).src = "PNG/UI/ELE03.png";
-					}
-				else if(document.getElementById(ID).src.includes("PNG/UI/ELE03.png"))
-					{
-						document.getElementById(ID).src = "PNG/UI/ELE04.png";
-					}
-				else if(document.getElementById(ID).src.includes("PNG/UI/ELE04.png"))
-					{
-						document.getElementById(ID).src = "PNG/UI/ELE01.png";
-					}
+				Data.Element = ((Data.Element + 1) < 5) ? (Data.Element += 1) : 1;
 			}
 		Stat("ID0101CharacterSPD");
 	}
@@ -558,19 +490,23 @@ function Stat(ID)
 		var TotalScore = 0;
 		for(var Count01 = 1; Count01 < 3; Count01 ++)
 			{
-				var IdoMagScore = 0;
-				
+				var ELE01 = 1;
+				var ELE02 = 1;
+				var ELE03 = 1;
+				var ELE04 = 1;
 				var SPDOrder = [["01", 0], ["02", 0], ["03", 0], ["04", 0]];
-				
-				var ELE01 = 1 + parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE01").value);
-				var ELE02 = 1 + parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE02").value);
-				var ELE03 = 1 + parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE03").value);
-				var ELE04 = 1 + parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE04").value);
+				var IdoMagScore = 0;
 				for(var Count02 = 1; Count02 < 5; Count02 ++)
 					{
 						var FID = Data.CharacterID[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 						var CID = FID.substring(0, 6);
 						var RID = FID.substring(0, 7) + "0";
+						
+						if(CharactersELE["0"].some(String => CID.includes(String)))
+							{
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src = "PNG/UI/ELE0" + Data.Element + ".png";
+							}
+						
 						if(CID == "100000")
 							{
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalHP").value = 0;
@@ -588,9 +524,10 @@ function Stat(ID)
 							{
 								var LB = (document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterDB").style.display == "none") ? (document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value * 10) : ((document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value * 10) + 1 + parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterDB").value));
 								
-								var CharacterScore = 0;
-								var WeaponScore = 0;
-								var SoulScore = 0;
+								ELE01 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE01.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
+								ELE02 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE02.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
+								ELE03 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE03.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
+								ELE04 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE04.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
 								
 								var TypeHP = 0;
 								var TypeATK = 0;
@@ -600,32 +537,36 @@ function Stat(ID)
 								var TypeRES = 0;
 								var TypeWEA = 0;
 								
+								var CharacterScore = 0;
+								var WeaponScore = 0;
+								var SoulScore = 0;
+								
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterT").style.height = "64px";
 								
 								if(FID.charAt(7) == "0")
 									{
-										if(CharactersTypeATK.some(String => FID.includes(String)))
+										if(CharactersType["1"].some(String => FID.includes(String)))
 											{
 												TypeHP += CharacterType.TypeATK.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeATK += CharacterType.TypeATK.ATK[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeDEF += CharacterType.TypeATK.DEF[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeATK.png";
 											}
-										else if(CharactersTypeDEF.some(String => FID.includes(String)))
+										else if(CharactersType["2"].some(String => FID.includes(String)))
 											{
 												TypeHP += CharacterType.TypeDEF.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeDEF += CharacterType.TypeDEF.DEF[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeSPD += CharacterType.TypeDEF.SPD[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeDEF.png";
 											}
-										else if(CharactersTypeSPD.some(String => FID.includes(String)))
+										else if(CharactersType["3"].some(String => FID.includes(String)))
 											{
 												TypeHP += CharacterType.TypeSPD.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeATK += CharacterType.TypeSPD.ATK[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeSPD += CharacterType.TypeSPD.SPD[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeSPD.png";
 											}
-										else if(CharactersTypeCRT.some(String => FID.includes(String)))
+										else if(CharactersType["4"].some(String => FID.includes(String)))
 											{
 												TypeHP += CharacterType.TypeCRT.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeDEF += CharacterType.TypeCRT.DEF[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
@@ -634,7 +575,7 @@ function Stat(ID)
 												TypeCRT += CharacterType.TypeCRT.CRT[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeCRT.png";
 											}
-										else if(CharactersTypeRES.some(String => FID.includes(String)))
+										else if(CharactersType["5"].some(String => FID.includes(String)))
 											{
 												TypeHP += CharacterType.TypeRES.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeATK += CharacterType.TypeRES.ATK[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
@@ -643,7 +584,7 @@ function Stat(ID)
 												TypeRES += CharacterType.TypeRES.RES[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeRES.png";
 											}
-										else if(CharactersTypeWEA.some(String => FID.includes(String)))
+										else if(CharactersType["6"].some(String => FID.includes(String)))
 											{
 												TypeHP += CharacterType.TypeWEA.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeATK += CharacterType.TypeWEA.ATK[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
@@ -655,43 +596,43 @@ function Stat(ID)
 									}
 								else
 									{
-										if(CharactersTypeATK.some(String => String.indexOf(RID) != -1))
+										if(CharactersType["1"].some(String => String.indexOf(RID) != -1))
 											{
 												TypeHP -= 200;
 												TypeATK -= 110;
 												TypeDEF -= 50;
 											}
-										else if(CharactersTypeDEF.some(String => String.indexOf(RID) != -1))
+										else if(CharactersType["2"].some(String => String.indexOf(RID) != -1))
 											{
 												TypeHP -= 400;
 												TypeDEF -= 130;
 												TypeSPD -= 40;
 											}
-										else if(CharactersTypeSPD.some(String => String.indexOf(RID) != -1))
+										else if(CharactersType["3"].some(String => String.indexOf(RID) != -1))
 											{
 												TypeHP -= 200;
 												TypeATK -= 60;
 												TypeSPD -= 90;
 											}
-										else if(CharactersTypeCRT.some(String => String.indexOf(RID) != -1))
+										else if(CharactersType["4"].some(String => String.indexOf(RID) != -1))
 											{
 												TypeATK -= 30;
 												TypeDEF -= 50;
 												TypeSPD -= 70;
 											}
-										else if(CharactersTypeRES.some(String => String.indexOf(RID) != -1))
+										else if(CharactersType["5"].some(String => String.indexOf(RID) != -1))
 											{
 												TypeATK -= 50;
 												TypeDEF -= 50;
 												TypeSPD -= 50;
 											}
-										else if(CharactersTypeWEA.some(String => String.indexOf(RID) != -1))
+										else if(CharactersType["6"].some(String => String.indexOf(RID) != -1))
 											{
 												TypeATK -= 70;
 												TypeDEF -= 70;
 											}
 										
-										if(CharactersTypeATK.some(String => FID.includes(String)))
+										if(CharactersType["1"].some(String => FID.includes(String)))
 											{
 												TypeHP += 200;
 												TypeHP += CharacterType.TypeATK.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
@@ -701,7 +642,7 @@ function Stat(ID)
 												TypeDEF += CharacterType.TypeATK.DEF[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeATK.png";
 											}
-										else if(CharactersTypeDEF.some(String => FID.includes(String)))
+										else if(CharactersType["2"].some(String => FID.includes(String)))
 											{
 												TypeHP += 400;
 												TypeHP += CharacterType.TypeDEF.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
@@ -711,7 +652,7 @@ function Stat(ID)
 												TypeSPD += CharacterType.TypeDEF.SPD[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeDEF.png";
 											}
-										else if(CharactersTypeSPD.some(String => FID.includes(String)))
+										else if(CharactersType["3"].some(String => FID.includes(String)))
 											{
 												TypeHP += 200;
 												TypeHP += CharacterType.TypeSPD.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
@@ -721,7 +662,7 @@ function Stat(ID)
 												TypeSPD += CharacterType.TypeSPD.SPD[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeSPD.png";
 											}
-										else if(CharactersTypeCRT.some(String => FID.includes(String)))
+										else if(CharactersType["4"].some(String => FID.includes(String)))
 											{
 												TypeHP += CharacterType.TypeCRT.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeATK += 30;
@@ -733,7 +674,7 @@ function Stat(ID)
 												TypeCRT += CharacterType.TypeCRT.CRT[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeCRT.png";
 											}
-										else if(CharactersTypeRES.some(String => FID.includes(String)))
+										else if(CharactersType["5"].some(String => FID.includes(String)))
 											{
 												TypeHP += CharacterType.TypeRES.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeATK += 50;
@@ -745,7 +686,7 @@ function Stat(ID)
 												TypeRES += CharacterType.TypeRES.RES[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTI").src = "PNG/UI/TypeRES.png";
 											}
-										else if(CharactersTypeWEA.some(String => FID.includes(String)))
+										else if(CharactersType["6"].some(String => FID.includes(String)))
 											{
 												TypeHP += CharacterType.TypeWEA.HP[parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value)];
 												TypeATK += 70;
@@ -807,6 +748,12 @@ function Stat(ID)
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalRES").value = TypeRES + parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponRES").value) + parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulRES").value) + parseInt(document.getElementById("ID0" + Count01 + "IdoMagRES").value);
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalWEA").value = TypeWEA;
 								
+								var SPDO = SPD;
+								SPDO *= (100 + parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SupportSPD").value)) / 100;
+								SPDOrder[Count02 - 1][1] = parseFloat(SPDO.toFixed(4));
+								var SPDOTXT = SPDO.toFixed(0);
+								document.getElementById("ID0" + Count01 + "0" + Count02 + "SPD").innerHTML = SPDOTXT;
+								
 								CharacterScore += (parseInt(CharacterStat[CID].HP[LB]) + TypeHP) * 0.25;
 								CharacterScore += (parseInt(CharacterStat[CID].ATK[LB]) + TypeATK)* 5;
 								CharacterScore += (parseInt(CharacterStat[CID].DEF[LB]) + TypeDEF)* 5;
@@ -857,17 +804,6 @@ function Stat(ID)
 								IdoMagScore += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE02.png") ? (parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD02").value) * 2.25) : 0;
 								IdoMagScore += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE04.png") ? (parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD04").value) * 2.25) : 0;
 								IdoMagScore += document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE03.png") ? (parseInt(document.getElementById("ID0" + Count01 + "IdoMagSPD03").value) * 2.25) : 0;
-								
-								var SPDO = SPD;
-								SPDO *= (100 + parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SupportSPD").value)) / 100;
-								SPDOrder[Count02 - 1][1] = parseFloat(SPDO.toFixed(4));
-								var SPDOTXT = SPDO.toFixed(0);
-								document.getElementById("ID0" + Count01 + "0" + Count02 + "SPD").innerHTML = SPDOTXT;
-								
-								ELE01 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE01.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
-								ELE02 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE02.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
-								ELE03 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE03.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
-								ELE04 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE04.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
 							}
 						Data.WeaponHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponHP").value;
 						Data.WeaponATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3] = document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponATK").value;
@@ -887,6 +823,15 @@ function Stat(ID)
 						document.getElementById("ID0" + Count01 + "0" + Count02 + "TypeRES").style.height = (document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalRES").value != 0) ? "24px" : "0px";
 						document.getElementById("ID0" + Count01 + "0" + Count02 + "TypeWEA").style.height = (document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalWEA").value != 0) ? "24px" : "0px";
 					}
+				ELE01 += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE01").value);
+				ELE02 += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE02").value);
+				ELE03 += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE03").value);
+				ELE04 += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE04").value);
+				document.getElementById("ID0" + Count01 + "TotalELE01").value = (ELE01 > 10) ? 10 : ELE01;
+				document.getElementById("ID0" + Count01 + "TotalELE02").value = (ELE02 > 10) ? 10 : ELE02;
+				document.getElementById("ID0" + Count01 + "TotalELE03").value = (ELE03 > 10) ? 10 : ELE03;
+				document.getElementById("ID0" + Count01 + "TotalELE04").value = (ELE04 > 10) ? 10 : ELE04;
+				
 				IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE01").value) * 100;
 				IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE02").value) * 100;
 				IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE03").value) * 100;
@@ -904,15 +849,6 @@ function Stat(ID)
 				document.getElementById("ID0" + Count01 + SPDOrder[1][0] + "SPDOrder").innerHTML = "2ND";
 				document.getElementById("ID0" + Count01 + SPDOrder[2][0] + "SPDOrder").innerHTML = "3RD";
 				document.getElementById("ID0" + Count01 + SPDOrder[3][0] + "SPDOrder").innerHTML = "4TH";
-				
-				if(ELE01 > 10) { ELE01 = 10; }
-				if(ELE02 > 10) { ELE02 = 10; }
-				if(ELE03 > 10) { ELE03 = 10; }
-				if(ELE04 > 10) { ELE04 = 10; }
-				document.getElementById("ID0" + Count01 + "TotalELE01").value = ELE01;
-				document.getElementById("ID0" + Count01 + "TotalELE02").value = ELE02;
-				document.getElementById("ID0" + Count01 + "TotalELE03").value = ELE03;
-				document.getElementById("ID0" + Count01 + "TotalELE04").value = ELE04;
 				
 				Data.IdoMagHP[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagHP").value;
 				Data.IdoMagATK[Count01 - 1] = document.getElementById("ID0" + Count01 + "IdoMagATK").value;
@@ -1034,55 +970,56 @@ function DataLoad()
 					{
 						IDCurr = "0" + Count01 + "0" + Count02;
 						if(DataLoad.CharacterID) { SelectCharacter(DataLoad.CharacterID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]); }
-						if(DataLoad.CharacterLB) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value = DataLoad.CharacterLB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-						if(DataLoad.CharacterD) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterD").style.opacity = DataLoad.CharacterD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-						if(DataLoad.CharacterDB) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterDB").value = DataLoad.CharacterDB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-						if(DataLoad.CharacterTB) { document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterTB").value = DataLoad.CharacterTB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.CharacterLB) { document.getElementById("ID" + IDCurr + "CharacterLB").value = DataLoad.CharacterLB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.CharacterD) { document.getElementById("ID" + IDCurr + "CharacterD").style.opacity = DataLoad.CharacterD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.CharacterDB) { document.getElementById("ID" + IDCurr + "CharacterDB").value = DataLoad.CharacterDB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.CharacterTB) { document.getElementById("ID" + IDCurr + "CharacterTB").value = DataLoad.CharacterTB[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
 						if(DataLoad.WeaponID) { SelectWeapon(DataLoad.WeaponID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]); }
-						if(DataLoad.WeaponHP) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponHP").value = DataLoad.WeaponHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-						if(DataLoad.WeaponATK) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponATK").value = DataLoad.WeaponATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-						if(DataLoad.WeaponDEF) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponDEF").value = DataLoad.WeaponDEF[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-						if(DataLoad.WeaponSPD) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponSPD").value = DataLoad.WeaponSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-						if(DataLoad.WeaponCRT) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponCRT").value = DataLoad.WeaponCRT[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-						if(DataLoad.WeaponRES) { document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponRES").value = DataLoad.WeaponRES[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.WeaponHP) { document.getElementById("ID" + IDCurr + "WeaponHP").value = DataLoad.WeaponHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.WeaponATK) { document.getElementById("ID" + IDCurr + "WeaponATK").value = DataLoad.WeaponATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.WeaponDEF) { document.getElementById("ID" + IDCurr + "WeaponDEF").value = DataLoad.WeaponDEF[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.WeaponSPD) { document.getElementById("ID" + IDCurr + "WeaponSPD").value = DataLoad.WeaponSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.WeaponCRT) { document.getElementById("ID" + IDCurr + "WeaponCRT").value = DataLoad.WeaponCRT[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.WeaponRES) { document.getElementById("ID" + IDCurr + "WeaponRES").value = DataLoad.WeaponRES[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
 						if(DataLoad.SoulID) { SelectSoul(DataLoad.SoulID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]); }
-						if(DataLoad.SoulHP) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulHP").value = DataLoad.SoulHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-						if(DataLoad.SoulATK) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulATK").value = DataLoad.SoulATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-						if(DataLoad.SoulDEF) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulDEF").value = DataLoad.SoulDEF[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-						if(DataLoad.SoulSPD) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulSPD").value = DataLoad.SoulSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-						if(DataLoad.SoulRES) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulRES").value = DataLoad.SoulRES[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-						if(DataLoad.SoulELE) { document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulELE").value = DataLoad.SoulELE[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
-						document.getElementById("ID0" + Count01 + "0" + Count02 + "SupportSPD").value = DataLoad.SupportSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
+						if(DataLoad.SoulHP) { document.getElementById("ID" + IDCurr + "SoulHP").value = DataLoad.SoulHP[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.SoulATK) { document.getElementById("ID" + IDCurr + "SoulATK").value = DataLoad.SoulATK[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.SoulDEF) { document.getElementById("ID" + IDCurr + "SoulDEF").value = DataLoad.SoulDEF[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.SoulSPD) { document.getElementById("ID" + IDCurr + "SoulSPD").value = DataLoad.SoulSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.SoulRES) { document.getElementById("ID" + IDCurr + "SoulRES").value = DataLoad.SoulRES[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						if(DataLoad.SoulELE) { document.getElementById("ID" + IDCurr + "SoulELE").value = DataLoad.SoulELE[(Count01 == 1) ? Count02 - 1 : Count02 + 3]; }
+						document.getElementById("ID" + IDCurr + "SupportSPD").value = DataLoad.SupportSPD[(Count01 == 1) ? Count02 - 1 : Count02 + 3];
 					}
 				IDCurr = "0" + Count01;
 				if(DataLoad.IdoMagID) { SelectIdoMag(DataLoad.IdoMagID[Count01 - 1]); }
-				if(DataLoad.IdoMagHP) { document.getElementById("ID0" + Count01 + "IdoMagHP").value = DataLoad.IdoMagHP[Count01 - 1]; }
-				if(DataLoad.IdoMagATK) { document.getElementById("ID0" + Count01 + "IdoMagATK").value = DataLoad.IdoMagATK[Count01 - 1]; }
-				if(DataLoad.IdoMagDEF) { document.getElementById("ID0" + Count01 + "IdoMagDEF").value = DataLoad.IdoMagDEF[Count01 - 1]; }
-				if(DataLoad.IdoMagSPD) { document.getElementById("ID0" + Count01 + "IdoMagSPD").value = DataLoad.IdoMagSPD[Count01 - 1]; }
-				if(DataLoad.IdoMagCRT) { document.getElementById("ID0" + Count01 + "IdoMagCRT").value = DataLoad.IdoMagCRT[Count01 - 1]; }
-				if(DataLoad.IdoMagRES) { document.getElementById("ID0" + Count01 + "IdoMagRES").value = DataLoad.IdoMagRES[Count01 - 1]; }
-				if(DataLoad.IdoMagRED) { document.getElementById("ID0" + Count01 + "IdoMagRED").value = DataLoad.IdoMagRED[Count01 - 1]; }
-				if(DataLoad.IdoMagELE01) { document.getElementById("ID0" + Count01 + "IdoMagELE01").value = DataLoad.IdoMagELE01[Count01 - 1]; }
-				if(DataLoad.IdoMagELE02) { document.getElementById("ID0" + Count01 + "IdoMagELE02").value = DataLoad.IdoMagELE02[Count01 - 1]; }
-				if(DataLoad.IdoMagELE03) { document.getElementById("ID0" + Count01 + "IdoMagELE03").value = DataLoad.IdoMagELE03[Count01 - 1]; }
-				if(DataLoad.IdoMagELE04) { document.getElementById("ID0" + Count01 + "IdoMagELE04").value = DataLoad.IdoMagELE04[Count01 - 1]; }
-				if(DataLoad.IdoMagEXP) { document.getElementById("ID0" + Count01 + "IdoMagEXP").value = DataLoad.IdoMagEXP[Count01 - 1]; }
-				if(DataLoad.IdoMagKZN) { document.getElementById("ID0" + Count01 + "IdoMagKZN").value = DataLoad.IdoMagKZN[Count01 - 1]; }
-				if(DataLoad.IdoMagMST) { document.getElementById("ID0" + Count01 + "IdoMagMST").value = DataLoad.IdoMagMST[Count01 - 1]; }
-				//if(DataLoad.IdoMagATK01) { document.getElementById("ID0" + Count01 + "IdoMagATK01").value = DataLoad.IdoMagATK01[Count01 - 1]; }
-				//if(DataLoad.IdoMagATK02) { document.getElementById("ID0" + Count01 + "IdoMagATK02").value = DataLoad.IdoMagATK02[Count01 - 1]; }
-				//if(DataLoad.IdoMagATK03) { document.getElementById("ID0" + Count01 + "IdoMagATK03").value = DataLoad.IdoMagATK03[Count01 - 1]; }
-				//if(DataLoad.IdoMagATK04) { document.getElementById("ID0" + Count01 + "IdoMagATK04").value = DataLoad.IdoMagATK04[Count01 - 1]; }
-				//if(DataLoad.IdoMagDEF01) { document.getElementById("ID0" + Count01 + "IdoMagDEF01").value = DataLoad.IdoMagDEF01[Count01 - 1]; }
-				//if(DataLoad.IdoMagDEF02) { document.getElementById("ID0" + Count01 + "IdoMagDEF02").value = DataLoad.IdoMagDEF02[Count01 - 1]; }
-				//if(DataLoad.IdoMagDEF03) { document.getElementById("ID0" + Count01 + "IdoMagDEF03").value = DataLoad.IdoMagDEF03[Count01 - 1]; }
-				//if(DataLoad.IdoMagDEF04) { document.getElementById("ID0" + Count01 + "IdoMagDEF04").value = DataLoad.IdoMagDEF04[Count01 - 1]; }
-				if(DataLoad.IdoMagSPD01) { document.getElementById("ID0" + Count01 + "IdoMagSPD01").value = DataLoad.IdoMagSPD01[Count01 - 1]; }
-				if(DataLoad.IdoMagSPD02) { document.getElementById("ID0" + Count01 + "IdoMagSPD02").value = DataLoad.IdoMagSPD02[Count01 - 1]; }
-				if(DataLoad.IdoMagSPD03) { document.getElementById("ID0" + Count01 + "IdoMagSPD03").value = DataLoad.IdoMagSPD03[Count01 - 1]; }
-				if(DataLoad.IdoMagSPD04) { document.getElementById("ID0" + Count01 + "IdoMagSPD04").value = DataLoad.IdoMagSPD04[Count01 - 1]; }
+				if(DataLoad.IdoMagHP) { document.getElementById("ID" + IDCurr + "IdoMagHP").value = DataLoad.IdoMagHP[Count01 - 1]; }
+				if(DataLoad.IdoMagATK) { document.getElementById("ID" + IDCurr + "IdoMagATK").value = DataLoad.IdoMagATK[Count01 - 1]; }
+				if(DataLoad.IdoMagDEF) { document.getElementById("ID" + IDCurr + "IdoMagDEF").value = DataLoad.IdoMagDEF[Count01 - 1]; }
+				if(DataLoad.IdoMagSPD) { document.getElementById("ID" + IDCurr + "IdoMagSPD").value = DataLoad.IdoMagSPD[Count01 - 1]; }
+				if(DataLoad.IdoMagCRT) { document.getElementById("ID" + IDCurr + "IdoMagCRT").value = DataLoad.IdoMagCRT[Count01 - 1]; }
+				if(DataLoad.IdoMagRES) { document.getElementById("ID" + IDCurr + "IdoMagRES").value = DataLoad.IdoMagRES[Count01 - 1]; }
+				if(DataLoad.IdoMagRED) { document.getElementById("ID" + IDCurr + "IdoMagRED").value = DataLoad.IdoMagRED[Count01 - 1]; }
+				if(DataLoad.IdoMagELE01) { document.getElementById("ID" + IDCurr + "IdoMagELE01").value = DataLoad.IdoMagELE01[Count01 - 1]; }
+				if(DataLoad.IdoMagELE02) { document.getElementById("ID" + IDCurr + "IdoMagELE02").value = DataLoad.IdoMagELE02[Count01 - 1]; }
+				if(DataLoad.IdoMagELE03) { document.getElementById("ID" + IDCurr + "IdoMagELE03").value = DataLoad.IdoMagELE03[Count01 - 1]; }
+				if(DataLoad.IdoMagELE04) { document.getElementById("ID" + IDCurr + "IdoMagELE04").value = DataLoad.IdoMagELE04[Count01 - 1]; }
+				if(DataLoad.IdoMagEXP) { document.getElementById("ID" + IDCurr + "IdoMagEXP").value = DataLoad.IdoMagEXP[Count01 - 1]; }
+				if(DataLoad.IdoMagKZN) { document.getElementById("ID" + IDCurr + "IdoMagKZN").value = DataLoad.IdoMagKZN[Count01 - 1]; }
+				if(DataLoad.IdoMagMST) { document.getElementById("ID" + IDCurr + "IdoMagMST").value = DataLoad.IdoMagMST[Count01 - 1]; }
+				//if(DataLoad.IdoMagATK01) { document.getElementById("ID" + IDCurr + "IdoMagATK01").value = DataLoad.IdoMagATK01[Count01 - 1]; }
+				//if(DataLoad.IdoMagATK02) { document.getElementById("ID" + IDCurr + "IdoMagATK02").value = DataLoad.IdoMagATK02[Count01 - 1]; }
+				//if(DataLoad.IdoMagATK03) { document.getElementById("ID" + IDCurr + "IdoMagATK03").value = DataLoad.IdoMagATK03[Count01 - 1]; }
+				//if(DataLoad.IdoMagATK04) { document.getElementById("ID" + IDCurr + "IdoMagATK04").value = DataLoad.IdoMagATK04[Count01 - 1]; }
+				//if(DataLoad.IdoMagDEF01) { document.getElementById("ID" + IDCurr + "IdoMagDEF01").value = DataLoad.IdoMagDEF01[Count01 - 1]; }
+				//if(DataLoad.IdoMagDEF02) { document.getElementById("ID" + IDCurr + "IdoMagDEF02").value = DataLoad.IdoMagDEF02[Count01 - 1]; }
+				//if(DataLoad.IdoMagDEF03) { document.getElementById("ID" + IDCurr + "IdoMagDEF03").value = DataLoad.IdoMagDEF03[Count01 - 1]; }
+				//if(DataLoad.IdoMagDEF04) { document.getElementById("ID" + IDCurr + "IdoMagDEF04").value = DataLoad.IdoMagDEF04[Count01 - 1]; }
+				if(DataLoad.IdoMagSPD01) { document.getElementById("ID" + IDCurr + "IdoMagSPD01").value = DataLoad.IdoMagSPD01[Count01 - 1]; }
+				if(DataLoad.IdoMagSPD02) { document.getElementById("ID" + IDCurr + "IdoMagSPD02").value = DataLoad.IdoMagSPD02[Count01 - 1]; }
+				if(DataLoad.IdoMagSPD03) { document.getElementById("ID" + IDCurr + "IdoMagSPD03").value = DataLoad.IdoMagSPD03[Count01 - 1]; }
+				if(DataLoad.IdoMagSPD04) { document.getElementById("ID" + IDCurr + "IdoMagSPD04").value = DataLoad.IdoMagSPD04[Count01 - 1]; }
 			}
+		if(DataLoad.Element) { Data.Element = DataLoad.Element; }
 		LB("ID0101CharacterLB");
 		DB("ID0101CharacterDB");
 		TB("ID0101CharacterTB");

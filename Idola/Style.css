@@ -307,6 +307,7 @@ body
 	}
 #SelectCharacter
 	{
+		width:658px;
 		height:calc(100% - 96px);
 	}
 .SelectFilter
