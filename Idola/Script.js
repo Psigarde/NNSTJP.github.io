@@ -326,6 +326,7 @@ function SelectWeapon(ID)
 		var Select = (IDCurr.charAt(1) == "1") ? 1 : -3;
 		Data.WeaponID[parseInt(IDCurr.charAt(3)) - Select] = ID;
 		SelectDone();
+		Stat("ID0101CharacterSPD");
 	}
 function SelectSoulList(ID)
 	{
@@ -494,6 +495,10 @@ function Stat(ID)
 				var ELE02 = 1;
 				var ELE03 = 1;
 				var ELE04 = 1;
+				var ELE01Max = 10;
+				var ELE02Max = 10;
+				var ELE03Max = 10;
+				var ELE04Max = 10;
 				var SPDOrder = [["01", 0], ["02", 0], ["03", 0], ["04", 0]];
 				var IdoMagScore = 0;
 				for(var Count02 = 1; Count02 < 5; Count02 ++)
@@ -528,6 +533,14 @@ function Stat(ID)
 								ELE02 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE02.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
 								ELE03 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE03.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
 								ELE04 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE04.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
+								
+								if(["206100102", "206100117"].indexOf(Data.WeaponID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]) != -1)
+									{
+										ELE01Max += 1;
+										ELE02Max += 1;
+										ELE03Max += 1;
+										ELE04Max += 1;
+									}
 								
 								var TypeHP = 0;
 								var TypeATK = 0;
@@ -827,10 +840,10 @@ function Stat(ID)
 				ELE02 += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE02").value);
 				ELE03 += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE03").value);
 				ELE04 += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE04").value);
-				document.getElementById("ID0" + Count01 + "TotalELE01").value = (ELE01 > 10) ? 10 : ELE01;
-				document.getElementById("ID0" + Count01 + "TotalELE02").value = (ELE02 > 10) ? 10 : ELE02;
-				document.getElementById("ID0" + Count01 + "TotalELE03").value = (ELE03 > 10) ? 10 : ELE03;
-				document.getElementById("ID0" + Count01 + "TotalELE04").value = (ELE04 > 10) ? 10 : ELE04;
+				document.getElementById("ID0" + Count01 + "TotalELE01").value = (ELE01 > ELE01Max) ? ELE01Max : ELE01;
+				document.getElementById("ID0" + Count01 + "TotalELE02").value = (ELE02 > ELE02Max) ? ELE02Max : ELE02;
+				document.getElementById("ID0" + Count01 + "TotalELE03").value = (ELE03 > ELE03Max) ? ELE03Max : ELE03;
+				document.getElementById("ID0" + Count01 + "TotalELE04").value = (ELE04 > ELE04Max) ? ELE04Max : ELE04;
 				
 				IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE01").value) * 100;
 				IdoMagScore += parseInt(document.getElementById("ID0" + Count01 + "IdoMagELE02").value) * 100;
