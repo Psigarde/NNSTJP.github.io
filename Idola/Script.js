@@ -489,16 +489,29 @@ function Stat(ID)
 		if(parseFloat(document.getElementById(ID).value) > parseFloat(document.getElementById(ID).max)) { document.getElementById(ID).value = document.getElementById(ID).max; }
 		
 		var TotalScore = 0;
+		
+		var ELE01Max = 10;
+		var ELE02Max = 10;
+		var ELE03Max = 10;
+		var ELE04Max = 10;
+		
+		for(var Count = 0; Count < 8; Count ++)
+			{
+				if(Data.WeaponID[Count] == "206100102" || Data.WeaponID[Count] == "206100117")
+					{
+						ELE01Max += 1;
+						ELE02Max += 1;
+						ELE03Max += 1;
+						ELE04Max += 1;
+					}
+			}
+		
 		for(var Count01 = 1; Count01 < 3; Count01 ++)
 			{
 				var ELE01 = 1;
 				var ELE02 = 1;
 				var ELE03 = 1;
 				var ELE04 = 1;
-				var ELE01Max = 10;
-				var ELE02Max = 10;
-				var ELE03Max = 10;
-				var ELE04Max = 10;
 				var SPDOrder = [["01", 0], ["02", 0], ["03", 0], ["04", 0]];
 				var IdoMagScore = 0;
 				for(var Count02 = 1; Count02 < 5; Count02 ++)
@@ -533,14 +546,6 @@ function Stat(ID)
 								ELE02 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE02.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
 								ELE03 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE03.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
 								ELE04 += (document.getElementById("ID0" + Count01 + "0" + Count02 + "Element").src.includes("PNG/UI/ELE04.png")) ? (parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "CharacterLB").value) * 0.25) : 0 ;
-								
-								if(["206100102", "206100117"].indexOf(Data.WeaponID[(Count01 == 1) ? Count02 - 1 : Count02 + 3]) != -1)
-									{
-										ELE01Max += 1;
-										ELE02Max += 1;
-										ELE03Max += 1;
-										ELE04Max += 1;
-									}
 								
 								var TypeHP = 0;
 								var TypeATK = 0;
