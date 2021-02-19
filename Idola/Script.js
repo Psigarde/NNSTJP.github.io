@@ -4,22 +4,10 @@ var DataLink;
 var Timeout;
 function Start()
 	{
-		for(var Count = 0; Count < Characters.length; Count ++)
-			{
-				document.getElementById("SelectCharacter").innerHTML += "<img class='SelectIMG' src='PNG/Character Icon/" + Characters[Count] + ".png' id='" + Characters[Count] + "' onClick='SelectCharacter(this.id)'>";
-			}
-		for(var Count = 0; Count < Weapons.length; Count ++)
-			{
-				document.getElementById("SelectWeapon").innerHTML += "<img class='SelectIMG' src='PNG/Weapon Icon/" + Weapons[Count] + ".png' id='" + Weapons[Count] + "' onClick='SelectWeapon(this.id)'>";
-			}
-		for(var Count = 0; Count < Souls.length; Count ++)
-			{
-				document.getElementById("SelectSoul").innerHTML += "<img class='SelectIMG' src='PNG/Soul Icon/" + Souls[Count] + ".png' id='" + Souls[Count] + "' onClick='SelectSoul(this.id)'>";
-			}
-		for(var Count = 0; Count < IdoMags.length; Count ++)
-			{
-				document.getElementById("SelectIdoMag").innerHTML += "<img class='SelectIMG' src='PNG/IdoMag Icon/" + IdoMags[Count] + ".png' id='" + IdoMags[Count] + "' onClick='SelectIdoMag(this.id)'>";
-			}
+		LoadCharacters();
+		LoadWeapons();
+		LoadSouls();
+		LoadIdoMags();
 		Data =
 			{
 				Element: 0,
@@ -157,6 +145,43 @@ function Start()
 				DB("ID0101CharacterDB");
 				TB("ID0101CharacterTB");
 			}
+	}
+
+function LoadCharacters()
+	{
+		let builthtml = "";
+		for(var Count = 0; Count < Characters.length; Count ++)
+			{
+				builthtml += "<img class='SelectIMG' loading='lazy' src='PNG/Character Icon/" + Characters[Count] + ".png' id='" + Characters[Count] + "' onClick='SelectCharacter(this.id)'>";
+			}
+		document.getElementById("SelectCharacter").innerHTML = builthtml;
+	}
+function LoadWeapons()
+	{
+		let builthtml = "";
+		for(var Count = 0; Count < Weapons.length; Count ++)
+			{
+				builthtml += "<img class='SelectIMG' loading='lazy' src='PNG/Weapon Icon/" + Weapons[Count] + ".png' id='" + Weapons[Count] + "' onClick='SelectWeapon(this.id)'>";
+			}
+		document.getElementById("SelectWeapon").innerHTML = builthtml;
+	}
+function LoadSouls()
+	{
+		let builthtml = "";
+		for(var Count = 0; Count < Souls.length; Count ++)
+			{
+				builthtml += "<img class='SelectIMG' loading='lazy' src='PNG/Soul Icon/" + Souls[Count] + ".png' id='" + Souls[Count] + "' onClick='SelectSoul(this.id)'>";
+			}
+		document.getElementById("SelectSoul").innerHTML = builthtml;
+	}
+function LoadIdoMags()
+	{
+		let builthtml = "";
+		for(var Count = 0; Count < IdoMags.length; Count ++)
+			{
+				builthtml += "<img class='SelectIMG' loading='lazy' src='PNG/IdoMag Icon/" + IdoMags[Count] + ".png' id='" + IdoMags[Count] + "' onClick='SelectIdoMag(this.id)'>";
+			}
+		document.getElementById("SelectIdoMag").innerHTML = builthtml;
 	}
 function SelectParty(ID)
 	{
