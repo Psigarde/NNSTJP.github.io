@@ -58,7 +58,7 @@ function Start()
 				IdoMagSPD01: ["0", "0"],
 				IdoMagSPD02: ["0", "0"],
 				IdoMagSPD03: ["0", "0"],
-				IdoMagSPD04: ["0", "0"]
+				IdoMagSPD04: ["0", "0"],
 			};
 		SelectParty("ID01");
 		document.getElementById("SelectCharacterELE00").style.opacity = "1";
