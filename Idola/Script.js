@@ -743,7 +743,7 @@ function Stat(ID)
 											}
 									}
 								
-								var HP = parseInt(CharacterStat[CID].HP[LB]);
+								var HP = parseInt(getCharacterStat(CID).HP[LB]);
 								HP += TypeHP;
 								HP += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponHP").value);
 								HP += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulHP").value);
@@ -751,7 +751,7 @@ function Stat(ID)
 								var HPTXT = HP.toFixed(0);
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalHP").value = HPTXT;
 								
-								var ATK = parseInt(CharacterStat[CID].ATK[LB]);
+								var ATK = parseInt(getCharacterStat(CID).ATK[LB]);
 								ATK += TypeATK;
 								ATK += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponATK").value);
 								ATK += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulATK").value);
@@ -763,7 +763,7 @@ function Stat(ID)
 								var ATKTXT = ATK.toFixed(0);
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalATK").value = ATKTXT;
 								
-								var DEF = parseInt(CharacterStat[CID].DEF[LB]);
+								var DEF = parseInt(getCharacterStat(CID).DEF[LB]);
 								DEF += TypeDEF;
 								DEF += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponDEF").value);
 								DEF += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulDEF").value);
@@ -775,7 +775,7 @@ function Stat(ID)
 								var DEFTXT = DEF.toFixed(0);
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "TotalDEF").value = DEFTXT;
 								
-								var SPD = parseInt(CharacterStat[CID].SPD[LB]);
+								var SPD = parseInt(getCharacterStat(CID).SPD[LB]);
 								SPD += TypeSPD;
 								SPD += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "WeaponSPD").value);
 								SPD += parseInt(document.getElementById("ID0" + Count01 + "0" + Count02 + "SoulSPD").value);
@@ -797,10 +797,10 @@ function Stat(ID)
 								var SPDOTXT = SPDO.toFixed(0);
 								document.getElementById("ID0" + Count01 + "0" + Count02 + "SPD").innerHTML = SPDOTXT;
 								
-								CharacterScore += (parseInt(CharacterStat[CID].HP[LB]) + TypeHP) * 0.25;
-								CharacterScore += (parseInt(CharacterStat[CID].ATK[LB]) + TypeATK)* 5;
-								CharacterScore += (parseInt(CharacterStat[CID].DEF[LB]) + TypeDEF)* 5;
-								CharacterScore += (parseInt(CharacterStat[CID].SPD[LB]) + TypeSPD)* 5;
+								CharacterScore += (parseInt(getCharacterStat(CID).HP[LB]) + TypeHP) * 0.25;
+								CharacterScore += (parseInt(getCharacterStat(CID).ATK[LB]) + TypeATK)* 5;
+								CharacterScore += (parseInt(getCharacterStat(CID).DEF[LB]) + TypeDEF)* 5;
+								CharacterScore += (parseInt(getCharacterStat(CID).SPD[LB]) + TypeSPD)* 5;
 								CharacterScore += TypeCRT * 25;
 								CharacterScore += TypeRES * 25;
 								CharacterScore += TypeWEA * 12.5;
@@ -1073,3 +1073,10 @@ function DataDelete()
 		document.getElementById("DataList").remove(document.getElementById("DataList").selectedIndex);
 		DataChange();
 	}
+
+function getCharacterStat(CID) {
+	if (CharacterStat.hasOwnProperty(CID)) {
+		return CharacterStat[CID];
+	}
+	return CharacterStat["100000"];
+}
