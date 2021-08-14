@@ -2758,11 +2758,15 @@
     "100100": {
         "AlwaysNeutralFlag": true,
         "FD": {
-            "nonfd": "0"
+            "nonfd": "0",
+            "law": "1",
+            "chaos": "2"
         },
         "Element": "0",
         "Type": {
-            "nonfd": "TypeSPD"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
             "hp": 19541,
@@ -2791,11 +2795,15 @@
     "100101": {
         "AlwaysNeutralFlag": true,
         "FD": {
-            "nonfd": "0"
+            "nonfd": "0",
+            "law": "1",
+            "chaos": "2"
         },
         "Element": "0",
         "Type": {
-            "nonfd": "TypeSPD"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
             "hp": 19541,
