@@ -1,9 +1,7 @@
 {
     "100000": {
         "FD": {
-            "nonfd": "0",
-            "law": "0",
-            "chaos": "0"
+            "nonfd": "0"
         },
         "Element": 0,
         "Type": {
