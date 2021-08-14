@@ -67,7 +67,6 @@ for x in CharData:
         if curFDType == "TypeWEA":
             CharactersType["6"].append(Trueid)
 
-print(CharactersELE)
 with open("Idola/DataID.js", "w") as output:
     #CharacterIDs
     output.write("var Characters =\n[")
