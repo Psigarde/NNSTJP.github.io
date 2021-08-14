@@ -9,17 +9,16 @@ with open('Idola/SymbolAndIdomagIDs.json') as f2:
     SymbolAndMagIDs = json.load(f2)
 
 Characters = []
-CharactersType = DefaultDict(list)
+CharactersType = {"1" : [], "2" : [], "3" : [], "4" : [],"5" : [],"6" : []}
 CharactersDBNA = []
-CharactersELE = DefaultDict(list)
+CharactersELE = {"0" :[], "1" : [], "2" : [], "3" : [], "4" : []}
 CharactersNeutral = []
 CharacterStat = {}
-iterations = 0
 for x in CharData:
     currentCharacterStat = {}
     prefix = "0"
     curCharEle = CharData[x]["Element"]
-    CharactersELE[curCharEle].append(x)
+    CharactersELE[str(curCharEle)].append(x)
     indexStat = 0
     for stat in CharData[x]["Base_Stat"]:
         statText = stat.upper()
@@ -68,7 +67,9 @@ for x in CharData:
         if curFDType == "TypeWEA":
             CharactersType["6"].append(Trueid)
 
+print(CharactersELE)
 with open("Idola/DataID.js", "w") as output:
+    #CharacterIDs
     output.write("var Characters =\n[")
     for entry in Characters:
         output.write("\""+entry+"\",")
@@ -77,32 +78,42 @@ with open("Idola/DataID.js", "w") as output:
     for entry in CharactersNeutral:
         output.write("\""+entry+"\",")
     output.write("];\n\n")
-    output.write("var CharactersELE =\n[")
+    #Elements
+    output.write("var CharactersELE =\n    {\n")
     for element in CharactersELE:
+        output.write("        \""+str(element)+"\":\n            [")
         for entry in CharactersELE[element]:
             output.write("\""+str(entry)+"\",")
-    output.write("];\n\n")
+        output.write("],\n")
+    output.write("    };\n\n")
+    #DBNA
     output.write("var CharactersDBNA =\n[")
     for entry in CharactersDBNA:
         output.write("\""+entry+"\",")
     output.write("];\n\n")
-    output.write("var CharactersType =\n[")
+    #types
+    output.write("var CharactersType =\n    {\n")
     for type in CharactersType:
+        output.write("        \""+str(type)+"\":\n            [")
         for entry in CharactersType[type]:
             output.write("\""+entry+"\",")
-    output.write("];\n\n")
+        output.write("],\n")
+    output.write("    };\n\n")
+    #Weapon IDs
     output.write("var Weapons =\n[")
     for entry in SymbolAndMagIDs["Weapons"]:
         output.write("\""+entry+"\",")
     output.write("];\n\n")
+    #soul IDs
     output.write("var Souls =\n[")
     for entry in SymbolAndMagIDs["Souls"]:
         output.write("\""+entry+"\",")
     output.write("];\n\n")
+    #Mag IDs
     output.write("var IdoMags =\n[")
     for entry in SymbolAndMagIDs["IdoMags"]:
         output.write("\""+entry+"\",")
-    output.write("];\n\n")
+    output.write("];")
 output.close()
 
 with open("Idola/DataCharacterStat.js", "w") as output:
