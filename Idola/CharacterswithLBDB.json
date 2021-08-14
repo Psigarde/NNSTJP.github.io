@@ -42,12 +42,12 @@
         },
         "Element": "0",
         "Type": {
-            "nonfd": "1"
+            "nonfd": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 15102,
-            "atk": 415,
-            "def": 415,
+            "hp": 15302,
+            "atk": 525,
+            "def": 465,
             "spd": 391
         },
         "LB": [
@@ -77,20 +77,20 @@
         "Element": "2",
         "Type": {
             "nonfd": 0,
-            "law": "3",
-            "chaos": "5"
+            "law": "TypeSPD",
+            "chaos": "TypeRES"
         },
         "Base_Stat": {
             "hp": 17604,
-            "atk": 532,
-            "def": 594,
-            "spd": 591
+            "atk": 422,
+            "def": 569,
+            "spd": 431
         },
         "LB": [
             [ 660, 8, 12, 10 ],
             [ 1320, 16, 24, 20 ],
             [ 2150, 26, 38, 32 ],
-            [ 3000, 50, 50, 50 ]
+            [ 3300, 40, 60, 50 ]
         ],
         "DB": [
             [ 520, 8, 10, 9 ],
@@ -101,7 +101,7 @@
             [ 1540, 14, 24, 17 ],
             [ 1805, 16, 28, 20 ],
             [ 2090, 19, 32, 23 ],
-            [ 2300, 28, 28, 28 ]
+            [ 2400, 22, 37, 27 ]
         ]
     },
     "100003": {
@@ -112,15 +112,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "2",
-            "law": "3",
-            "chaos": "1"
+            "nonfd": "TypeDEF",
+            "law": "TypeSPD",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 15601,
+            "hp": 16001,
             "atk": 426,
-            "def": 426,
-            "spd": 391
+            "def": 556,
+            "spd": 431
         },
         "LB": [
             [ 500, 7, 7, 8 ],
@@ -148,15 +148,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "2",
-            "law": "3",
-            "chaos": "1"
+            "nonfd": "TypeDEF",
+            "law": "TypeSPD",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 14621,
+            "hp": 15021,
             "atk": 404,
-            "def": 404,
-            "spd": 391
+            "def": 534,
+            "spd": 431
         },
         "LB": [
             [ 400, 3, 5, 6 ],
@@ -184,15 +184,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "3",
-            "law": "5",
-            "chaos": "2"
+            "nonfd": "TypeSPD",
+            "law": "TypeRES",
+            "chaos": "TypeDEF"
         },
         "Base_Stat": {
-            "hp": 17204,
-            "atk": 422,
+            "hp": 17404,
+            "atk": 482,
             "def": 403,
-            "spd": 426
+            "spd": 516
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -220,15 +220,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "1"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 15031,
-            "atk": 371,
+            "hp": 15231,
+            "atk": 431,
             "def": 454,
-            "spd": 391
+            "spd": 481
         },
         "LB": [
             [ 400, 3, 5, 6 ],
@@ -256,15 +256,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "2",
-            "law": "5",
-            "chaos": "1"
+            "nonfd": "TypeDEF",
+            "law": "TypeRES",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 17204,
+            "hp": 17604,
             "atk": 403,
-            "def": 494,
-            "spd": 391
+            "def": 624,
+            "spd": 431
         },
         "LB": [
             [ 540, 12, 8, 10 ],
@@ -292,15 +292,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "2",
-            "law": "1",
-            "chaos": "3"
+            "nonfd": "TypeDEF",
+            "law": "TypeATK",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 14210,
+            "hp": 14610,
             "atk": 421,
-            "def": 404,
-            "spd": 391
+            "def": 534,
+            "spd": 431
         },
         "LB": [
             [ 360, 4, 4, 6 ],
@@ -328,15 +328,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "2",
-            "law": "3",
-            "chaos": "1"
+            "nonfd": "TypeDEF",
+            "law": "TypeSPD",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 15140,
+            "hp": 15540,
             "atk": 426,
-            "def": 391,
-            "spd": 444
+            "def": 521,
+            "spd": 484
         },
         "LB": [
             [ 550, 5, 9, 8 ],
@@ -364,15 +364,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "1"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 15601,
-            "atk": 391,
+            "hp": 15801,
+            "atk": 451,
             "def": 409,
-            "spd": 444
+            "spd": 534
         },
         "LB": [
             [ 500, 7, 7, 8 ],
@@ -400,14 +400,14 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "1",
-            "law": "2",
-            "chaos": "3"
+            "nonfd": "TypeATK",
+            "law": "TypeDEF",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 14680,
-            "atk": 418,
-            "def": 409,
+            "hp": 14880,
+            "atk": 528,
+            "def": 459,
             "spd": 426
         },
         "LB": [
@@ -436,15 +436,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "2",
-            "law": "1",
-            "chaos": "3"
+            "nonfd": "TypeDEF",
+            "law": "TypeATK",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 14210,
+            "hp": 14610,
             "atk": 388,
-            "def": 404,
-            "spd": 426
+            "def": 534,
+            "spd": 466
         },
         "LB": [
             [ 360, 4, 4, 6 ],
@@ -472,15 +472,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "3",
-            "law": "1",
-            "chaos": "2"
+            "nonfd": "TypeSPD",
+            "law": "TypeATK",
+            "chaos": "TypeDEF"
         },
         "Base_Stat": {
-            "hp": 14621,
-            "atk": 371,
+            "hp": 14821,
+            "atk": 431,
             "def": 388,
-            "spd": 444
+            "spd": 534
         },
         "LB": [
             [ 360, 4, 4, 6 ],
@@ -508,15 +508,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "1"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 15601,
-            "atk": 409,
+            "hp": 15801,
+            "atk": 469,
             "def": 426,
-            "spd": 409
+            "spd": 499
         },
         "LB": [
             [ 500, 7, 7, 8 ],
@@ -544,15 +544,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "2",
-            "law": "1",
-            "chaos": "3"
+            "nonfd": "TypeDEF",
+            "law": "TypeATK",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 15140,
+            "hp": 15540,
             "atk": 444,
-            "def": 426,
-            "spd": 391
+            "def": 556,
+            "spd": 431
         },
         "LB": [
             [ 500, 7, 7, 8 ],
@@ -580,15 +580,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "2",
-            "law": "1",
-            "chaos": "3"
+            "nonfd": "TypeDEF",
+            "law": "TypeATK",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 15601,
+            "hp": 16001,
             "atk": 391,
-            "def": 409,
-            "spd": 444
+            "def": 539,
+            "spd": 484
         },
         "LB": [
             [ 450, 9, 5, 8 ],
@@ -616,14 +616,14 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "1",
-            "law": "3",
-            "chaos": "2"
+            "nonfd": "TypeATK",
+            "law": "TypeSPD",
+            "chaos": "TypeDEF"
         },
         "Base_Stat": {
-            "hp": 14680,
-            "atk": 426,
-            "def": 426,
+            "hp": 14880,
+            "atk": 536,
+            "def": 476,
             "spd": 426
         },
         "LB": [
@@ -652,14 +652,14 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "1",
-            "law": "3",
-            "chaos": "6"
+            "nonfd": "TypeATK",
+            "law": "TypeSPD",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 16172,
-            "atk": 458,
-            "def": 439,
+            "hp": 16372,
+            "atk": 568,
+            "def": 489,
             "spd": 391
         },
         "LB": [
@@ -688,15 +688,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "3",
-            "law": "1",
-            "chaos": "2"
+            "nonfd": "TypeSPD",
+            "law": "TypeATK",
+            "chaos": "TypeDEF"
         },
         "Base_Stat": {
-            "hp": 13800,
-            "atk": 404,
+            "hp": 14000,
+            "atk": 464,
             "def": 404,
-            "spd": 426
+            "spd": 516
         },
         "LB": [
             [ 400, 3, 5, 6 ],
@@ -724,15 +724,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "3",
-            "law": "1",
-            "chaos": "6"
+            "nonfd": "TypeSPD",
+            "law": "TypeATK",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 16172,
-            "atk": 439,
+            "hp": 16372,
+            "atk": 499,
             "def": 403,
-            "spd": 444
+            "spd": 534
         },
         "LB": [
             [ 540, 12, 8, 10 ],
@@ -760,15 +760,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "1"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 14621,
-            "atk": 388,
+            "hp": 14821,
+            "atk": 448,
             "def": 404,
-            "spd": 409
+            "spd": 499
         },
         "LB": [
             [ 330, 5, 3, 6 ],
@@ -796,15 +796,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "3",
-            "law": "1",
-            "chaos": "2"
+            "nonfd": "TypeSPD",
+            "law": "TypeATK",
+            "chaos": "TypeDEF"
         },
         "Base_Stat": {
-            "hp": 15140,
-            "atk": 426,
+            "hp": 15340,
+            "atk": 486,
             "def": 391,
-            "spd": 444
+            "spd": 534
         },
         "LB": [
             [ 500, 7, 7, 8 ],
@@ -832,15 +832,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "2",
-            "law": "3",
-            "chaos": "1"
+            "nonfd": "TypeDEF",
+            "law": "TypeSPD",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 15140,
+            "hp": 15540,
             "atk": 444,
-            "def": 426,
-            "spd": 391
+            "def": 556,
+            "spd": 431
         },
         "LB": [
             [ 450, 9, 5, 8 ],
@@ -868,15 +868,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "2",
-            "law": "3",
-            "chaos": "1"
+            "nonfd": "TypeDEF",
+            "law": "TypeSPD",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 16061,
+            "hp": 16461,
             "atk": 391,
-            "def": 479,
-            "spd": 391
+            "def": 609,
+            "spd": 431
         },
         "LB": [
             [ 500, 7, 7, 8 ],
@@ -904,15 +904,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "1"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 14210,
-            "atk": 404,
+            "hp": 14410,
+            "atk": 464,
             "def": 371,
-            "spd": 444
+            "spd": 534
         },
         "LB": [
             [ 400, 3, 5, 6 ],
@@ -940,15 +940,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "1"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 13800,
-            "atk": 404,
+            "hp": 14000,
+            "atk": 464,
             "def": 404,
-            "spd": 426
+            "spd": 516
         },
         "LB": [
             [ 360, 4, 4, 6 ],
@@ -976,15 +976,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "2",
-            "law": "3",
-            "chaos": "1"
+            "nonfd": "TypeDEF",
+            "law": "TypeSPD",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 14210,
+            "hp": 14610,
             "atk": 421,
-            "def": 404,
-            "spd": 391
+            "def": 534,
+            "spd": 431
         },
         "LB": [
             [ 330, 5, 3, 6 ],
@@ -1012,14 +1012,14 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "1",
-            "law": "2",
-            "chaos": "3"
+            "nonfd": "TypeATK",
+            "law": "TypeDEF",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 13800,
-            "atk": 404,
-            "def": 404,
+            "hp": 14000,
+            "atk": 514,
+            "def": 454,
             "spd": 426
         },
         "LB": [
@@ -1048,15 +1048,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "1"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 16061,
-            "atk": 409,
+            "hp": 16261,
+            "atk": 469,
             "def": 391,
-            "spd": 426
+            "spd": 516
         },
         "LB": [
             [ 450, 9, 5, 8 ],
@@ -1084,15 +1084,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "2",
-            "law": "5",
-            "chaos": "6"
+            "nonfd": "TypeDEF",
+            "law": "TypeRES",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 23676,
+            "hp": 24076,
             "atk": 515,
-            "def": 564,
-            "spd": 563
+            "def": 694,
+            "spd": 603
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -1120,15 +1120,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "1"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 17204,
-            "atk": 403,
+            "hp": 17404,
+            "atk": 463,
             "def": 494,
-            "spd": 391
+            "spd": 481
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -1156,15 +1156,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "2",
-            "law": "1",
-            "chaos": "3"
+            "nonfd": "TypeDEF",
+            "law": "TypeATK",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 14621,
+            "hp": 15021,
             "atk": 404,
-            "def": 404,
-            "spd": 391
+            "def": 534,
+            "spd": 431
         },
         "LB": [
             [ 330, 5, 3, 6 ],
@@ -1192,14 +1192,14 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "1",
-            "law": "2",
-            "chaos": "3"
+            "nonfd": "TypeATK",
+            "law": "TypeDEF",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 15140,
-            "atk": 426,
-            "def": 391,
+            "hp": 15340,
+            "atk": 536,
+            "def": 441,
             "spd": 444
         },
         "LB": [
@@ -1228,15 +1228,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "3",
-            "law": "6",
-            "chaos": "1"
+            "nonfd": "TypeSPD",
+            "law": "TypeWEA",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 16689,
-            "atk": 422,
+            "hp": 16889,
+            "atk": 482,
             "def": 439,
-            "spd": 409
+            "spd": 499
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -1264,14 +1264,14 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "1",
-            "law": "3",
-            "chaos": "2"
+            "nonfd": "TypeATK",
+            "law": "TypeSPD",
+            "chaos": "TypeDEF"
         },
         "Base_Stat": {
-            "hp": 14680,
-            "atk": 418,
-            "def": 409,
+            "hp": 14880,
+            "atk": 528,
+            "def": 459,
             "spd": 426
         },
         "LB": [
@@ -1300,14 +1300,14 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "1",
-            "law": "2",
-            "chaos": "3"
+            "nonfd": "TypeATK",
+            "law": "TypeDEF",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 14680,
-            "atk": 426,
-            "def": 426,
+            "hp": 14880,
+            "atk": 536,
+            "def": 476,
             "spd": 426
         },
         "LB": [
@@ -1336,15 +1336,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "3",
-            "law": "1",
-            "chaos": "2"
+            "nonfd": "TypeSPD",
+            "law": "TypeATK",
+            "chaos": "TypeDEF"
         },
         "Base_Stat": {
-            "hp": 14621,
-            "atk": 388,
+            "hp": 14821,
+            "atk": 448,
             "def": 404,
-            "spd": 409
+            "spd": 499
         },
         "LB": [
             [ 400, 3, 5, 6 ],
@@ -1372,14 +1372,14 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "1",
-            "law": "2",
-            "chaos": "3"
+            "nonfd": "TypeATK",
+            "law": "TypeDEF",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 15346,
-            "atk": 412,
-            "def": 429,
+            "hp": 15546,
+            "atk": 522,
+            "def": 479,
             "spd": 426
         },
         "LB": [
@@ -1408,15 +1408,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "2",
-            "law": "3",
-            "chaos": "1"
+            "nonfd": "TypeDEF",
+            "law": "TypeSPD",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 15601,
+            "hp": 16001,
             "atk": 391,
-            "def": 409,
-            "spd": 444
+            "def": 539,
+            "spd": 484
         },
         "LB": [
             [ 550, 5, 9, 8 ],
@@ -1444,15 +1444,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "2",
-            "law": "3",
-            "chaos": "1"
+            "nonfd": "TypeDEF",
+            "law": "TypeSPD",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 18389,
+            "hp": 18789,
             "atk": 477,
-            "def": 487,
-            "spd": 440
+            "def": 617,
+            "spd": 480
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -1480,14 +1480,14 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "1",
-            "law": "2",
-            "chaos": "6"
+            "nonfd": "TypeATK",
+            "law": "TypeDEF",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 19404,
-            "atk": 503,
-            "def": 524,
+            "hp": 19604,
+            "atk": 613,
+            "def": 574,
             "spd": 501
         },
         "LB": [
@@ -1516,15 +1516,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "2",
-            "law": "3",
-            "chaos": "6"
+            "nonfd": "TypeDEF",
+            "law": "TypeSPD",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 18776,
+            "hp": 19176,
             "atk": 485,
-            "def": 449,
-            "spd": 495
+            "def": 579,
+            "spd": 535
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -1552,14 +1552,14 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "1",
-            "law": "2",
-            "chaos": "6"
+            "nonfd": "TypeATK",
+            "law": "TypeDEF",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 14680,
-            "atk": 426,
-            "def": 426,
+            "hp": 14880,
+            "atk": 536,
+            "def": 476,
             "spd": 426
         },
         "LB": [
@@ -1588,15 +1588,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "2",
-            "law": "1",
-            "chaos": "3"
+            "nonfd": "TypeDEF",
+            "law": "TypeATK",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 15601,
+            "hp": 16001,
             "atk": 391,
-            "def": 409,
-            "spd": 444
+            "def": 539,
+            "spd": 484
         },
         "LB": [
             [ 450, 8, 5, 9 ],
@@ -1624,15 +1624,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "4"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeCRT"
         },
         "Base_Stat": {
-            "hp": 16172,
-            "atk": 422,
+            "hp": 16372,
+            "atk": 482,
             "def": 439,
-            "spd": 426
+            "spd": 516
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -1660,15 +1660,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "1"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 16061,
-            "atk": 391,
+            "hp": 16261,
+            "atk": 451,
             "def": 479,
-            "spd": 391
+            "spd": 481
         },
         "LB": [
             [ 450, 9, 5, 8 ],
@@ -1696,15 +1696,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "2",
-            "law": "3",
-            "chaos": "1"
+            "nonfd": "TypeDEF",
+            "law": "TypeSPD",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 15656,
+            "hp": 16056,
             "atk": 430,
-            "def": 422,
-            "spd": 426
+            "def": 552,
+            "spd": 466
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -1732,15 +1732,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "1"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 16689,
-            "atk": 439,
+            "hp": 16889,
+            "atk": 499,
             "def": 422,
-            "spd": 409
+            "spd": 499
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -1768,14 +1768,14 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "1",
-            "law": "4",
-            "chaos": "3"
+            "nonfd": "TypeATK",
+            "law": "TypeCRT",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 16172,
-            "atk": 439,
-            "def": 403,
+            "hp": 16372,
+            "atk": 549,
+            "def": 453,
             "spd": 444
         },
         "LB": [
@@ -1804,14 +1804,14 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "1",
-            "law": "6",
-            "chaos": "3"
+            "nonfd": "TypeATK",
+            "law": "TypeWEA",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 15819,
-            "atk": 429,
-            "def": 429,
+            "hp": 16019,
+            "atk": 539,
+            "def": 479,
             "spd": 391
         },
         "LB": [
@@ -1840,14 +1840,14 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "1",
-            "law": "3",
-            "chaos": "4"
+            "nonfd": "TypeATK",
+            "law": "TypeSPD",
+            "chaos": "TypeCRT"
         },
         "Base_Stat": {
-            "hp": 21856,
-            "atk": 511,
-            "def": 516,
+            "hp": 22056,
+            "atk": 621,
+            "def": 566,
             "spd": 553
         },
         "LB": [
@@ -1876,15 +1876,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "3",
-            "law": "1",
-            "chaos": "2"
+            "nonfd": "TypeSPD",
+            "law": "TypeATK",
+            "chaos": "TypeDEF"
         },
         "Base_Stat": {
-            "hp": 16689,
-            "atk": 439,
+            "hp": 16889,
+            "atk": 499,
             "def": 422,
-            "spd": 409
+            "spd": 499
         },
         "LB": [
             [ 540, 12, 8, 10 ],
@@ -1912,14 +1912,14 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "1",
-            "law": "3",
-            "chaos": "2"
+            "nonfd": "TypeATK",
+            "law": "TypeSPD",
+            "chaos": "TypeDEF"
         },
         "Base_Stat": {
-            "hp": 15656,
-            "atk": 439,
-            "def": 439,
+            "hp": 15856,
+            "atk": 549,
+            "def": 489,
             "spd": 426
         },
         "LB": [
@@ -1948,15 +1948,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "1"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 16889,
-            "atk": 442,
+            "hp": 17089,
+            "atk": 502,
             "def": 439,
-            "spd": 429
+            "spd": 519
         },
         "LB": [
             [ 540, 8, 11, 11 ],
@@ -1984,14 +1984,14 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "1",
-            "law": "2",
-            "chaos": "3"
+            "nonfd": "TypeATK",
+            "law": "TypeDEF",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 17204,
-            "atk": 422,
-            "def": 403,
+            "hp": 17404,
+            "atk": 532,
+            "def": 453,
             "spd": 426
         },
         "LB": [
@@ -2020,14 +2020,14 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "1",
-            "law": "2",
-            "chaos": "3"
+            "nonfd": "TypeATK",
+            "law": "TypeDEF",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 16332,
-            "atk": 462,
-            "def": 439,
+            "hp": 16532,
+            "atk": 572,
+            "def": 489,
             "spd": 429
         },
         "LB": [
@@ -2056,14 +2056,14 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "1",
-            "law": "3",
-            "chaos": "2"
+            "nonfd": "TypeATK",
+            "law": "TypeSPD",
+            "chaos": "TypeDEF"
         },
         "Base_Stat": {
-            "hp": 16656,
-            "atk": 439,
-            "def": 439,
+            "hp": 16856,
+            "atk": 549,
+            "def": 489,
             "spd": 426
         },
         "LB": [
@@ -2092,15 +2092,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "1"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 16989,
-            "atk": 459,
+            "hp": 17189,
+            "atk": 519,
             "def": 427,
-            "spd": 419
+            "spd": 509
         },
         "LB": [
             [ 540, 8, 11, 11 ],
@@ -2128,15 +2128,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "2",
-            "law": "3",
-            "chaos": "1"
+            "nonfd": "TypeDEF",
+            "law": "TypeSPD",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 18689,
+            "hp": 19089,
             "atk": 539,
-            "def": 509,
-            "spd": 471
+            "def": 639,
+            "spd": 511
         },
         "LB": [
             [ 540, 12, 8, 10 ],
@@ -2164,15 +2164,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "2",
-            "law": "3",
-            "chaos": "1"
+            "nonfd": "TypeDEF",
+            "law": "TypeSPD",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 18256,
+            "hp": 18656,
             "atk": 430,
-            "def": 442,
-            "spd": 476
+            "def": 572,
+            "spd": 516
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -2200,14 +2200,14 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "1",
-            "law": "6",
-            "chaos": "4"
+            "nonfd": "TypeATK",
+            "law": "TypeWEA",
+            "chaos": "TypeCRT"
         },
         "Base_Stat": {
-            "hp": 19809,
-            "atk": 469,
-            "def": 495,
+            "hp": 20009,
+            "atk": 579,
+            "def": 545,
             "spd": 529
         },
         "LB": [
@@ -2236,14 +2236,14 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "1",
-            "law": "2",
-            "chaos": "4"
+            "nonfd": "TypeATK",
+            "law": "TypeDEF",
+            "chaos": "TypeCRT"
         },
         "Base_Stat": {
-            "hp": 16729,
-            "atk": 450,
-            "def": 450,
+            "hp": 16929,
+            "atk": 560,
+            "def": 500,
             "spd": 427
         },
         "LB": [
@@ -2272,15 +2272,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "2",
-            "law": "4",
-            "chaos": "5"
+            "nonfd": "TypeDEF",
+            "law": "TypeCRT",
+            "chaos": "TypeRES"
         },
         "Base_Stat": {
-            "hp": 22804,
+            "hp": 23204,
             "atk": 453,
-            "def": 455,
-            "spd": 467
+            "def": 585,
+            "spd": 507
         },
         "LB": [
             [ 540, 11, 8, 11 ],
@@ -2308,14 +2308,14 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "1",
-            "law": "6",
-            "chaos": "4"
+            "nonfd": "TypeATK",
+            "law": "TypeWEA",
+            "chaos": "TypeCRT"
         },
         "Base_Stat": {
-            "hp": 22169,
-            "atk": 549,
-            "def": 536,
+            "hp": 22369,
+            "atk": 659,
+            "def": 586,
             "spd": 542
         },
         "LB": [
@@ -2344,14 +2344,14 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "1",
-            "law": "3",
-            "chaos": "6"
+            "nonfd": "TypeATK",
+            "law": "TypeSPD",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 23072,
-            "atk": 553,
-            "def": 489,
+            "hp": 23272,
+            "atk": 663,
+            "def": 539,
             "spd": 496
         },
         "LB": [
@@ -2380,15 +2380,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "4",
-            "law": "5",
-            "chaos": "6"
+            "nonfd": "TypeCRT",
+            "law": "TypeRES",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
             "hp": 21509,
-            "atk": 524,
-            "def": 554,
-            "spd": 496
+            "atk": 554,
+            "def": 604,
+            "spd": 566
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -2416,15 +2416,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "2",
-            "law": "1",
-            "chaos": "3"
+            "nonfd": "TypeDEF",
+            "law": "TypeATK",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 18664,
+            "hp": 19064,
             "atk": 445,
-            "def": 441,
-            "spd": 411
+            "def": 571,
+            "spd": 451
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -2450,12 +2450,12 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "1"
+            "nonfd": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 17481,
-            "atk": 436,
-            "def": 466,
+            "hp": 17681,
+            "atk": 546,
+            "def": 516,
             "spd": 419
         },
         "LB": [
@@ -2482,13 +2482,13 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "3"
+            "nonfd": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 16821,
-            "atk": 473,
+            "hp": 17021,
+            "atk": 533,
             "def": 426,
-            "spd": 465
+            "spd": 555
         },
         "LB": [
             [ 540, 11, 8, 11 ],
@@ -2514,13 +2514,13 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "2"
+            "nonfd": "TypeDEF"
         },
         "Base_Stat": {
-            "hp": 16340,
+            "hp": 16740,
             "atk": 463,
-            "def": 434,
-            "spd": 436
+            "def": 564,
+            "spd": 476
         },
         "LB": [
             [ 540, 12, 8, 10 ],
@@ -2548,14 +2548,14 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "1",
-            "law": "6",
-            "chaos": "3"
+            "nonfd": "TypeATK",
+            "law": "TypeWEA",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 17656,
-            "atk": 544,
-            "def": 459,
+            "hp": 17856,
+            "atk": 654,
+            "def": 509,
             "spd": 551
         },
         "LB": [
@@ -2584,15 +2584,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "2",
-            "law": "4",
-            "chaos": "1"
+            "nonfd": "TypeDEF",
+            "law": "TypeCRT",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 17656,
+            "hp": 18056,
             "atk": 510,
-            "def": 512,
-            "spd": 526
+            "def": 642,
+            "spd": 566
         },
         "LB": [
             [ 540, 8, 11, 11 ],
@@ -2621,15 +2621,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "2",
-            "law": "3",
-            "chaos": "5"
+            "nonfd": "TypeDEF",
+            "law": "TypeSPD",
+            "chaos": "TypeRES"
         },
         "Base_Stat": {
-            "hp": 17889,
+            "hp": 18289,
             "atk": 433,
-            "def": 434,
-            "spd": 521
+            "def": 564,
+            "spd": 561
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -2657,15 +2657,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "3",
-            "law": "4",
-            "chaos": "1"
+            "nonfd": "TypeSPD",
+            "law": "TypeCRT",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 17572,
-            "atk": 544,
+            "hp": 17772,
+            "atk": 604,
             "def": 513,
-            "spd": 519
+            "spd": 609
         },
         "LB": [
             [ 540, 11, 8, 11 ],
@@ -2693,15 +2693,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "3",
-            "law": "1",
-            "chaos": "6"
+            "nonfd": "TypeSPD",
+            "law": "TypeATK",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 19296,
-            "atk": 478,
+            "hp": 19496,
+            "atk": 538,
             "def": 471,
-            "spd": 531
+            "spd": 621
         },
         "LB": [
             [ 540, 8, 11, 11 ],
@@ -2727,13 +2727,13 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "3"
+            "nonfd": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 15140,
-            "atk": 409,
+            "hp": 15340,
+            "atk": 469,
             "def": 409,
-            "spd": 509
+            "spd": 599
         },
         "LB": [
             [ 550, 5, 9, 8 ],
@@ -2760,13 +2760,13 @@
         },
         "Element": "0",
         "Type": {
-            "nonfd": "3"
+            "nonfd": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 19341,
-            "atk": 506,
+            "hp": 19541,
+            "atk": 566,
             "def": 507,
-            "spd": 490
+            "spd": 580
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -2793,13 +2793,13 @@
         },
         "Element": "0",
         "Type": {
-            "nonfd": "3"
+            "nonfd": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 19341,
-            "atk": 506,
+            "hp": 19541,
+            "atk": 566,
             "def": 507,
-            "spd": 490
+            "spd": 580
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -2827,15 +2827,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "2",
-            "law": "5",
-            "chaos": "4"
+            "nonfd": "TypeDEF",
+            "law": "TypeRES",
+            "chaos": "TypeCRT"
         },
         "Base_Stat": {
-            "hp": 26724,
+            "hp": 27124,
             "atk": 549,
-            "def": 624,
-            "spd": 499
+            "def": 754,
+            "spd": 539
         },
         "LB": [
             [ 540, 8, 11, 11 ],
@@ -2863,15 +2863,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "2",
-            "law": "4",
-            "chaos": "6"
+            "nonfd": "TypeDEF",
+            "law": "TypeCRT",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 23536,
+            "hp": 23936,
             "atk": 626,
-            "def": 554,
-            "spd": 537
+            "def": 684,
+            "spd": 577
         },
         "LB": [
             [ 540, 12, 8, 10 ],
@@ -2899,15 +2899,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "2",
-            "law": "6",
-            "chaos": "4"
+            "nonfd": "TypeDEF",
+            "law": "TypeWEA",
+            "chaos": "TypeCRT"
         },
         "Base_Stat": {
-            "hp": 22772,
+            "hp": 23172,
             "atk": 569,
-            "def": 522,
-            "spd": 516
+            "def": 652,
+            "spd": 556
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -2935,15 +2935,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "3",
-            "law": "4",
-            "chaos": "6"
+            "nonfd": "TypeSPD",
+            "law": "TypeCRT",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 22349,
-            "atk": 573,
+            "hp": 22549,
+            "atk": 633,
             "def": 488,
-            "spd": 531
+            "spd": 621
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -2971,14 +2971,14 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "1",
-            "law": "4",
-            "chaos": "6"
+            "nonfd": "TypeATK",
+            "law": "TypeCRT",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 25704,
-            "atk": 539,
-            "def": 604,
+            "hp": 25904,
+            "atk": 649,
+            "def": 654,
             "spd": 526
         },
         "LB": [
@@ -3007,14 +3007,14 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "6",
-            "law": "2",
-            "chaos": "5"
+            "nonfd": "TypeWEA",
+            "law": "TypeDEF",
+            "chaos": "TypeRES"
         },
         "Base_Stat": {
             "hp": 22649,
-            "atk": 500,
-            "def": 524,
+            "atk": 570,
+            "def": 594,
             "spd": 573
         },
         "LB": [
@@ -3043,15 +3043,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "4",
-            "law": "5",
-            "chaos": "3"
+            "nonfd": "TypeCRT",
+            "law": "TypeRES",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
             "hp": 23872,
-            "atk": 504,
-            "def": 495,
-            "spd": 516
+            "atk": 534,
+            "def": 545,
+            "spd": 586
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -3080,15 +3080,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "5",
-            "law": "4",
-            "chaos": "6"
+            "nonfd": "TypeRES",
+            "law": "TypeCRT",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
             "hp": 24829,
-            "atk": 497,
-            "def": 545,
-            "spd": 518
+            "atk": 547,
+            "def": 595,
+            "spd": 568
         },
         "LB": [
             [ 540, 8, 11, 11 ],
@@ -3116,14 +3116,14 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "1",
-            "law": "4",
-            "chaos": "2"
+            "nonfd": "TypeATK",
+            "law": "TypeCRT",
+            "chaos": "TypeDEF"
         },
         "Base_Stat": {
-            "hp": 23476,
-            "atk": 580,
-            "def": 517,
+            "hp": 23676,
+            "atk": 690,
+            "def": 567,
             "spd": 556
         },
         "LB": [
@@ -3152,15 +3152,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "6"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 25289,
-            "atk": 583,
+            "hp": 25489,
+            "atk": 643,
             "def": 596,
-            "spd": 516
+            "spd": 606
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -3188,14 +3188,14 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "1",
-            "law": "6",
-            "chaos": "4"
+            "nonfd": "TypeATK",
+            "law": "TypeWEA",
+            "chaos": "TypeCRT"
         },
         "Base_Stat": {
-            "hp": 21689,
-            "atk": 579,
-            "def": 492,
+            "hp": 21889,
+            "atk": 689,
+            "def": 542,
             "spd": 571
         },
         "LB": [
@@ -3224,15 +3224,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "4",
-            "law": "5",
-            "chaos": "6"
+            "nonfd": "TypeCRT",
+            "law": "TypeRES",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
             "hp": 23729,
-            "atk": 580,
-            "def": 598,
-            "spd": 514
+            "atk": 610,
+            "def": 648,
+            "spd": 584
         },
         "LB": [
             [ 540, 8, 11, 11 ],
@@ -3260,15 +3260,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "4",
-            "law": "1",
-            "chaos": "6"
+            "nonfd": "TypeCRT",
+            "law": "TypeATK",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
             "hp": 20676,
-            "atk": 549,
-            "def": 509,
-            "spd": 580
+            "atk": 579,
+            "def": 559,
+            "spd": 650
         },
         "LB": [
             [ 540, 11, 8, 11 ],
@@ -3296,15 +3296,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "4",
-            "law": "5",
-            "chaos": "2"
+            "nonfd": "TypeCRT",
+            "law": "TypeRES",
+            "chaos": "TypeDEF"
         },
         "Base_Stat": {
             "hp": 24172,
-            "atk": 542,
-            "def": 559,
-            "spd": 556
+            "atk": 572,
+            "def": 609,
+            "spd": 626
         },
         "LB": [
             [ 540, 8, 11, 11 ],
@@ -3332,15 +3332,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "3",
-            "law": "6",
-            "chaos": "4"
+            "nonfd": "TypeSPD",
+            "law": "TypeWEA",
+            "chaos": "TypeCRT"
         },
         "Base_Stat": {
-            "hp": 22489,
-            "atk": 522,
+            "hp": 22689,
+            "atk": 582,
             "def": 559,
-            "spd": 499
+            "spd": 589
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -3369,15 +3369,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "5",
-            "law": "3",
-            "chaos": "4"
+            "nonfd": "TypeRES",
+            "law": "TypeSPD",
+            "chaos": "TypeCRT"
         },
         "Base_Stat": {
             "hp": 23289,
-            "atk": 549,
-            "def": 512,
-            "spd": 554
+            "atk": 599,
+            "def": 562,
+            "spd": 604
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -3405,15 +3405,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "4",
-            "law": "1",
-            "chaos": "6"
+            "nonfd": "TypeCRT",
+            "law": "TypeATK",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
             "hp": 23889,
-            "atk": 569,
-            "def": 522,
-            "spd": 529
+            "atk": 599,
+            "def": 572,
+            "spd": 599
         },
         "LB": [
             [ 540, 11, 8, 11 ],
@@ -3441,15 +3441,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "4",
-            "law": "1",
-            "chaos": "6"
+            "nonfd": "TypeCRT",
+            "law": "TypeATK",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
             "hp": 23372,
-            "atk": 559,
-            "def": 503,
-            "spd": 573
+            "atk": 589,
+            "def": 553,
+            "spd": 643
         },
         "LB": [
             [ 540, 11, 8, 11 ],
@@ -3477,15 +3477,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "4",
+            "nonfd": "TypeCRT",
             "law": 0,
-            "chaos": "6"
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
             "hp": 23256,
-            "atk": 569,
-            "def": 579,
-            "spd": 591
+            "atk": 599,
+            "def": 629,
+            "spd": 661
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -3513,15 +3513,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "4",
-            "law": "5",
-            "chaos": "1"
+            "nonfd": "TypeCRT",
+            "law": "TypeRES",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
             "hp": 23056,
-            "atk": 550,
-            "def": 572,
-            "spd": 596
+            "atk": 580,
+            "def": 622,
+            "spd": 666
         },
         "LB": [
             [ 540, 8, 11, 11 ],
@@ -3549,15 +3549,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "3",
-            "law": "5",
-            "chaos": "4"
+            "nonfd": "TypeSPD",
+            "law": "TypeRES",
+            "chaos": "TypeCRT"
         },
         "Base_Stat": {
-            "hp": 24789,
-            "atk": 539,
+            "hp": 24989,
+            "atk": 599,
             "def": 577,
-            "spd": 544
+            "spd": 634
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -3585,14 +3585,14 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "1",
-            "law": "2",
-            "chaos": "3"
+            "nonfd": "TypeATK",
+            "law": "TypeDEF",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 17144,
-            "atk": 408,
-            "def": 489,
+            "hp": 17344,
+            "atk": 518,
+            "def": 539,
             "spd": 394
         },
         "LB": [
@@ -3621,15 +3621,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "2",
-            "law": "1",
-            "chaos": "3"
+            "nonfd": "TypeDEF",
+            "law": "TypeATK",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 17264,
+            "hp": 17664,
             "atk": 417,
-            "def": 444,
-            "spd": 388
+            "def": 574,
+            "spd": 428
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -3657,15 +3657,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "2",
-            "law": "3",
-            "chaos": "4"
+            "nonfd": "TypeDEF",
+            "law": "TypeSPD",
+            "chaos": "TypeCRT"
         },
         "Base_Stat": {
-            "hp": 17304,
+            "hp": 17704,
             "atk": 431,
-            "def": 444,
-            "spd": 422
+            "def": 574,
+            "spd": 462
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -3693,14 +3693,14 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "1",
-            "law": "2",
-            "chaos": "3"
+            "nonfd": "TypeATK",
+            "law": "TypeDEF",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 16672,
-            "atk": 428,
-            "def": 448,
+            "hp": 16872,
+            "atk": 538,
+            "def": 498,
             "spd": 436
         },
         "LB": [
@@ -3729,14 +3729,14 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "1",
-            "law": "3",
-            "chaos": "6"
+            "nonfd": "TypeATK",
+            "law": "TypeSPD",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 16056,
-            "atk": 456,
-            "def": 442,
+            "hp": 16256,
+            "atk": 566,
+            "def": 492,
             "spd": 436
         },
         "LB": [
@@ -3765,15 +3765,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "2",
-            "law": "3",
-            "chaos": "1"
+            "nonfd": "TypeDEF",
+            "law": "TypeSPD",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 15656,
+            "hp": 16056,
             "atk": 439,
-            "def": 439,
-            "spd": 476
+            "def": 569,
+            "spd": 516
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -3801,15 +3801,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "2",
-            "law": "5",
-            "chaos": "6"
+            "nonfd": "TypeDEF",
+            "law": "TypeRES",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 18289,
+            "hp": 18689,
             "atk": 492,
-            "def": 479,
-            "spd": 469
+            "def": 609,
+            "spd": 509
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -3837,15 +3837,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "2",
-            "law": "4",
-            "chaos": "6"
+            "nonfd": "TypeDEF",
+            "law": "TypeCRT",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 18764,
+            "hp": 19164,
             "atk": 492,
-            "def": 519,
-            "spd": 513
+            "def": 649,
+            "spd": 553
         },
         "LB": [
             [ 540, 8, 11, 11 ],
@@ -3873,15 +3873,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "3",
-            "law": "1",
-            "chaos": "6"
+            "nonfd": "TypeSPD",
+            "law": "TypeATK",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 20204,
-            "atk": 461,
+            "hp": 20404,
+            "atk": 521,
             "def": 509,
-            "spd": 468
+            "spd": 558
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -3910,15 +3910,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "1"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 18769,
-            "atk": 492,
+            "hp": 18969,
+            "atk": 552,
             "def": 492,
-            "spd": 442
+            "spd": 532
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -3946,15 +3946,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "2",
-            "law": "5",
-            "chaos": "3"
+            "nonfd": "TypeDEF",
+            "law": "TypeRES",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 17204,
+            "hp": 17604,
             "atk": 422,
-            "def": 439,
-            "spd": 391
+            "def": 569,
+            "spd": 431
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -3982,15 +3982,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "4",
-            "law": "5",
-            "chaos": "1"
+            "nonfd": "TypeCRT",
+            "law": "TypeRES",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
             "hp": 22740,
-            "atk": 489,
-            "def": 549,
-            "spd": 489
+            "atk": 519,
+            "def": 599,
+            "spd": 559
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -4018,15 +4018,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "4",
-            "law": "2",
-            "chaos": "1"
+            "nonfd": "TypeCRT",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
             "hp": 21416,
-            "atk": 532,
-            "def": 498,
-            "spd": 523
+            "atk": 562,
+            "def": 548,
+            "spd": 593
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -4054,14 +4054,14 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "6",
+            "nonfd": "TypeWEA",
             "law": 0,
             "chaos": 0
         },
         "Base_Stat": {
             "hp": 22089,
-            "atk": 499,
-            "def": 512,
+            "atk": 569,
+            "def": 582,
             "spd": 634
         },
         "LB": [
@@ -4090,14 +4090,14 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "1",
-            "law": "2",
-            "chaos": "3"
+            "nonfd": "TypeATK",
+            "law": "TypeDEF",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 17656,
-            "atk": 449,
-            "def": 479,
+            "hp": 17856,
+            "atk": 559,
+            "def": 529,
             "spd": 446
         },
         "LB": [
@@ -4126,14 +4126,14 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "1",
-            "law": "6",
-            "chaos": "3"
+            "nonfd": "TypeATK",
+            "law": "TypeWEA",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 18172,
-            "atk": 478,
-            "def": 459,
+            "hp": 18372,
+            "atk": 588,
+            "def": 509,
             "spd": 451
         },
         "LB": [
@@ -4162,15 +4162,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "2",
-            "law": "3",
-            "chaos": "1"
+            "nonfd": "TypeDEF",
+            "law": "TypeSPD",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 16372,
+            "hp": 16772,
             "atk": 459,
-            "def": 423,
-            "spd": 464
+            "def": 553,
+            "spd": 504
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -4198,15 +4198,15 @@
         },
         "Element": "1",
         "Type": {
-            "nonfd": "2",
-            "law": "5",
-            "chaos": "6"
+            "nonfd": "TypeDEF",
+            "law": "TypeRES",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 23964,
+            "hp": 24364,
             "atk": 487,
-            "def": 527,
-            "spd": 521
+            "def": 657,
+            "spd": 561
         },
         "LB": [
             [ 540, 12, 8, 10 ],
@@ -4234,15 +4234,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "3",
-            "law": "4",
-            "chaos": "6"
+            "nonfd": "TypeSPD",
+            "law": "TypeCRT",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 15629,
-            "atk": 451,
+            "hp": 15829,
+            "atk": 511,
             "def": 449,
-            "spd": 494
+            "spd": 584
         },
         "LB": [
             [ 540, 11, 8, 11 ],
@@ -4270,15 +4270,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "4"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeCRT"
         },
         "Base_Stat": {
-            "hp": 16172,
-            "atk": 422,
+            "hp": 16372,
+            "atk": 482,
             "def": 439,
-            "spd": 426
+            "spd": 516
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -4306,15 +4306,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "2",
-            "law": "1",
-            "chaos": "3"
+            "nonfd": "TypeDEF",
+            "law": "TypeATK",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 18056,
+            "hp": 18456,
             "atk": 457,
-            "def": 450,
-            "spd": 463
+            "def": 580,
+            "spd": 503
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -4342,14 +4342,14 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "6",
-            "law": "2",
-            "chaos": "3"
+            "nonfd": "TypeWEA",
+            "law": "TypeDEF",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
             "hp": 21772,
-            "atk": 549,
-            "def": 453,
+            "atk": 619,
+            "def": 523,
             "spd": 563
         },
         "LB": [
@@ -4378,15 +4378,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "2",
-            "law": "6",
-            "chaos": "5"
+            "nonfd": "TypeDEF",
+            "law": "TypeWEA",
+            "chaos": "TypeRES"
         },
         "Base_Stat": {
-            "hp": 21940,
+            "hp": 22340,
             "atk": 539,
-            "def": 479,
-            "spd": 469
+            "def": 609,
+            "spd": 509
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -4414,14 +4414,14 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "1",
-            "law": "6",
-            "chaos": "3"
+            "nonfd": "TypeATK",
+            "law": "TypeWEA",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 15656,
-            "atk": 439,
-            "def": 439,
+            "hp": 15856,
+            "atk": 549,
+            "def": 489,
             "spd": 426
         },
         "LB": [
@@ -4450,15 +4450,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "1"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeATK"
         },
         "Base_Stat": {
-            "hp": 17904,
-            "atk": 472,
+            "hp": 18104,
+            "atk": 532,
             "def": 453,
-            "spd": 456
+            "spd": 546
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -4486,15 +4486,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "3",
-            "law": "1",
-            "chaos": "6"
+            "nonfd": "TypeSPD",
+            "law": "TypeATK",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 23372,
-            "atk": 568,
+            "hp": 23572,
+            "atk": 628,
             "def": 479,
-            "spd": 532
+            "spd": 622
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -4522,15 +4522,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "3",
-            "law": "2",
-            "chaos": "6"
+            "nonfd": "TypeSPD",
+            "law": "TypeDEF",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 23249,
-            "atk": 556,
+            "hp": 23449,
+            "atk": 616,
             "def": 511,
-            "spd": 514
+            "spd": 604
         },
         "LB": [
             [ 540, 8, 11, 11 ],
@@ -4558,15 +4558,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "4",
-            "law": "1",
-            "chaos": "6"
+            "nonfd": "TypeCRT",
+            "law": "TypeATK",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
             "hp": 22540,
-            "atk": 559,
-            "def": 529,
-            "spd": 559
+            "atk": 589,
+            "def": 579,
+            "spd": 629
         },
         "LB": [
             [ 540, 11, 8, 11 ],
@@ -4592,13 +4592,13 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "3"
+            "nonfd": "TypeSPD"
         },
         "Base_Stat": {
-            "hp": 16140,
-            "atk": 409,
+            "hp": 16340,
+            "atk": 469,
             "def": 409,
-            "spd": 559
+            "spd": 649
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -4626,15 +4626,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "4",
-            "law": "3",
-            "chaos": "6"
+            "nonfd": "TypeCRT",
+            "law": "TypeSPD",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
             "hp": 22656,
-            "atk": 639,
-            "def": 524,
-            "spd": 643
+            "atk": 669,
+            "def": 574,
+            "spd": 713
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -4662,15 +4662,15 @@
         },
         "Element": "4",
         "Type": {
-            "nonfd": "4",
-            "law": "5",
-            "chaos": "6"
+            "nonfd": "TypeCRT",
+            "law": "TypeRES",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
             "hp": 22456,
-            "atk": 520,
-            "def": 550,
-            "spd": 561
+            "atk": 550,
+            "def": 600,
+            "spd": 631
         },
         "LB": [
             [ 600, 10, 10, 10 ],
@@ -4698,15 +4698,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "2",
-            "law": "6",
-            "chaos": "4"
+            "nonfd": "TypeDEF",
+            "law": "TypeWEA",
+            "chaos": "TypeCRT"
         },
         "Base_Stat": {
-            "hp": 25372,
+            "hp": 25772,
             "atk": 540,
-            "def": 639,
-            "spd": 581
+            "def": 769,
+            "spd": 621
         },
         "LB": [
             [ 540, 8, 11, 11 ],
@@ -4734,15 +4734,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "4",
-            "law": "6",
+            "nonfd": "TypeCRT",
+            "law": "TypeWEA",
             "chaos": 0
         },
         "Base_Stat": {
             "hp": 21056,
-            "atk": 532,
-            "def": 524,
-            "spd": 516
+            "atk": 562,
+            "def": 574,
+            "spd": 586
         },
         "LB": [
             [ 540, 12, 8, 10 ],
@@ -4770,15 +4770,15 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": "4",
-            "law": "1",
-            "chaos": "3"
+            "nonfd": "TypeCRT",
+            "law": "TypeATK",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
             "hp": 22689,
-            "atk": 539,
-            "def": 552,
-            "spd": 639
+            "atk": 569,
+            "def": 602,
+            "spd": 709
         },
         "LB": [
             [ 540, 8, 11, 11 ],
@@ -4806,15 +4806,15 @@
         },
         "Element": "2",
         "Type": {
-            "nonfd": "2",
-            "law": "5",
-            "chaos": "6"
+            "nonfd": "TypeDEF",
+            "law": "TypeRES",
+            "chaos": "TypeWEA"
         },
         "Base_Stat": {
-            "hp": 24256,
+            "hp": 24656,
             "atk": 515,
-            "def": 602,
-            "spd": 583
+            "def": 732,
+            "spd": 623
         },
         "LB": [
             [ 660, 8, 12, 10 ],
@@ -4914,32 +4914,32 @@
         },
         "Element": "3",
         "Type": {
-            "nonfd": 4,
-            "law": 1,
-            "chaos": 6
+            "nonfd": 0,
+            "law": 0,
+            "chaos": 0
         },
         "Base_Stat": {
-            "hp": 22972,
-            "atk": 539,
-            "def": 589,
-            "spd": 516
+            "hp": 0,
+            "atk": 0,
+            "def": 0,
+            "spd": 0
         },
         "LB": [
-            [ 600, 10, 10, 10 ],
-            [ 1200, 20, 20, 20 ],
-            [ 1950, 32, 32, 32 ],
-            [ 3000, 50, 50, 50 ]
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ]
         ],
         "DB": [
-            [ 500, 9, 9, 9 ],
-            [ 640, 10, 10, 10 ],
-            [ 800, 11, 11, 11 ],
-            [ 980, 12, 12, 12 ],
-            [ 1190, 14, 14, 14 ],
-            [ 1430, 17, 17, 17 ],
-            [ 1700, 20, 20, 20 ],
-            [ 1990, 24, 24, 24 ],
-            [ 2300, 28, 28, 28 ]
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ]
         ]
     },
     "191108": {
@@ -4948,34 +4948,34 @@
             "law": "1",
             "chaos": "2"
         },
-        "Element": "1",
+        "Element": 0,
         "Type": {
-            "nonfd": 2,
-            "law": 3,
-            "chaos": 6
+            "nonfd": 0,
+            "law": 0,
+            "chaos": 0
         },
         "Base_Stat": {
-            "hp": 22649,
-            "atk": 566,
-            "def": 512,
-            "spd": 574
+            "hp": 0,
+            "atk": 0,
+            "def": 0,
+            "spd": 0
         },
         "LB": [
-            [ 540, 12, 8, 10 ],
-            [ 1080, 24, 16, 20 ],
-            [ 1750, 38, 26, 32 ],
-            [ 2700, 60, 40, 50 ]
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ]
         ],
         "DB": [
-            [ 510, 9, 8, 10 ],
-            [ 657, 10, 9, 12 ],
-            [ 827, 11, 10, 14 ],
-            [ 1012, 13, 11, 17 ],
-            [ 1220, 15, 12, 20 ],
-            [ 1452, 17, 14, 24 ],
-            [ 1705, 20, 16, 28 ],
-            [ 1975, 23, 19, 32 ],
-            [ 2265, 27, 22, 37 ]
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ],
+            [ 0, 0, 0, 0 ]
         ]
     }
 }

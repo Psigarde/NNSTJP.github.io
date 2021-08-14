@@ -1,0 +1,118 @@
+from collections import defaultdict
+import json
+from typing import DefaultDict, Dict, Any
+
+with open('Idola/CharacterswithLBDB.json') as f:
+    CharData = json.load(f)
+
+with open('Idola/SymbolAndIdomagIDs.json') as f2:
+    SymbolAndMagIDs = json.load(f2)
+
+Characters = []
+CharactersType = DefaultDict(list)
+CharactersDBNA = []
+CharactersELE = DefaultDict(list)
+CharactersNeutral = []
+CharacterStat = {}
+for x in CharData:
+    currentCharacterStat = {}
+    prefix = "0"
+    curCharEle = CharData[x]["Element"]
+    CharactersELE[curCharEle].append(x)
+    indexStat = 0
+    for stat in CharData[x]["Base_Stat"]:
+        statText = stat.upper()
+        currentCharacterStat |= {statText:[]}
+        indexStat = 0
+        indexLB = 0
+        currentStatValue = CharData[x]["Base_Stat"][stat]
+        while indexLB < 5:
+            indexDB = 0
+            while indexDB < 10:
+                if indexLB == 0:
+                    if indexDB == 0:
+                        pass
+                    else:
+                        currentStatValue += CharData[x]["DB"][indexDB-1][indexStat]
+                else:
+                    if indexDB == 0:
+                        currentStatValue += CharData[x]["LB"][indexLB-1][indexStat]
+                    else:
+                        currentStatValue += CharData[x]["LB"][indexLB-1][indexStat] + CharData[x]["DB"][indexDB-1][indexStat]
+                currentCharacterStat[statText].append(currentStatValue)
+                indexDB += 1
+            indexLB += 1
+        indexStat += 1
+    CharacterStat |= {x:currentCharacterStat}
+    for fdcount in CharData[x]["FD"]:
+        Trueid = x + " "+prefix+CharData[x]["FD"][fdcount]
+        if prefix == "0":
+            prefix = "1"
+        Characters.append(Trueid)
+        if "AlwaysNeutralFlag" in CharData[x]:
+            CharactersNeutral.append(Trueid)
+        if len(CharData[x]["FD"]) == 1:
+            CharactersDBNA.append(Trueid)
+        curFDType = CharData[x]["Type"][fdcount]
+        if curFDType == "TypeATK":
+            CharactersType["1"].append(Trueid)
+        if curFDType == "TypeDEF":
+            CharactersType["2"].append(Trueid)
+        if curFDType == "TypeSPD":
+            CharactersType["3"].append(Trueid)
+        if curFDType == "TypeCRT":
+            CharactersType["4"].append(Trueid)
+        if curFDType == "TypeRES":
+            CharactersType["5"].append(Trueid)
+        if curFDType == "TypeWEA":
+            CharactersType["6"].append(Trueid)
+
+with open("Idola/DataID.js", "w") as output:
+    output.write("var Characters =\n[")
+    for entry in Characters:
+        output.write("\""+entry+"\",")
+    output.write("];\n\n")
+    output.write("var CharactersNeutral\n[")
+    for entry in CharactersNeutral:
+        output.write("\""+entry+"\",")
+    output.write("];\n\n")
+    output.write("var CharactersELE\n[")
+    for element in CharactersELE:
+        for entry in CharactersELE[element]:
+            output.write("\""+str(entry)+"\",")
+    output.write("];\n\n")
+    output.write("var CharactersDBNA\n[")
+    for entry in CharactersDBNA:
+        output.write("\""+entry+"\",")
+    output.write("];\n\n")
+    output.write("var CharactersType\n[")
+    for type in CharactersType:
+        for entry in CharactersType[type]:
+            output.write("\""+entry+"\",")
+    output.write("];\n\n")
+    output.write("var Weapons\n[")
+    for entry in SymbolAndMagIDs["Weapons"]:
+        output.write("\""+entry+"\",")
+    output.write("];\n\n")
+    output.write("var Souls\n[")
+    for entry in SymbolAndMagIDs["Souls"]:
+        output.write("\""+entry+"\",")
+    output.write("];\n\n")
+    output.write("var IdoMags\n[")
+    for entry in SymbolAndMagIDs["IdoMags"]:
+        output.write("\""+entry+"\",")
+    output.write("];\n\n")
+output.close()
+
+with open("Idola/DataCharacterStat.js", "w") as output:
+    output.write("var CharacterStat =\n    {\n")
+    for x in CharacterStat:
+        output.write("        \""+x+"\":\n            {\n")
+        for stat in CharacterStat[x]:
+            output.write("                \""+stat+"\": [")
+            for value in CharacterStat[x][stat]:
+                output.write(str(value)+",")
+            output.write("],\n")
+        output.write("            },\n")
+    output.write("    };")
+output.close()
