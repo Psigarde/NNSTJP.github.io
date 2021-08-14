@@ -14,6 +14,7 @@ CharactersDBNA = []
 CharactersELE = DefaultDict(list)
 CharactersNeutral = []
 CharacterStat = {}
+iterations = 0
 for x in CharData:
     currentCharacterStat = {}
     prefix = "0"
@@ -72,33 +73,33 @@ with open("Idola/DataID.js", "w") as output:
     for entry in Characters:
         output.write("\""+entry+"\",")
     output.write("];\n\n")
-    output.write("var CharactersNeutral\n[")
+    output.write("var CharactersNeutral =\n[")
     for entry in CharactersNeutral:
         output.write("\""+entry+"\",")
     output.write("];\n\n")
-    output.write("var CharactersELE\n[")
+    output.write("var CharactersELE =\n[")
     for element in CharactersELE:
         for entry in CharactersELE[element]:
             output.write("\""+str(entry)+"\",")
     output.write("];\n\n")
-    output.write("var CharactersDBNA\n[")
+    output.write("var CharactersDBNA =\n[")
     for entry in CharactersDBNA:
         output.write("\""+entry+"\",")
     output.write("];\n\n")
-    output.write("var CharactersType\n[")
+    output.write("var CharactersType =\n[")
     for type in CharactersType:
         for entry in CharactersType[type]:
             output.write("\""+entry+"\",")
     output.write("];\n\n")
-    output.write("var Weapons\n[")
+    output.write("var Weapons =\n[")
     for entry in SymbolAndMagIDs["Weapons"]:
         output.write("\""+entry+"\",")
     output.write("];\n\n")
-    output.write("var Souls\n[")
+    output.write("var Souls =\n[")
     for entry in SymbolAndMagIDs["Souls"]:
         output.write("\""+entry+"\",")
     output.write("];\n\n")
-    output.write("var IdoMags\n[")
+    output.write("var IdoMags =\n[")
     for entry in SymbolAndMagIDs["IdoMags"]:
         output.write("\""+entry+"\",")
     output.write("];\n\n")
