@@ -23,7 +23,6 @@ for x in CharData:
     for stat in CharData[x]["Base_Stat"]:
         statText = stat.upper()
         currentCharacterStat |= {statText:[]}
-        indexStat = 0
         indexLB = 0
         currentStatValue = CharData[x]["Base_Stat"][stat]
         statWithLBDB = 0
