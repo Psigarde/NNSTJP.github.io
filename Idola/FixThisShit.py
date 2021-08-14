@@ -26,20 +26,21 @@ for x in CharData:
         indexStat = 0
         indexLB = 0
         currentStatValue = CharData[x]["Base_Stat"][stat]
+        statWithLBDB = 0
         while indexLB < 5:
             indexDB = 0
             while indexDB < 10:
                 if indexLB == 0:
                     if indexDB == 0:
-                        pass
+                        statWithLBDB = currentStatValue
                     else:
-                        currentStatValue += CharData[x]["DB"][indexDB-1][indexStat]
+                        statWithLBDB = CharData[x]["DB"][indexDB-1][indexStat] + currentStatValue
                 else:
                     if indexDB == 0:
-                        currentStatValue += CharData[x]["LB"][indexLB-1][indexStat]
+                        statWithLBDB = CharData[x]["LB"][indexLB-1][indexStat] + currentStatValue
                     else:
-                        currentStatValue += CharData[x]["LB"][indexLB-1][indexStat] + CharData[x]["DB"][indexDB-1][indexStat]
-                currentCharacterStat[statText].append(currentStatValue)
+                        statWithLBDB = CharData[x]["LB"][indexLB-1][indexStat] + CharData[x]["DB"][indexDB-1][indexStat] + currentStatValue
+                currentCharacterStat[statText].append(statWithLBDB)
                 indexDB += 1
             indexLB += 1
         indexStat += 1
