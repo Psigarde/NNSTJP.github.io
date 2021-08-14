@@ -74,6 +74,7 @@ with open("Idola/DataID.js", "w") as output:
     for entry in Characters:
         output.write("\""+entry+"\",")
     output.write("];\n\n")
+    #neutral chars
     output.write("var CharactersNeutral =\n[")
     for entry in CharactersNeutral:
         output.write("\""+entry+"\",")

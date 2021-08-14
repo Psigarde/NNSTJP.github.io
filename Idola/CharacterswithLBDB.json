@@ -38,11 +38,15 @@
     "100001": {
         "AlwaysNeutralFlag": true,
         "FD": {
-            "nonfd": "0"
+            "nonfd": "0",
+            "law": "1",
+            "chaos": "2"
         },
         "Element": "0",
         "Type": {
-            "nonfd": "TypeATK"
+            "nonfd": "TypeATK",
+            "law": "TypeDEF",
+            "chaos": "TypeSPD"
         },
         "Base_Stat": {
             "hp": 15302,
