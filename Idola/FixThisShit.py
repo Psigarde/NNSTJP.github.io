@@ -114,7 +114,7 @@ with open("Idola/DataID.js", "w") as output:
     output.write("var IdoMags =\n[")
     for entry in SymbolAndMagIDs["IdoMags"]:
         output.write("\""+entry+"\",")
-    output.write("];")
+    output.write("];\n")
 output.close()
 
 with open("Idola/DataCharacterStat.js", "w") as output:
@@ -127,5 +127,5 @@ with open("Idola/DataCharacterStat.js", "w") as output:
                 output.write(str(value)+",")
             output.write("],\n")
         output.write("            },\n")
-    output.write("    };")
+    output.write("    };\n")
 output.close()
