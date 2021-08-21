@@ -70,12 +70,12 @@ for x in CharData:
 Characters.sort()
 with open("Idola/DataID.js", "w") as output:
     #CharacterIDs
-    output.write("var Characters =\n[")
+    output.write("var Characters =\n    [")
     for entry in Characters:
         output.write("\""+entry+"\",")
     output.write("];\n\n")
     #neutral chars
-    output.write("var CharactersNeutral =\n[")
+    output.write("var CharactersNeutral =\n    [")
     for entry in CharactersNeutral:
         output.write("\""+entry+"\",")
     output.write("];\n\n")
@@ -88,7 +88,7 @@ with open("Idola/DataID.js", "w") as output:
         output.write("],\n")
     output.write("    };\n\n")
     #DBNA
-    output.write("var CharactersDBNA =\n[")
+    output.write("var CharactersDBNA =\n    [")
     for entry in CharactersDBNA:
         output.write("\""+entry+"\",")
     output.write("];\n\n")
@@ -101,17 +101,17 @@ with open("Idola/DataID.js", "w") as output:
         output.write("],\n")
     output.write("    };\n\n")
     #Weapon IDs
-    output.write("var Weapons =\n[")
+    output.write("var Weapons =\n    [")
     for entry in SymbolAndMagIDs["Weapons"]:
         output.write("\""+entry+"\",")
     output.write("];\n\n")
     #soul IDs
-    output.write("var Souls =\n[")
+    output.write("var Souls =\n    [")
     for entry in SymbolAndMagIDs["Souls"]:
         output.write("\""+entry+"\",")
     output.write("];\n\n")
     #Mag IDs
-    output.write("var IdoMags =\n[")
+    output.write("var IdoMags =\n    [")
     for entry in SymbolAndMagIDs["IdoMags"]:
         output.write("\""+entry+"\",")
     output.write("];\n")
