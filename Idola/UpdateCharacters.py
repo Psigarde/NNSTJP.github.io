@@ -58,4 +58,5 @@ for updateID in updateCharacters:
 finishedList = json.dumps(cl, indent=4, cls=MyJSONEncoder)
 with open("Idola/CharacterswithLBDB.json", "w") as json_file:
     json_file.write(finishedList)
+    json_file.write("\n")
 json_file.close()
