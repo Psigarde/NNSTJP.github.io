@@ -152,7 +152,7 @@ function LoadCharacters()
 		let builthtml = "";
 		for(var Count = 0; Count < Characters.length; Count ++)
 			{
-				builthtml += "<img class='SelectIMG' loading='lazy' src='PNG/Character Icon/" + Characters[Count] + ".png' id='" + Characters[Count] + "' onClick='SelectCharacter(this.id)'>";
+				builthtml += "<img class='SelectIMG' src='PNG/Character Icon/" + Characters[Count] + ".png' id='" + Characters[Count] + "' onClick='SelectCharacter(this.id)'>";
 			}
 		document.getElementById("SelectCharacter").innerHTML = builthtml;
 	}
