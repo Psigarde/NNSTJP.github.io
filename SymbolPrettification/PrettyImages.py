@@ -41,6 +41,18 @@ for entries in weaponImages:
     currentImg.save("SymbolPrettification/"+weaponID+".png","PNG")
     addedIDs["Weapons"].append(str(weaponID))
 
+for entries in magImages:
+    splitText = entries.split("_")
+    #pastes the mag art onto mag BG
+    magBG = Image.open("SymbolPrettification/MagBG.png")
+    img = Image.open(entries)
+    magID = splitText[2]+" "+splitText[3][:-4]
+
+    magBG.paste(img,(0,0),img)
+
+    magBG.save("SymbolPrettification/"+magID+".png", "PNG")
+    addedIDs["Mags"].append(str(magID))
+
 for entries in charImages:
     splitText = entries.split("_")
     fd = splitText[2][1]
@@ -57,17 +69,6 @@ for entries in charImages:
     currentChar.save("SymbolPrettification/"+fullID+".png", "PNG")
     addedIDs["Chars"].append(str(fullID))
 
-for entries in magImages:
-    splitText = entries.split("_")
-    #pastes the mag art onto mag BG
-    magBG = Image.open("SymbolPrettification/MagBG.png")
-    img = Image.open(entries)
-    magID = splitText[2]+" "+splitText[3][:-4]
-
-    magBG.paste(img,(0,0),img)
-
-    magBG.save("SymbolPrettification/"+magID+".png", "PNG")
-    addedIDs["Mags"].append(str(magID))
 #make a json file with all the IDs that were added in this run
 with open("SymbolPrettification/addedIDs.json","w") as json_file:
     json_file.write(json.dumps(addedIDs,indent=2))
