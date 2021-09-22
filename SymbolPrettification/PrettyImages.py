@@ -5,7 +5,7 @@ import json
 
 #grabs all images as lists with their raw data names
 weaponImages = glob.glob('SymbolPrettification/Symbol_Weapon*')
-soulImages = glob.glob('SymbolPrettification/Symbol_Soul*')
+soulImages = glob.glob('SymbolPrettification/Symbol_Soul_s*')
 charImages = glob.glob('SymbolPrettification/ch_Icon*')
 magImages = glob.glob('SymbolPrettification/mg_icon*')
 
