@@ -5,6 +5,7 @@ import glob
 #grabs all images as lists with their raw data names
 weaponImages = glob.glob('SymbolPrettification/Symbol_Weapon*')
 soulImages = glob.glob('SymbolPrettification/Symbol_Soul*')
+charImages = glob.glob('SymbolPrettification/ch_Icon*')
 
 background = Image.open("SymbolPrettification/6StarWep.png")
 soulBase = Image.new('RGBA',(128,128),(0,0,0,0))
@@ -34,3 +35,17 @@ for entries in weaponImages:
     currentImg.paste(frame,(0,0), frame)
     currentImg.save("SymbolPrettification/"+weaponID,"PNG")
 
+for entries in charImages:
+    splitText = entries.split("_")
+    fd = splitText[2][1]
+    fullID = splitText[1][4:] + " "+splitText[2]
+    #opens the appropriate background and border for the character FD
+    currentChar = Image.open("SymbolPrettification/BG"+fd+".png")
+    currentBorder = Image.open("SymbolPrettification/Border"+fd+".png")
+    #opens the character image
+    img = Image.open(entries)
+
+    currentChar.paste(img,(2,2), img)
+    currentChar.paste(currentBorder, (0,0), currentBorder)
+
+    currentChar.save("SymbolPrettification/"+fullID, "PNG")
