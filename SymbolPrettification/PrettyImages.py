@@ -15,7 +15,7 @@ def main():
     background = Image.open("SymbolPrettification/6StarWep.png")
     soulBase = Image.new('RGBA',(128,128),(0,0,0,0))
     FDCircle = Image.open("SymbolPrettification/FDCircle.png")
-    frame = Image.open("SymbolPrettification/FrameT.png").resize((128,128))
+    frame = Image.open("SymbolPrettification/FrameT.png").resize((128,128),Image.LANCZOS)
 
     for entries in soulImages:
         soulBG = soulBase.copy()
