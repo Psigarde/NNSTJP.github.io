@@ -1447,7 +1447,7 @@
         "Element": "3",
         "Type": {
             "nonfd": "TypeDEF",
-            "law": "TypeSPE",
+            "law": "TypeSPD",
             "chaos": "TypeATK"
         },
         "Base_Stat": {
