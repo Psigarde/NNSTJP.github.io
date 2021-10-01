@@ -14,6 +14,7 @@ def main():
                 pass
             else:
                 oldIDs[category].append(entry)
+        oldIDs[category].sort()
 
     updatedIDs = json.dumps(oldIDs, indent=2)
     with open("Idola/SymbolAndIdomagIDs.json", "w") as json_file:
