@@ -21,7 +21,7 @@ def main():
         soulBG = soulBase.copy()
         soulID = entries.split("_")[3][:-4]
         #opens image and trims 5 pixels off each side to properly crop
-        img = Image.open(entries).resize((128,128))
+        img = Image.open(entries).resize((128,128),Image.LANCZOS)
         arr = np.array(img)
         arr_trim = arr[5:123, 5:123]
         img = Image.fromarray(arr_trim)
@@ -36,7 +36,7 @@ def main():
         currentImg = background.copy()
         weaponID = entries.split("_")[3][:-4]
 
-        img = Image.open(entries).resize((128,128))
+        img = Image.open(entries).resize((128,128),Image.LANCZOS)
 
         currentImg.paste(img,(0,0), img)
         currentImg.paste(frame,(0,0), frame)
