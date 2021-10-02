@@ -19,13 +19,14 @@ def main():
     <body>
         <table border = "1" bordercolor ="black" align="center">
             <tr>
+                <th>ID</th>
                 <th>Rank</th>
                 <th>Character</th>
                 <th>Teamscore</th>
             </tr>"""
     i = 1
     for entry in characters:
-        message += "\n\t\t\t<tr>\n\t\t\t\t<td><b>"+str(i)+"</b></td>\n\t\t\t\t<td><img src=\"PNG/Character Icon/"+entry+".png\" load = \"lazy\"></img></td>\n\t\t\t\t<td><b>"+str(characters[entry])+"</b></td>\n\t\t\t</tr>"
+        message += "\n\t\t\t<tr>\n\t\t\t\t<td>"+entry+"</td>\n\t\t\t\t<td><b>"+str(i)+"</b></td>\n\t\t\t\t<td><img src=\"PNG/Character Icon/"+entry+".png\" load = \"lazy\"></img></td>\n\t\t\t\t<td><b>"+str(characters[entry])+"</b></td>\n\t\t\t</tr>"
         i += 1
     message +="""</table>
     </body>
