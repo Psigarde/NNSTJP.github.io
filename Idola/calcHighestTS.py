@@ -44,26 +44,12 @@ def main():
                     pass
 
                 teamscore[id] = int(math.ceil(calced))
-        if entry == "100142":
-            ehp = statdata[entry]["HP"][-1]
-            eraw = statdata[entry]["ATK"][-1] + statdata[entry]["DEF"][-1] + statdata[entry]["SPD"][-1]
-            ebt = baseType
-
 
     sk = sorted(teamscore, key = teamscore.get, reverse=True)
     SortedTS = {}
     for id in sk:
         SortedTS[id] = teamscore[id]
 
-    ets = (ehp/4)+(eraw*5)
-    erawts = eraw*5
-    ehpts = ehp/4
-    eets = ehpts+erawts+ typestats["TypeRES"]["max"]
-    eets -= typestats[ebt]["base"]
-    ets -= typestats[ebt]["base"]
-    ets += typestats["TypeRES"]["max"]
-    ets += typestats["TypeRES"]["specialMax"]
-    print("ts %: "+str(math.ceil(ets))+" hp: "+str(ehp)+" raw: "+str(eets))
     j = json.dumps(SortedTS,indent = 2)
     with open("Idola/teamscores.json", "w") as json_file:
         json_file.write(j)
