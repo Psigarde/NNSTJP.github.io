@@ -2,6 +2,8 @@ import json
 def main():
 
     #ultra basic table generation to make it easier to see rankings
+    #requires manually copying data from DataCharacterStat.js to testfile.json
+    #then formatting it correctly (can be easily done with ctrl+H and replacing errors)
     f = open('Idola/TSrank.html', 'w')
     with open('Idola/teamscores.json') as j:
         characters = json.load(j)
