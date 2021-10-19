@@ -1,5 +1,6 @@
 import json
 
+#this script is intended to be ran automatically after running UpdateCharacters.py
 def main():
     with open('Idola/CharacterswithLBDB.json') as f:
         CharData = json.load(f)

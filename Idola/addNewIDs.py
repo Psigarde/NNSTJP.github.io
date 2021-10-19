@@ -1,5 +1,7 @@
 import json
 
+#REQUIRES RUNNING PrettyImages.py FIRST!
+#This script automatically adds the new IDs of mags and symbols after PrettyImages.py generates the json of added IDs
 def main():
     with open("SymbolPrettification/output/addedIDs.json") as file:
         newIDs = json.load(file)
