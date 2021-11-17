@@ -5643,7 +5643,7 @@
             "law": "1",
             "chaos": "2"
         },
-        "Element": "1",
+        "Element": "2",
         "Type": {
             "nonfd": "TypeATK",
             "law": "TypeATK",
@@ -5679,7 +5679,7 @@
             "law": "1",
             "chaos": "2"
         },
-        "Element": "2",
+        "Element": "1",
         "Type": {
             "nonfd": "TypeATK",
             "law": "TypeATK",
